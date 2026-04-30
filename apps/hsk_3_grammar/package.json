@@ -1,0 +1,37 @@
+{
+  "name": "hsk3-grammar-lessons",
+  "version": "1.0.0",
+  "description": "HSK 3 Grammar — Interactive Lessons for English Speakers",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:dmg": "electron-builder --mac dmg"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.andre.hsk3grammar",
+    "productName": "HSK 3 Grammar",
+    "files": [
+      "main.js",
+      "index.html",
+      "lesson*.html",
+      "styles.css",
+      "script.js",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.education",
+      "target": ["dmg", "zip"]
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

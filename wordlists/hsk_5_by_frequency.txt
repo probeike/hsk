@@ -1,0 +1,1300 @@
+1	1008	其余	qíyú	Rest
+2	1069	实现	shíxiàn	Realization
+3	1067	实话	shíhuà	The truth
+4	1153	显得	xiǎnde	Appear, seem
+5	507	显然	xiǎnrán	Obviously
+6	1205	因而	yīn’ér	thus
+7	82	从而	cóng’ér	thus
+8	719	从此	cóngcǐ	from then on
+9	1202	以及	yǐjí	as well as
+10	552	以来	yǐlái	Since
+11	129	反而	fǎn’ér	Instead
+12	131	反正	fǎnzhèng	anyway
+13	773	反映	fǎnyìng	reflect
+14	130	反应	fǎnyìng	reaction
+15	772	反复	fǎnfù	Repeatedly
+16	186	何必	hébì	Why
+17	845	何况	hékuàng	Not to mention
+18	979	难怪	nánguài	no wonder
+19	1259	至于	zhìyú	As for
+20	449	似乎	sìhū	It seems that
+21	229	简直	jiǎnzhí	simply
+22	660	毕竟	bìjìng	after all
+23	426	始终	shǐzhōng	Throughout
+24	836	果然	guǒrán	Sure enough
+25	904	居然	jūrán	actually
+26	673	不如	bùrú	not as good as
+27	669	不要紧	búyàojǐn	Never mind
+28	1219	与其	yǔqí	Rather than
+29	635	总之	zǒngzhī	in short, in brief
+30	634	总算	zǒngsuàn	finally
+31	632	总共	zǒnggòng	In total
+32	19	必要	bìyào	necessary
+33	18	必然	bìrán	Inevitable
+34	682	曾经	céngjīng	once
+35	1000	凭	píng	By
+36	916	靠	kào	lean
+37	51	趁	chèn	while
+38	688	朝	cháo	towards
+39	483	万一	wànyī	In case
+40	79	此外	cǐwài	in addition
+41	824	观点	guāndiǎn	viewpoint
+42	1224	原则	yuánzé	Principle
+43	134	方式	fāngshì	mode
+44	377	趋势	qūshì	trend
+45	245	结构	jiégòu	structure
+46	502	系统	xìtǒng	system
+47	1256	制度	zhìdù	system
+48	163	功能	gōngnéng	function
+49	1169	效率	xiàolǜ	efficiency
+50	335	能源	néngyuán	energy
+51	1282	资源	zīyuán	Resources
+52	1281	资金	zījīn	capital
+53	625	资料	zīliào	data
+54	697	成果	chéngguǒ	Achievements
+55	698	成就	chéngjiù	achievement
+56	57	成立	chénglì	establish
+57	696	成分	chéngfèn	component
+58	699	成熟	chéngshú	mature
+59	1176	形式	xíngshì	form
+60	1175	形成	xíngchéng	formation
+61	1177	形象	xíngxiàng	image
+62	528	形势	xíngshì	situation
+63	1204	意义	yìyì	Significance
+64	745	道德	dàodé	Morality
+65	99	道理	dàolǐ	truth
+66	831	规模	guīmó	scale
+67	830	规矩	guīju	Rules
+68	178	规则	guīzé	rule
+69	132	范围	fànwéi	Range
+70	695	程度	chéngdù	degree
+71	56	程序	chéngxù	program
+72	622	状况	zhuàngkuàng	status
+73	1279	状态	zhuàngtài	state
+74	509	现象	xiànxiàng	phenomenon
+75	1155	现代	xiàndài	modern
+76	1156	现实	xiànshí	reality
+77	423	实验	shíyàn	Experiment
+78	422	实习	shíxí	Internship
+79	177	规律	guīlǜ	Law
+80	837	过分	guòfèn	excessive
+81	838	过期	guòqī	Be overdue
+82	960	矛盾	máodùn	contradiction
+83	551	疑问	yíwèn	Doubt
+84	1074	事实	shìshí	Fact
+85	429	事物	shìwù	Thing
+86	39	采取	cǎiqǔ	take, adopt
+87	814	构成	gòuchéng	constitute
+88	636	组成	zǔchéng	Form
+89	585	造成	zàochéng	cause
+90	45	产生	chǎnshēng	produce
+91	715	创造	chuàngzào	create
+92	604	制造	zhìzào	Manufacture
+93	791	改革	gǎigé	reform
+94	145	改进	gǎijìn	Improvement
+95	792	改善	gǎishàn	Improve
+96	123	发挥	fāhuī	Develop
+97	121	发表	fābiǎo	Publish
+98	255	进步	jìnbù	progress
+99	1117	推广	tuīguǎng	Extension
+100	652	保持	bǎochí	keep
+101	9	保留	bǎoliú	Retain
+102	8	保存	bǎocún	Preservation
+103	485	维修	wéixiū	Repair
+104	276	控制	kòngzhì	control
+105	589	掌握	zhǎngwò	master
+106	644	把握	bǎwò	grasp
+107	54	承担	chéngdān	bear
+108	694	承认	chéngrèn	Admit
+109	55	承受	chéngshòu	bear
+110	892	接触	jiēchù	Contact
+111	242	接待	jiēdài	Reception
+112	893	接近	jiējìn	near
+113	944	连续	liánxù	serial
+114	215	集中	jízhōng	focus
+115	214	集合	jíhé	aggregate
+116	725	达到	dádào	Achieve
+117	1108	体现	tǐxiàn	Reflect
+118	26	表现	biǎoxiàn	performance
+119	23	表达	biǎodá	Expression
+120	588	展开	zhǎnkāi	Open
+121	1232	展览	zhǎnlǎn	exhibition
+122	1154	显示	xiǎnshì	display
+123	464	体验	tǐyàn	experience
+124	1107	体会	tǐhuì	Experience
+125	798	感受	gǎnshòu	feel
+126	345	培养	péiyǎng	culture, foster
+127	536	训练	xùnliàn	training
+128	989	培训	péixùn	Train
+129	720	从事	cóngshì	Be engaged in
+130	1112	投入	tóurù	put into
+131	677	参与	cānyù	participate in
+132	40	参考	cānkǎo	Reference resources
+133	649	包括	bāokuò	Include
+134	6	包含	bāohán	Contain
+135	511	相当	xiāngdāng	Quite
+136	1159	相对	xiāngduì	Relative
+137	512	相似	xiāngsì	Be similar
+138	1160	相关	xiāngguān	correlate
+139	190	合作	hézuò	cooperation
+140	346	配合	pèihé	Coordination
+141	583	赞成	zànchéng	Agreement
+142	1228	赞美	zànměi	Praise
+143	167	鼓掌	gǔzhǎng	applause
+144	318	明显	míngxiǎn	obvious
+145	317	明确	míngquè	To make clear
+146	80	次要	cìyào	secondary
+147	211	基本	jīběn	basic
+148	156	根本	gēnběn	at all
+149	1026	全面	quánmiàn	comprehensive
+150	595	整个	zhěnggè	Whole
+151	1249	整体	zhěngtǐ	Whole
+152	325	某	mǒu	some
+153	566	优势	yōushì	advantage
+154	151	高级	gāojí	senior
+155	801	高档	gāodàng	High-grade
+156	548	一致	yízhì	Agreement
+157	1198	一律	yílǜ	all and singular
+158	549	一再	yízài	repeatedly
+159	155	各自	gèzì	Each
+160	730	大型	dàxíng	large
+161	1030	人口	rénkǒu	population
+162	389	人类	rénlèi	Human beings
+163	1033	人员	rényuán	personnel
+164	391	人物	rénwù	character
+165	388	人才	réncái	talented people
+166	390	人生	rénshēng	Life
+167	984	农民	nóngmín	farmer
+168	811	工人	gōngrén	Worker
+169	617	专家	zhuānjiā	expert
+170	598	政府	zhèngfǔ	government
+171	1250	政治	zhèngzhì	Politics
+172	952	领导	lǐngdǎo	Leader
+173	615	主任	zhǔrèn	Headmaster
+174	1271	主席	zhǔxí	Chairman
+175	91	代表	dàibiǎo	representative
+176	835	国王	guówáng	king
+177	428	市场	shìchǎng	market
+178	1009	企业	qǐyè	enterprise
+179	1047	商业	shāngyè	business
+180	162	工业	gōngyè	Industry
+181	341	农业	nóngyè	Agriculture
+182	1056	生产	shēngchǎn	production
+183	1165	消费	xiāofèi	consumption
+184	472	投资	tóuzī	Investment
+185	879	价值	jiàzhí	value
+186	419	时代	shídài	times, epoch
+187	1066	时期	shíqī	period
+188	1065	时刻	shíkè	time
+189	421	时尚	shíshàng	fashion
+190	336	年代	niándài	years
+191	750	地区	dìqū	region
+192	1125	网络	wǎngluò	network
+193	962	媒体	méitǐ	media
+194	655	报道	bàodào	report
+195	1184	宣传	xuānchuán	Propaganda
+196	1138	文明	wénmíng	civilization
+197	76	传统	chuántǒng	tradition
+198	231	建设	jiànshè	build
+199	1260	治疗	zhìliáo	Treatment
+200	666	病毒	bìngdú	virus
+201	140	风险	fēngxiǎn	risk
+202	484	威胁	wēixié	threaten
+203	252	紧急	jǐnjí	urgent
+204	580	灾害	zāihài	disaster
+205	1021	情绪	qíngxù	emotion
+206	523	心理	xīnlǐ	Psychology
+207	258	精神	jīngshén	spirit
+208	148	感想	gǎnxiǎng	Feel
+209	172	观念	guānniàn	concept
+210	448	思想	sīxiǎng	thought
+211	286	理论	lǐlùn	theory
+212	1272	主张	zhǔzhāng	opinion
+213	784	风俗	fēngsú	Customs
+214	783	风格	fēnggé	style
+215	460	特色	tèsè	characteristic
+216	1103	特征	tèzhēng	Features
+217	16	本领	běnlǐng	ability
+218	1073	似的	shìde	Likely
+219	547	一旦	yídàn	once; in case
+220	351	平常	píngcháng	Usual
+221	1034	日常	rìcháng	daily
+222	1092	随时	suíshí	at any time
+223	1037	如今	rújīn	nowadays
+224	978	目前	mùqián	at present
+225	83	从前	cóngqián	before
+226	1171	欣赏	xīnshǎng	Appreciate
+227	1267	逐渐	zhújiàn	gradually
+228	1298	遵守	zūnshǒu	comply with
+229	1200	遗憾	yíhàn	pity
+230	1208	英雄	yīngxióng	Hero
+231	1157	限制	xiànzhì	limit
+232	1110	挑战	tiǎozhàn	challenge
+233	1283	咨询	zīxún	Consultation
+234	1277	装饰	zhuāngshì	decorate
+235	1091	宿舍	sùshè	dormitory
+236	1098	坦率	tǎnshuài	frank
+237	1101	逃避	táobì	escape
+238	1183	叙述	xùshù	Narration
+239	1217	犹豫	yóuyù	hesitate
+240	1231	粘贴	zhāntiē	paste
+241	709	出版	chūbǎn	publish
+242	710	出色	chūsè	excellent; outstanding
+243	711	初级	chūjí	primary
+244	71	出席	chūxí	Attend
+245	717	辞职	cízhí	Resignation
+246	718	刺激	cìjī	stimulate
+247	721	促进	cùjìn	Promote
+248	722	催	cuī	Reminder, urge
+249	727	打喷嚏	dǎpēntì	Sneeze
+250	729	大方	dàfang	generous
+251	732	代替	dàitì	replace
+252	96	耽误	dānwu	delay
+253	743	导致	dǎozhì	cause
+254	757	独立	dúlì	Independent
+255	112	独特	dútè	unique
+256	114	对比	duìbǐ	Contrast
+257	115	对待	duìdài	treat
+258	116	对手	duìshǒu	Opponent
+259	761	对象	duìxiàng	object
+260	762	兑换	duìhuàn	exchange
+261	766	恶劣	èliè	Adverse
+262	767	耳环	ěrhuán	Earrings
+263	768	发愁	fāchóu	To be worried
+264	122	发达	fādá	To develop
+265	769	发抖	fādǒu	Tremble
+266	770	发明	fāmíng	Invention
+267	778	分别	fēnbié	part
+268	137	分布	fēnbù	distribution
+269	779	分配	fēnpèi	distribution
+270	142	否认	fǒurèn	deny
+271	788	服装	fúzhuāng	costume; dress
+272	789	辅导	fǔdǎo	Coach
+273	790	妇女	fùnǚ	Woman
+274	797	感激	gǎnjī	Appreciate
+275	796	干燥	gānzào	Dry
+276	804	个别	gèbié	individual
+277	154	个人	gèrén	personal
+278	805	个性	gèxìng	personality
+279	810	工程师	gōngchéngshī	Engineer
+280	807	公布	gōngbù	Publish
+281	158	公平	gōngpíng	fair
+282	815	姑姑	gūgu	aunt
+283	165	姑娘	gūniang	girl
+284	817	鼓舞	gǔwǔ	Inspire
+285	816	古典	gǔdiǎn	classical
+286	166	古代	gǔdài	Ancient
+287	818	股票	gǔpiào	shares; stock
+288	168	骨头	gǔtou	Bone
+289	820	挂号	guàhào	Register
+290	171	观察	guānchá	observation
+291	174	光滑	guānghuá	smooth
+292	826	光临	guānglín	presence
+293	175	光明	guāngmíng	light
+294	827	光盘	guāngpán	CD
+295	205	灰	huī	ash
+296	859	灰尘	huīchén	dust
+297	206	灰心	huīxīn	Lose heart; be discouraged
+298	860	恢复	huīfù	recovery
+299	861	汇率	huìlǜ	exchange rate
+300	207	婚礼	hūnlǐ	wedding
+301	862	婚姻	hūnyīn	Marriage
+302	208	活跃	huóyuè	active
+303	868	急忙	jímáng	Hastily
+304	216	急诊	jízhěn	emergency
+305	867	集体	jítǐ	collective
+306	873	寂寞	jìmò	lonely
+307	876	夹子	jiāzi	Clip
+308	884	简历	jiǎnlì	resume
+309	886	建立	jiànlì	establish
+310	232	建筑	jiànzhù	Architecture
+311	230	健身	jiànshēn	workout
+312	887	讲究	jiǎngjiu	Pay attention to; daintily
+313	237	交换	jiāohuàn	exchange
+314	888	交际	jiāojì	communication
+315	239	角度	jiǎodù	angle
+316	240	教材	jiàocái	teaching material
+317	891	教练	jiàoliàn	coach
+318	246	结合	jiéhé	Combination
+319	247	结论	jiélùn	conclusion
+320	243	结实	jiēshi	strong
+321	895	戒指	jièzhi	Ring
+322	259	经典	jīngdiǎn	classics; scriptures
+323	901	经营	jīngyíng	Management
+324	899	精力	jīnglì	energy
+325	260	救	jiù	save
+326	263	具备	jùbèi	Have, possess
+327	905	具体	jùtǐ	specific
+328	906	俱乐部	jùlèbù	Club
+329	266	绝对	juéduì	Absolutely
+330	910	角色	juésè	role
+331	267	军事	jūnshì	Military
+332	911	均匀	jūnyún	uniformity
+333	271	看不起	kànbuqǐ	Despise
+334	915	看望	kànwàng	visit
+335	917	颗	kē	pellet (measure word)
+336	272	可见	kějiàn	so; it`s thus clear
+337	918	可靠	kěkào	reliable
+338	273	可怕	kěpà	dreadful
+339	920	克服	kèfú	Overcome
+340	275	客观	kèguān	objective
+341	919	课程	kèchéng	curriculum
+342	922	空间	kōngjiān	space
+343	923	空闲	kòngxián	free
+344	926	宽	kuān	wide
+345	927	昆虫	kūnchóng	insect
+346	279	扩大	kuòdà	Expand
+347	280	辣椒	làjiāo	Pepper, spice
+348	931	老百姓	lǎobǎixìng	Ordinary people
+349	283	老板	lǎobǎn	Boss
+350	934	乐观	lèguān	optimistic
+351	936	类型	lèixíng	type
+352	937	冷淡	lěngdàn	cool attitude
+353	939	离婚	líhūn	divorce
+354	942	利润	lìrùn	profit
+355	943	利益	lìyì	interest
+356	291	利用	lìyòng	utilize
+357	292	连忙	liánmáng	Hurriedly
+358	293	联合	liánhé	union
+359	945	恋爱	liàn’ài	Love, in love
+360	946	良好	liánghǎo	good
+361	947	粮食	liángshi	foodstuff
+362	294	了不起	liǎobuqǐ	Amazing
+363	296	临时	línshí	temporary
+364	297	灵活	línghuó	flexible
+365	949	铃	líng	bell
+366	298	领域	lǐngyù	field
+367	300	浏览	liúlǎn	browse
+368	303	陆地	lùdì	land
+369	954	陆续	lùxù	One after another
+370	304	录取	lùqǔ	matriculate
+371	955	录音	lùyīn	Sound recording
+372	306	落后	luòhòu	backward, fall behind
+373	307	骂	mà	scold
+374	958	馒头	mántou	Steamed buns
+375	963	煤炭	méitàn	coal
+376	312	美术	měishù	Fine Arts
+377	964	魅力	mèilì	charm
+378	965	梦想	mèngxiǎng	Dream
+379	313	秘密	mìmì	Secret
+380	968	秘书	mìshū	secretary
+381	967	密切	mìqiè	close
+382	314	面对	miànduì	Face
+383	969	面积	miànjī	The measure of area
+384	315	面临	miànlín	face
+385	316	苗条	miáotiao	slim
+386	970	描写	miáoxiě	describe
+387	971	敏感	mǐngǎn	Sensitive
+388	319	名牌	míngpái	famous brand
+389	973	名片	míngpiàn	business card
+390	321	命令	mìnglìng	call; nominate
+391	974	命运	mìngyùn	fate, destiny
+392	975	模仿	mófǎng	imitate
+393	323	模糊	móhu	vague
+394	976	模特	mótè	model
+395	324	摩托车	mótuōchē	Motorcycle
+396	977	陌生	mòshēng	strange
+397	326	目标	mùbiāo	target
+398	327	目录	mùlù	Catalog
+399	329	哪怕	nǎpà	even if
+400	331	脑袋	nǎodai	head
+401	980	内部	nèibù	interior
+402	332	内科	nèikē	Internal medicine
+403	333	嫩	nèn	tender, delicate
+404	334	能干	nénggàn	capable
+405	982	念	niàn	Read
+406	340	农村	nóngcūn	countryside
+407	983	浓	nóng	strong
+408	342	女士	nǚshì	Madam
+409	986	偶然	ǒurán	accidental
+410	343	派	pài	send
+411	988	盼望	pànwàng	look forward to
+412	344	赔偿	péicháng	compensate for
+413	990	佩服	pèifu	Admire
+414	991	盆	pén	basin, pot
+415	993	批	pī	batch
+416	994	批准	pīzhǔn	Approval
+417	347	披	pī	drape over one`s shoulders
+418	995	疲劳	píláo	fatigue
+419	996	匹	pǐ	Horse (meaure word)
+420	997	片	piàn	slice
+421	348	片面	piànmiàn	one-sided
+422	999	频道	píndào	channel
+423	350	平	píng	flat
+424	1001	平安	píng’ān	sound and safe
+425	1002	平等	píngděng	equality
+426	352	平方	píngfāng	square
+427	1003	平衡	pínghéng	balance
+428	353	平静	píngjìng	calm
+429	1004	平均	píngjūn	Average
+430	354	评价	píngjià	evaluate
+431	1006	迫切	pòqiè	urgent
+432	1005	破产	pòchǎn	bankruptcy
+433	355	破坏	pòhuài	Destruction
+434	597	正	zhèng	just
+435	663	便	biàn	then, in that case
+436	776	非	fēi	wrong; non
+437	948	亮	liàng	bright
+438	1095	所	suǒ	place
+439	1149	系	xì	department
+440	10	报到	bàodào	register,check in
+441	11	报告	bàogào	Presentation
+442	24	表面	biǎomiàn	surface
+443	25	表情	biǎoqíng	Expression
+444	34	不然	bùrán	otherwise
+445	35	不足	bùzú	insufficient
+446	46	常识	chángshí	common sense
+447	88	打工	dǎgōng	Work
+448	138	分手	fēnshǒu	Break up
+449	152	告别	gàobié	farewell
+450	157	公开	gōngkāi	open
+451	200	话题	huàtí	Topic of conversation
+452	220	家务	jiāwù	Housework
+453	269	开水	kāishuǐ	Boiling water
+454	386	热爱	rè’ài	Ardently love
+455	405	商务	shāngwù	business
+456	414	生动	shēngdòng	vivid
+457	415	生长	shēngzhǎng	grow
+458	431	手工	shǒugōng	manual
+459	446	说服	shuōfú	Persuade
+460	466	天真	tiānzhēn	naive
+461	480	外公	wàigōng	grandpa (mother’s side)
+462	496	问候	wènhòu	To greet
+463	519	小气	xiǎoqi	Mean
+464	522	写作	xiězuò	writing
+465	553	意外	yìwài	Accident
+466	575	员工	yuángōng	employee
+467	578	运气	yùnqi	luck
+468	582	再三	zàisān	repeatedly
+469	607	中介	zhōngjiè	intermediary
+470	665	表明	biǎomíng	Indicate
+471	728	打听	dǎting	Inquire
+472	843	好客	hàokè	Hospitable
+473	848	后果	hòuguǒ	Consequence
+474	900	经商	jīngshāng	be in business; trade
+475	950	零件	língjiàn	Spare parts
+476	972	明星	míngxīng	Star
+477	1007	期间	qījiān	Period
+478	1032	人事	rénshì	Personnel matters
+479	1035	日期	rìqī	Date
+480	1036	日子	rìzi	life, days
+481	1075	事先	shìxiān	Prior
+482	1088	思考	sīkǎo	Reflection
+483	1096	太太	tàitai	Ma’am
+484	1186	学问	xuéwen	knowledge
+485	1195	要不	yàobù	Or
+486	1211	影子	yǐngzi	shadow
+487	1220	语气	yǔqì	tone
+488	1238	着火	zháohuǒ	on fire
+489	1300	作为	zuòwéi	As
+490	31	不见得	bújiàndé	Not necessarily
+491	672	不得了	bùdéliǎo	Very
+492	170	怪不得	guàibude	No wonder
+493	1085	说不定	shuōbudìng	maybe
+494	2	爱心	àixīn	love
+495	14	被子	bèizi	quilt
+496	58	成人	chéngrén	adult
+497	59	成语	chéngyǔ	idiom
+498	69	出口	chūkǒu	Exit
+499	72	除非	chúfēi	Unless
+500	101	等于	děngyú	Be equal to
+501	124	发票	fāpiào	invoice
+502	127	法院	fǎyuàn	Court
+503	181	果实	guǒshí	fruit
+504	185	好奇	hàoqí	Be curious
+505	198	花生	huāshēng	peanut
+506	268	开放	kāifàng	To open up
+507	309	满足	mǎnzú	satisfy
+508	374	轻视	qīngshì	Despise
+509	375	请求	qǐngqiú	request
+510	378	去世	qùshì	pass away
+511	387	热心	rèxīn	enthusiastic
+512	394	日历	rìlì	calendar
+513	462	题目	tímù	subject
+514	465	天空	tiānkōng	sky
+515	473	突出	tūchū	prominent
+516	494	文学	wénxué	literature
+517	526	行为	xíngwéi	behavior
+518	576	愿望	yuànwàng	desire, wish
+519	579	运用	yùnyòng	Application
+520	581	在乎	zàihu	care about
+521	609	周到	zhōudào	thoughtful
+522	614	主题	zhǔtí	theme
+523	629	自动	zìdòng	automatic
+524	638	作文	zuòwén	composition
+525	640	爱护	àihù	Care
+526	671	不安	bù’ān	Uneasy, unstable
+527	700	成长	chéngzhǎng	Grow up
+528	702	迟早	chízǎo	sooner or later
+529	748	地道	dìdao	tunnel
+530	752	点心	diǎnxin	snack
+531	760	对方	duìfāng	the other party
+532	808	公元	gōngyuán	A.D.
+533	809	公主	gōngzhǔ	princess
+534	844	和平	hépíng	peace
+535	855	化学	huàxué	Chemistry
+536	897	进口	jìnkǒu	Imported
+537	902	酒吧	jiǔbā	Bar
+538	907	据说	jùshuō	allegedly; it`s said
+539	912	卡车	kǎchē	Truck
+540	913	开发	kāifā	Development
+541	932	老实	lǎoshi	honest
+542	1048	上当	shàngdàng	When
+543	1064	时差	shíchā	time difference
+544	1104	疼爱	téng’ài	Love dearly
+545	1106	提问	tíwèn	Put questions to
+546	1137	文件	wénjiàn	file
+547	1139	文字	wénzì	writing, character
+548	1172	信号	xìnhào	signal
+549	1173	行动	xíngdòng	Get some action
+550	1174	行人	xíngrén	pedestrian
+551	1185	学历	xuélì	education degree
+552	1196	业务	yèwù	business
+553	1227	在于	zàiyú	rest with
+554	1241	照常	zhàocháng	as usual
+555	1243	真实	zhēnshí	real
+556	1262	中心	zhōngxīn	core
+557	1264	重大	zhòngdà	significant
+558	1269	主动	zhǔdòng	active
+559	1270	主人	zhǔrén	master
+560	1285	自从	zìcóng	Since
+561	1287	自觉	zìjué	Conscious
+562	110	动画片	dònghuàpiàn	Cartoon
+563	726	打交道	dǎjiāodao	Dealing with
+564	120	朵	duǒ	classifier of flower
+565	774	方	fāng	square
+566	806	根	gēn	root
+567	1083	数	shǔ	to count
+568	1136	闻	wén	smell
+569	1206	银	yín	silver
+570	1253	直	zhí	straight
+571	15	本科	běnkē	Undergraduate
+572	17	比例	bǐlì	Proportion
+573	30	不断	búduàn	Constantly
+574	36	部门	bùmén	department
+575	65	重复	chóngfù	repeat
+576	70	出示	chūshì	show
+577	90	大象	dàxiàng	Elephant
+578	93	单调	dāndiào	monotonous
+579	94	单位	dānwèi	Company
+580	113	度过	dùguò	Spend
+581	146	改正	gǎizhèng	correction
+582	149	赶快	gǎnkuài	hurry up
+583	161	工具	gōngjù	tool
+584	176	广大	guǎngdà	Vast
+585	189	合同	hétong	contract
+586	223	假如	jiǎrú	If
+587	238	交往	jiāowǎng	affiliate with
+588	250	借口	jièkǒu	Excuse
+589	253	尽快	jǐnkuài	as soon as possible
+590	265	决赛	juésài	Finals
+591	289	力量	lìliàng	Power
+592	290	利息	lìxī	accrual; interest
+593	295	列车	lièchē	train
+594	337	年纪	niánjì	Age
+595	360	汽油	qìyóu	gasoline
+596	370	亲爱	qīn’ài	Dear
+597	376	球迷	qiúmí	fans
+598	382	确认	quèrèn	confirm
+599	393	日程	rìchéng	schedule
+600	412	身份	shēnfèn	identity
+601	432	手术	shǒushù	Operation
+602	433	手续	shǒuxù	procedures
+603	441	数据	shùjù	data
+604	444	双方	shuāngfāng	both sides
+605	450	随身	suíshēn	Carry on
+606	468	通常	tōngcháng	usually
+607	481	完整	wánzhěng	complete
+608	482	玩具	wánjù	Toys
+609	490	位于	wèiyú	Be located
+610	530	幸运	xìngyùn	lucky
+611	534	学术	xuéshù	learning
+612	541	样式	yàngshì	style
+613	561	应用	yìngyòng	application
+614	563	勇气	yǒngqì	courage
+615	569	有利	yǒulì	favourable, beneficial
+616	571	预报	yùbào	prediction
+617	586	责备	zébèi	Reproach
+618	599	证件	zhèngjiàn	Certificates
+619	601	支票	zhīpiào	Check
+620	619	转告	zhuǎngào	Tell, transmit
+621	633	总理	zǒnglǐ	prime minister
+622	641	爱惜	àixī	Cherish
+623	646	办理	bànlǐ	handle
+624	656	报社	bàoshè	Newspaper office
+625	658	本质	běnzhì	essence
+626	664	标点	biāodiǎn	punctuation
+627	687	超级	chāojí	super
+628	713	传说	chuánshuō	Legend
+629	723	存在	cúnzài	existence
+630	724	答应	dāying	promise
+631	736	单元	dānyuán	unit
+632	738	当地	dāngdì	Local
+633	739	当心	dāngxīn	Watch out
+634	747	的确	díquè	indeed; be certain to
+635	749	地理	dìlǐ	Geography
+636	751	地位	dìwèi	status
+637	753	电台	diàntái	radio station
+638	803	格外	géwài	especially
+639	825	管子	guǎnzi	pipe
+640	828	广场	guǎngchǎng	square
+641	840	海关	hǎiguān	Customs
+642	842	行业	hángyè	industry
+643	846	合影	héyǐng	Group photo
+644	866	极其	jíqí	extremely
+645	909	决心	juéxīn	Determination
+646	925	会计	kuàijì	accountant
+647	959	毛病	máobìng	Trouble
+648	1018	轻易	qīngyì	easily
+649	1020	情景	qíngjǐng	scene
+650	1040	色彩	sècǎi	color
+651	1053	身材	shēncái	figure
+652	1057	声调	shēngdiào	Tone
+653	1061	失去	shīqù	Lose
+654	1070	实用	shíyòng	Practical
+655	1078	手指	shǒuzhǐ	finger
+656	1093	随手	suíshǒu	Readily
+657	1109	调皮	tiáopí	naughty
+658	1120	外交	wàijiāo	International Relations
+659	1121	完美	wánměi	perfect
+660	1127	微笑	wēixiào	Smile
+661	1147	物理	wùlǐ	Physics
+662	1161	想象	xiǎngxiàng	imagine
+663	1209	迎接	yíngjiē	meet, welcome
+664	1226	运输	yùnshū	transport
+665	1239	着凉	zháoliáng	get cold
+666	1244	针对	zhēnduì	aim at
+667	1258	至今	zhìjīn	so far
+668	1265	重量	zhòngliàng	weight
+669	1284	字母	zìmǔ	Letter
+670	1289	自愿	zìyuàn	voluntarily
+671	29	博物馆	bówùguǎn	Museum
+672	150	干活儿	gànhuór	work on a job
+673	339	牛仔裤	niúzǎikù	Jeans
+674	392	忍不住	rěnbuzhù	Unable to bear
+675	407	舍不得	shěbude	Hate to part with or use
+676	1017	青少年	qīngshàonián	Teenagers
+677	1197	一辈子	yíbèizi	A lifetime
+678	32	不耐烦	búnàifán	Impatient
+679	180	国庆节	guóqìngjié	National Day
+680	395	日用品	rìyòngpǐn	Daily Necessities
+681	455	太极拳	tàijíquán	Taiji boxing
+682	871	系领带	jìlǐngdài	wear a tie
+683	903	救护车	jiùhùchē	Ambulance
+684	1218	幼儿园	yòu’éryuán	Kindergarten
+685	1261	志愿者	zhìyuànzhě	Volunteer
+686	7	宝贵	bǎoguì	valuable
+687	41	操场	cāochǎng	Playground
+688	43	叉子	chāzi	Fork
+689	49	车库	chēkù	Garage
+690	62	尺子	chǐzi	Ruler
+691	64	充分	chōngfèn	To the full
+692	74	处理	chǔlǐ	Handle
+693	81	匆忙	cōngmáng	hastily
+694	89	大厦	dàshà	Large building
+695	95	担任	dānrèn	To serve as
+696	100	登记	dēngjì	register
+697	103	敌人	dírén	Enemy
+698	107	电池	diànchí	Battery
+699	119	多亏	duōkuī	thanks to
+700	125	发言	fāyán	give a speech
+701	133	方案	fāng’àn	programme
+702	139	风景	fēngjǐng	Scenery
+703	159	公寓	gōngyù	apartment
+704	160	工厂	gōngchǎng	factory
+705	182	过敏	guòmǐn	allergy
+706	183	海鲜	hǎixiān	seafood
+707	187	合法	héfǎ	legitimate
+708	188	合理	hélǐ	reasonable
+709	192	猴子	hóuzi	Monkey
+710	193	后背	hòubèi	back
+711	194	忽视	hūshì	Ignore
+712	196	胡说	húshuō	Nonsense
+713	204	黄金	huángjīn	gold
+714	210	或许	huòxǔ	maybe; probably
+715	212	机器	jīqì	machine
+716	217	记忆	jìyì	memory
+717	221	嘉宾	jiābīn	Distinguished guest
+718	233	键盘	jiànpán	keyboard
+719	234	讲座	jiǎngzuò	Lecture
+720	241	教训	jiàoxùn	lesson
+721	244	节省	jiéshěng	save
+722	256	近代	jìndài	Modern
+723	257	尽量	jìnliàng	as far as possible
+724	262	桔子	júzi	Orange
+725	264	巨大	jùdà	huge
+726	277	口味	kǒuwèi	Flavor
+727	282	劳动	láodòng	labour
+728	284	老鼠	lǎoshǔ	Mouse
+729	287	理由	lǐyóu	Reason
+730	305	论文	lùnwén	paper
+731	310	冒险	màoxiǎn	adventure
+732	330	难免	nánmiǎn	Unavoidable
+733	338	宁可	nìngkě	would rather
+734	356	期待	qīdài	expect
+735	359	气氛	qìfēn	atmosphere
+736	396	如何	rúhé	How
+737	397	软件	ruǎnjiàn	Software
+738	399	嗓子	sǎngzi	throat
+739	402	闪电	shǎndiàn	lightning
+740	404	商品	shāngpǐn	commodity
+741	406	伤害	shānghài	hurt
+742	409	摄影	shèyǐng	Photography
+743	411	深刻	shēnkè	profound
+744	418	狮子	shīzi	Lion
+745	420	时髦	shímáo	Fashionable
+746	427	试卷	shìjuàn	test paper
+747	430	收据	shōujù	receipt
+748	437	书架	shūjià	bookshelf
+749	439	熟练	shúliàn	skilled
+750	442	数码	shùmǎ	Digital
+751	457	淘气	táoqì	naughty
+752	463	体贴	tǐtiē	Considerate
+753	467	调整	tiáozhěng	adjustment
+754	469	统一	tǒngyī	Unified
+755	470	痛快	tòngkuài	Happy, to one`s great satisfaction
+756	475	兔子	tùzi	Rabbit
+757	479	退休	tuìxiū	retire
+758	493	文具	wénjù	Stationery
+759	497	卧室	wòshì	Bedroom
+760	498	无数	wúshù	Countless
+761	500	物质	wùzhì	material
+762	503	戏剧	xìjù	drama
+763	506	下载	xiàzài	download
+764	513	想念	xiǎngniàn	miss
+765	517	消极	xiāojí	negative
+766	524	心脏	xīnzàng	heart
+767	525	信任	xìnrèn	trust
+768	531	兄弟	xiōngdì	Brother
+769	535	询问	xúnwèn	inquiry
+770	539	宴会	yànhuì	banquet
+771	546	依然	yīrán	still
+772	554	议论	yìlùn	Discussion
+773	555	义务	yìwù	obligation
+774	556	因素	yīnsù	Factor
+775	560	应付	yìngfu	cope with
+776	564	用功	yònggōng	Diligent
+777	570	娱乐	yúlè	entertainment
+778	608	中旬	zhōngxún	Mid
+779	610	逐步	zhúbù	gradually
+780	611	竹子	zhúzi	Bamboo
+781	612	主持	zhǔchí	Host
+782	613	主观	zhǔguān	subjective
+783	618	专心	zhuānxīn	Attentively
+784	628	字幕	zìmù	Subtitle
+785	630	自由	zìyóu	free
+786	647	傍晚	bàngwǎn	Evening
+787	667	播放	bōfàng	play
+788	668	脖子	bózi	neck
+789	674	步骤	bùzhòu	step
+790	683	差距	chājù	disparity; distance
+791	685	长途	chángtú	Long-distance
+792	691	车厢	chēxiāng	carriage
+793	701	吃亏	chīkuī	Suffer
+794	744	到达	dàodá	Arrive
+795	746	等待	děngdài	wait for
+796	764	多余	duōyú	surplus
+797	777	废话	fèihuà	Crap
+798	780	分析	fēnxī	Analysis
+799	786	否定	fǒudìng	negative
+800	800	钢铁	gāngtiě	steel
+801	812	恭喜	gōngxǐ	congratulations
+802	823	关闭	guānbì	close; shut
+803	849	忽然	hūrán	suddenly
+804	852	胡同	hútòng	Hutong
+805	857	幻想	huànxiǎng	fantasy
+806	863	火柴	huǒchái	Match
+807	865	肌肉	jīròu	muscle
+808	870	计算	jìsuàn	Calculation
+809	874	家庭	jiātíng	Family
+810	875	家乡	jiāxiāng	Hometown
+811	881	坚决	jiānjué	firm, determined
+812	889	胶水	jiāoshuǐ	glue
+813	898	尽力	jìnlì	Try the best
+814	921	刻苦	kèkǔ	Hardworking
+815	929	朗读	lǎngdú	Reading aloud
+816	933	老婆	lǎopó	wife
+817	940	厘米	límǐ	centimeter
+818	951	零食	língshí	snacks
+819	1010	前途	qiántú	future
+820	1015	亲自	qīnzì	personally
+821	1028	确定	quèdìng	Determine
+822	1029	热烈	rèliè	warm
+823	1046	扇子	shànzi	Fan
+824	1050	设备	shèbèi	equipment
+825	1054	神话	shénhuà	Myth
+826	1058	绳子	shéngzi	Rope
+827	1062	失业	shīyè	Unemployment
+828	1077	手套	shǒutào	glove
+829	1079	蔬菜	shūcài	Vegetables
+830	1080	舒适	shūshì	Comfortable
+831	1081	梳子	shūzi	comb
+832	1089	私人	sīrén	private
+833	1113	透明	tòumíng	transparent
+834	1118	退步	tuìbù	Backward
+835	1122	完善	wánshàn	perfect
+836	1123	王子	wángzǐ	prince
+837	1124	往返	wǎngfǎn	Return
+838	1126	危害	wēihài	Harm
+839	1130	唯一	wéiyī	Only
+840	1131	伟大	wěidà	great
+841	1134	未来	wèilái	Future
+842	1141	握手	wòshǒu	Handshake
+843	1142	屋子	wūzi	House
+844	1150	细节	xìjié	details
+845	1158	相处	xiāngchǔ	Get along with
+846	1166	消化	xiāohuà	Digestion
+847	1168	小麦	xiǎomài	Wheat
+848	1182	休闲	xiūxián	Leisure time
+849	1188	寻找	xúnzhǎo	Seek, look for
+850	1190	延长	yáncháng	extend
+851	1192	演讲	yǎnjiǎng	speech
+852	1193	阳台	yángtái	balcony
+853	1199	移动	yídòng	move
+854	1207	印刷	yìnshuā	printing
+855	1212	硬件	yìngjiàn	Hardware
+856	1216	游览	yóulǎn	visit
+857	1222	玉米	yùmǐ	Corn
+858	1223	原料	yuánliào	raw material
+859	1225	乐器	yuèqì	instrument
+860	1235	长辈	zhǎngbèi	Elder
+861	1240	召开	zhàokāi	convene
+862	1242	哲学	zhéxué	Philosophy
+863	1246	振动	zhèndòng	Vibration
+864	1251	证据	zhèngjù	evidence
+865	1257	制作	zhìzuò	Make
+866	1276	转变	zhuǎnbiàn	change
+867	1296	最初	zuìchū	First, at the beginning
+868	1299	作品	zuòpǐn	works
+869	458	讨价还价	tǎojiàhuánjià	bargain
+870	425	使劲儿	shǐjìnr	exert all one’s strength
+871	914	开幕式	kāimùshì	The opening ceremony
+872	1031	人民币	rénmínbì	RMB
+873	1144	无所谓	wúsuǒwèi	cannot be designated as
+874	199	划	huá	Rowing
+875	274	克	kè	gram
+876	362	签	qiān	Sign
+877	434	首	shǒu	head, chief
+878	600	支	zhī	branch (measure word)
+879	758	断	duàn	break
+880	771	翻	fān	Turn
+881	1014	切	qiē	cut
+882	1229	则	zé	be
+883	1233	占	zhàn	occupy
+884	3	安慰	ānwèi	comfort
+885	22	标志	biāozhì	sign
+886	61	持续	chíxù	Continued
+887	66	宠物	chǒngwù	Pet
+888	67	抽象	chōuxiàng	abstract
+889	73	除夕	chúxī	the New Year’s Eve
+890	75	传染	chuánrǎn	contagion
+891	92	待遇	dàiyù	treatment
+892	105	地毯	dìtǎn	Carpet
+893	106	地震	dìzhèn	earthquake
+894	144	复制	fùzhì	copy
+895	203	慌张	huāngzhāng	flurried
+896	213	及格	jígé	pass
+897	224	假装	jiǎzhuāng	pretend
+898	248	结账	jiézhàng	Checkout
+899	288	立刻	lìkè	immediately
+900	299	流传	liúchuán	spread
+901	328	木头	mùtou	wood
+902	349	拼音	pīnyīn	pinyin
+903	357	奇迹	qíjì	Miracle
+904	358	启发	qǐfā	Inspire
+905	365	强调	qiángdiào	Emphasize
+906	371	亲切	qīnqiè	kind
+907	373	青春	qīngchūn	Youth
+908	379	权力	quánlì	power
+909	384	燃烧	ránshāo	burning
+910	403	善于	shànyú	be good at
+911	424	石头	shítou	stone
+912	435	受伤	shòushāng	Injured
+913	438	输入	shūrù	import; input
+914	461	提倡	tíchàng	promote
+915	491	未必	wèibì	not necessarily
+916	495	稳定	wěndìng	Stable
+917	501	吸取	xīqǔ	Draw
+918	510	香肠	xiāngcháng	sausage
+919	518	消失	xiāoshī	disappear
+920	527	形容	xíngróng	describe
+921	532	虚心	xūxīn	With an open mind, modest
+922	538	牙齿	yáchǐ	tooth
+923	545	业余	yèyú	amateur
+924	567	悠久	yōujiǔ	long
+925	574	元旦	uándàn	New year’s Day
+926	584	糟糕	zāogāo	Too bad
+927	594	争取	zhēngqǔ	strive for
+928	602	指导	zhǐdǎo	guidance
+929	603	制定	zhìdìng	Formulate
+930	624	资格	zīgé	Qualifications
+931	642	安装	ānzhuāng	install
+932	648	包裹	bāoguǒ	package
+933	653	保险	bǎoxiǎn	Insurance
+934	679	操心	cāoxīn	Worry
+935	706	充满	chōngmǎn	full of 
+936	712	传播	chuánbō	spread
+937	716	词汇	cíhuì	vocabulary
+938	734	单纯	dānchún	Simple
+939	735	单独	dāndú	Alone
+940	742	导演	dǎoyǎn	director
+941	795	干脆	gāncuì	simply
+942	799	赶紧	gǎnjǐn	Quickly
+943	819	固定	gùdìng	fixed
+944	847	核心	héxīn	core
+945	850	呼吸	hūxī	breathing
+946	856	缓解	huǎnjiě	relieve
+947	869	记录	jìlù	Record
+948	872	纪律	jìlǜ	discipline
+949	877	假设	jiǎshè	in case of
+950	894	阶段	jiēduàn	stage
+951	924	夸张	kuāzhāng	exagerate
+952	961	贸易	màoyì	Trade
+953	1019	清淡	qīngdàn	light
+954	1024	取消	qǔxiāo	cancel
+955	1044	删除	shānchú	delete
+956	1068	实践	shíjiàn	practice
+957	1071	食物	shíwù	food
+958	1076	收获	shōuhuò	Harvest
+959	1082	属于	shǔyú	belong to
+960	1094	缩短	suōduǎn	Shorten
+961	1097	谈判	tánpàn	negotiation
+962	1102	特殊	tèshū	special
+963	1105	提纲	tígāng	outline
+964	1114	土地	tǔdì	land
+965	1129	围巾	wéijīn	scarf
+966	1132	胃口	wèikǒu	Appetite
+967	1133	位置	wèizhì	position
+968	1135	温暖	wēnnuǎn	warm
+969	1148	吸收	xīshōu	absorb
+970	1152	鲜艳	xiānyàn	Colorful
+971	1163	项目	xiàngmù	project
+972	1178	性质	xìngzhì	Nature
+973	1181	修改	xiūgǎi	modify
+974	1210	营业	yíngyè	Do business
+975	1214	用途	yòngtú	purpose
+976	1215	优美	yōuměi	Graceful
+977	1247	争论	zhēnglùn	debate
+978	1248	征求	zhēngqiú	ask for
+979	1254	执照	zhízhào	License
+980	1263	种类	zhǒnglèi	type
+981	1273	祝福	zhùfú	blessing
+982	1274	注册	zhùcè	register
+983	1280	追求	zhuīqiú	Pursuit
+984	1286	自豪	zìháo	Proud
+985	1288	自私	zìsī	selfish
+986	1290	总裁	zǒngcái	CEO
+987	1291	总统	zǒngtǒng	President
+988	27	冰激凌	bīngjīlíng	ice cream
+989	308	麦克风	màikèfēng	Microphone
+990	705	充电器	chōngdiànqì	Charger
+991	737	胆小鬼	dǎnxiǎoguǐ	Coward
+992	320	名胜古迹	míngshènggǔjì	Places of historic interest and scenic beauty
+993	505	夏令营	xiàlìngyíng	Summer camp
+994	12	悲观	bēiguān	Pessimism
+995	13	背景	bèijǐng	background
+996	21	辩论	biànlùn	Debate
+997	50	彻底	chèdǐ	thorough
+998	60	诚恳	chéngkěn	sincere
+999	84	粗糙	cūcāo	rough
+1000	86	促使	cùshǐ	Urge
+1001	98	倒霉	dǎoméi	fall on evil days
+1002	126	罚款	fákuǎn	forfeit; amerce; fine
+1003	136	肥皂	féizào	soap
+1004	147	概括	gàikuò	Generalization
+1005	164	沟通	gōutōng	Communicate
+1006	201	怀念	huáiniàn	miss
+1007	202	怀孕	huáiyùn	become pregnant
+1008	209	伙伴	huǒbàn	Partner
+1009	218	纪录	jìlù	Record
+1010	219	纪念	jìniàn	memorialize
+1011	226	坚强	jiānqiáng	Firm
+1012	227	艰苦	jiānkǔ	hard
+1013	235	酱油	jiàngyóu	soy sauce
+1014	311	眉毛	méimao	eyebrow
+1015	369	巧妙	qiǎomiào	clever
+1016	372	勤奋	qínfèn	hardworking
+1017	381	缺乏	quēfá	Lack
+1018	400	沙滩	shātān	beach
+1019	408	设计	shèjì	Design
+1020	417	失眠	shīmián	insomnia
+1021	436	寿命	shòumìng	Life
+1022	440	鼠标	shǔbiāo	mouse
+1023	443	摔倒	shuāidǎo	fall
+1024	452	损失	sǔnshī	loss
+1025	454	台阶	táijiē	Steps
+1026	476	推辞	tuīcí	Refuse
+1027	477	推荐	tuījiàn	Recommend
+1028	486	围绕	wéirào	around
+1029	492	温柔	wēnróu	Tender
+1030	514	享受	xiǎngshòu	enjoy
+1031	516	象征	xiàngzhēng	Symbolize
+1032	520	孝顺	xiàoshun	Filial piety
+1033	537	押金	yājīn	deposit
+1034	550	移民	yímín	immigrant
+1035	558	营养	yíngyǎng	Nutrition
+1036	565	优惠	yōuhuì	preferential; favorable
+1037	568	油炸	yóuzhá	Fried
+1038	572	预防	yùfáng	Prevention
+1039	590	账户	zhànghù	account
+1040	591	珍惜	zhēnxī	cherish
+1041	596	整齐	zhěngqí	neat
+1042	606	秩序	zhìxù	order
+1043	621	装修	zhuāngxiū	decorate house
+1044	631	综合	zōnghé	comprehensive
+1045	654	抱怨	bàoyuàn	Complain
+1046	659	彼此	bǐcǐ	each other
+1047	661	避免	bìmiǎn	avoid
+1048	676	彩虹	cǎihóng	Rainbow
+1049	681	测验	cèyàn	test
+1050	692	沉默	chénmò	silent
+1051	693	称呼	chēnghu	to address
+1052	707	抽屉	chōuti	drawer
+1053	714	窗帘	chuānglián	Window curtains
+1054	733	贷款	dàikuǎn	extend credit to; provide a loan
+1055	782	奋斗	fèndòu	Struggle
+1056	794	概念	gàiniàn	concept
+1057	829	广泛	guǎngfàn	widely
+1058	833	柜台	guìtái	Counter
+1059	864	激烈	jīliè	fierce
+1060	883	兼职	jiānzhí	Part-time job
+1061	885	剪刀	jiǎndāo	scissors
+1062	896	金属	jīnshǔ	Metal
+1063	941	立即	lìjí	immediately
+1064	953	流泪	liúlèi	Shed tears
+1065	956	轮流	lúnliú	take turns
+1066	985	欧洲	Ōuzhōu	Europe
+1067	1022	庆祝	qìngzhù	Celebrate
+1068	1027	权利	quánlì	right, interest
+1069	1042	沙漠	shāmò	Desert
+1070	1059	省略	shěnglüè	ellipsis
+1071	1060	胜利	shènglì	victory
+1072	1072	士兵	shìbīng	soldiers
+1073	1111	痛苦	tòngkǔ	Pain
+1074	1128	违反	wéifǎn	Violation
+1075	1143	无奈	wúnài	have no choice
+1076	1145	武术	wǔshù	A martial art
+1077	1164	象棋	xiàngqí	Xiangqi
+1078	1167	销售	xiāoshòu	Sale
+1079	1179	幸亏	xìngkuī	Thanks
+1080	1189	迅速	xùnsù	rapid
+1081	1191	严肃	yánsù	serious
+1082	1213	拥抱	yōngbào	embrace
+1083	1221	预订	yùdìng	book; subscribe for
+1084	1234	战争	zhànzhēng	War
+1085	1237	招待	zhāodài	Entertain
+1086	1245	诊断	zhěnduàn	Diagnosis
+1087	1255	指挥	zhǐhuī	command
+1088	1275	抓紧	zhuājǐn	Pay close attention to, grasp
+1089	1293	组合	zǔhé	combination
+1090	1294	阻止	zǔzhǐ	prevent
+1091	1297	尊敬	zūnjìng	respect
+1092	1	唉	āi	alas
+1093	4	岸	àn	bank
+1094	38	踩	cǎi	step on
+1095	42	插	chā	insert
+1096	44	拆	chāi	Remove
+1097	48	吵	chǎo	Noisy
+1098	52	称	chēng	call
+1099	63	冲	chōng	punching
+1100	68	丑	chǒu	ugly
+1101	77	闯	chuǎng	 rush; dash
+1102	78	吹	chuī	blow
+1103	85	醋	cù	vinegar
+1104	97	淡	dàn	light
+1105	102	滴	dī	drop
+1106	104	递	dì	Delivery
+1107	108	顶	dǐng	top
+1108	109	冻	dòng	freeze
+1109	111	逗	dòu	Funny
+1110	117	吨	dūn	ton
+1111	118	顿	dùn	Meal
+1112	143	扶	fú	hold up
+1113	169	乖	guāi	Good behaved
+1114	179	滚	gǔn	rolling
+1115	191	恨	hèn	hate
+1116	195	壶	hú	pot
+1117	222	甲	jiǎ	nail
+1118	228	捡	jiǎn	pick up
+1119	236	浇	jiāo	pour it over
+1120	249	届	jiè	Session
+1121	251	戒	jiè	Quit
+1122	270	砍	kǎn	cut
+1123	278	夸	kuā	boast, praise
+1124	281	烂	làn	rotten
+1125	301	龙	lóng	dragon
+1126	302	漏	lòu	leak
+1127	322	摸	mō	feel, touch
+1128	363	浅	qiǎn	shallow
+1129	364	枪	qiāng	gun
+1130	366	抢	qiǎng	rob
+1131	368	瞧	qiáo	look
+1132	380	劝	quàn	persuade
+1133	383	群	qún	group
+1134	385	绕	rào	Around
+1135	398	洒	sǎ	sprinkle
+1136	401	晒	shài	The sun
+1137	410	伸	shēn	stretch
+1138	416	诗	shī	poetry
+1139	445	税	shuì	tax
+1140	451	碎	suì	broken
+1141	453	锁	suǒ	lock
+1142	456	逃	táo	flee
+1143	459	套	tào	set
+1144	471	偷	tōu	steal
+1145	478	退	tuì	retreat
+1146	489	胃	wèi	stomach
+1147	499	勿	wù	Not
+1148	504	吓	xià	scare
+1149	508	县	xiàn	county
+1150	521	斜	xié	oblique
+1151	540	痒	yǎng	itch
+1152	542	腰	yāo	waist
+1153	543	咬	yǎo	bite
+1154	544	夜	yè	night
+1155	559	硬	yìng	hard
+1156	573	圆	yuán	circular
+1157	577	晕	yūn	faint
+1158	587	窄	zhǎi	narrow
+1159	592	阵	zhèn	front
+1160	593	睁	zhēng	open (eyes)
+1161	616	抓	zhuā	grab
+1162	620	装	zhuāng	pretend
+1163	623	追	zhuī	run after
+1164	627	紫	zǐ	purple
+1165	639	哎	āi	Oh
+1166	643	暗	àn	dark
+1167	645	摆	bǎi	pendulum
+1168	650	薄	báo	thin
+1169	657	背	bèi	Back
+1170	670	布	bù	cloth, textile
+1171	680	册	cè	volume, book
+1172	686	抄	chāo	copy
+1173	689	炒	chǎo	fry
+1174	708	臭	chòu	smelly
+1175	731	呆	dāi	stay
+1176	740	挡	dǎng	block
+1177	754	钓	diào	Fishing
+1178	755	洞	dòng	hole
+1179	759	堆	duī	heap
+1180	763	蹲	dūn	squat
+1181	787	幅	fú	classifier of picture
+1182	793	盖	gài	cover
+1183	802	搞	gǎo	get
+1184	822	官	guān	officer
+1185	834	锅	guō	pot
+1186	839	哈	hā	ah
+1187	841	喊	hǎn	shout
+1188	854	滑	huá	slippery
+1189	858	挥	huī	Essential
+1190	878	嫁	jià	get married to
+1191	908	捐	juān	Donate
+1192	928	拦	lán	Stop
+1193	935	雷	léi	Thunder
+1194	938	梨	lí	pear
+1195	981	嗯	en	Well
+1196	987	拍	pāi	beat
+1197	992	碰	pèng	touch, meet
+1198	998	飘	piāo	Gone with the wind
+1199	1011	欠	qiàn	owe
+1200	1012	墙	qiáng	wall
+1201	1016	青	qīng	young
+1202	1023	娶	qǔ	marry
+1203	1025	圈	quān	circle
+1204	1038	软	ruǎn	soft
+1205	1039	弱	ruò	weak
+1206	1041	杀	shā	kill
+1207	1043	傻	shǎ	silly
+1208	1049	蛇	shé	snake
+1209	1055	升	shēng	rise
+1210	1084	甩	shuǎi	Rejection
+1211	1086	撕	sī	tear
+1212	1099	烫	tàng	Hot
+1213	1100	桃	táo	peach
+1214	1115	吐	tù	spit
+1215	1116	团	tuán	group
+1216	1119	歪	wāi	Crooked
+1217	1140	吻	wěn	kiss
+1218	1146	雾	wù	Fog
+1219	1151	瞎	xiā	blind
+1220	1162	项	xiàng	term
+1221	1170	歇	xiē	Rest
+1222	1180	胸	xiōng	chest
+1223	1187	血	xuè	blood
+1224	1194	摇	yáo	shake
+1225	1201	乙	yǐ	
+1226	1203	亿	yì	Billion
+1227	1230	摘	zhāi	pick
+1228	1236	涨	zhǎng	rise
+1229	1252	挣	zhèng	earn, make
+1230	1266	猪	zhū	pig
+1231	1268	煮	zhǔ	cook
+1232	1278	撞	zhuàng	Hit
+1233	1292	组	zǔ	group
+1234	1295	醉	zuì	drunk
+1235	5	熬夜	áoyè	stay up late
+1236	20	鞭炮	biānpào	firecracker
+1237	28	玻璃	bōli	Glass
+1238	33	补充	bǔchōng	supplement
+1239	37	财产	cáichǎn	property
+1240	47	潮湿	cháoshī	damp
+1241	53	称赞	chēngzàn	Praise
+1242	87	措施	cuòshī	Measures
+1243	128	繁荣	fánróng	Boom
+1244	135	妨碍	fáng’ài	Hinder
+1245	141	讽刺	fěngcì	satire
+1246	153	隔壁	gébì	next door
+1247	173	冠军	guànjūn	Champion
+1248	184	豪华	háohuá	luxury
+1249	197	糊涂	hútu	Confused
+1250	225	驾驶	jiàshǐ	Drive
+1251	254	谨慎	jǐnshèn	cautious
+1252	261	舅舅	jiùjiu	uncle
+1253	285	姥姥	lǎolao	Grandma
+1254	361	谦虚	qiānxū	Modest
+1255	367	悄悄	qiāoqiāo	quietly
+1256	413	神秘	shénmì	mysterious
+1257	447	丝绸	sīchóu	silk
+1258	474	土豆	tǔdòu	Potato
+1259	487	尾巴	wěiba	tail
+1260	488	委屈	wěiqu	suffer from injustice
+1261	515	项链	xiàngliàn	Necklace
+1262	529	形状	xíngzhuàng	shape
+1263	533	宣布	xuānbù	Announce
+1264	557	英俊	yīngjùn	Handsome and spirited
+1265	562	拥挤	yōngjǐ	Crowded
+1266	605	智慧	zhìhuì	wisdom
+1267	626	姿势	zīshì	posture
+1268	637	组织	zǔzhī	organization
+1269	651	宝贝	bǎobèi	baby
+1270	662	编辑	biānjí	edit
+1271	675	采访	cǎifǎng	interview
+1272	678	惭愧	cánkuì	Be ashamed
+1273	684	产品	chǎnpǐn	product
+1274	690	吵架	chǎojià	quarrel
+1275	703	池塘	chítáng	Pond
+1276	704	翅膀	chìbǎng	Wing
+1277	741	岛屿	dǎoyǔ	Islands
+1278	756	豆腐	dòufu	Bean curd
+1279	765	躲藏	duǒcáng	Hide oneself
+1280	775	仿佛	fǎngfú	as if
+1281	781	纷纷	fēnfēn	one after another
+1282	785	疯狂	fēngkuáng	Insane
+1283	813	贡献	gòngxiàn	contribution
+1284	821	拐弯	guǎiwān	Turn
+1285	832	归纳	guīnà	Induce
+1286	851	蝴蝶	húdié	Butterfly
+1287	853	华裔	huáyì	Chinese born
+1288	880	肩膀	jiānbǎng	shoulder
+1289	882	艰巨	jiānjù	arduous
+1290	890	狡猾	jiǎohuá	cunning
+1291	930	劳驾	láojià	Excuse me
+1292	957	逻辑	luóji	logic
+1293	966	蜜蜂	mìfēng	honeybee
+1294	1013	强烈	qiángliè	strong
+1295	1045	善良	shànliáng	kind; virtuous
+1296	1051	设施	shèshī	facilities
+1297	1052	射击	shèjī	Shooting
+1298	1063	湿润	shīrùn	Moist
+1299	1087	丝毫	sīháo	A bit
+1300	1090	搜索	sōusuǒ	search

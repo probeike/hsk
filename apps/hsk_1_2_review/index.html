@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HSK 1 + 2 Grammar Review</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="dashboard">
+<div class="page">
+
+  <header>
+    <h1>HSK 1 + 2 Grammar Review</h1>
+    <p class="sub">Topic-themed review sheets · every other day · don't let the grammar rust</p>
+  </header>
+
+  <section class="progress-card">
+    <svg class="progress-ring" viewBox="0 0 80 80" aria-hidden="true">
+      <circle class="bg" cx="40" cy="40" r="34"></circle>
+      <circle class="fg" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6" stroke-linecap="round"></circle>
+      <text x="40" y="40">0%</text>
+    </svg>
+    <div class="info">
+      <h2>Your progress</h2>
+      <p class="muted" id="sheet-counter">0 of 18 sheets at solid</p>
+      <p class="next" id="next-up">Start anywhere — sheets are independent, but ordering them top-to-bottom gives the best cumulative-recall benefit.</p>
+    </div>
+  </section>
+
+  <div class="actions">
+    <a class="btn" href="sheets/01-pronouns-shi-ma.html">Start with sheet 01 →</a>
+    <button class="secondary" id="shuffle">Shuffle review</button>
+    <a class="btn secondary" href="reference.html">Open reference sheet</a>
+    <button class="secondary" id="reset">Reset progress</button>
+  </div>
+
+  <h2>How to use this</h2>
+  <p>
+    Open one sheet every other day. Each sheet is ~20–30 minutes. Try the
+    exercises <em>before</em> expanding the reminder — the point is active
+    recall, not reading. At the end, mark yourself honestly: <strong>solid</strong>,
+    <strong>shaky</strong>, or <strong>redo</strong>. Anything shaky or redo will
+    bubble back up as "next up" on this page. Sheets you haven't seen in more
+    than two days also go back in the queue.
+  </p>
+  <p>
+    The <a href="reference.html">reference sheet</a> is a one-page cheat sheet
+    of every grammar pattern. Use it if a sheet's reminder isn't enough, or
+    print it to keep on your desk.
+  </p>
+
+  <h2>All sheets</h2>
+  <ul class="sheet-list" id="sheet-list"></ul>
+
+  <p class="muted" style="margin-top: 2rem; font-size: .82rem;">
+    Progress is stored in your browser's <code>localStorage</code> — nothing
+    leaves this device. Clearing site data or using a different browser will
+    reset it.
+  </p>
+
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

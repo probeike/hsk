@@ -1,0 +1,32 @@
+谢
+谢
+、                       一LT全                                                               你
+  拼音规则 ( 1 ) : 标调法和省写
+Rules of Pinyin (1): Tone Marking and Abbreviation
+(1) 标调法“Tone Marking
+汉语拼音的声调必须标注在元音字母上。当一个韵母含有两个或者两个
+以上元音字母时，调号标注在开口度较大的那个元音字母上。调号标注的主
+要元音顺序为0.o.eiuu，但iu是个例外,iu是iou 的省略形式，声调标注
+在uU上。轻声音节不标声调。
+Tone marks in Chinese pinyin are put above vowels. When there are two or more
+vowels in the final of a syllable, the tone should be marked on the one that is pronounced
+with the mouth more wide-open, the sequence being “a, 0, e, i, u, i” in the descending
+order. The compound final iu is an exception to this rule, in which the tone mark is put on u
+rather than 7 as iu is the abbreviation of iou. The neutral tone is unmarked.
+DIE POG, TER UENIL SS. 028
+Read the syllables aloud and pay attention to the positions of the tone marks.
+xuéxido        bang mang _ Idnqiu          nu’ér
+you yong       shdubido        zhongyu      gongs!
+shijian          shénti           kuoshi         gudjia
+baozhi          hdochi          xiexie          keqi
+(2) 省写 Abbreviation
+iou. uei, uen 前面加声母的时候，写成: iusui un. PAM niu. gui, lun.
+When iou, uei or uen follows an initial, they are written as iu, ui and un respectively,
+for example, niu, gui, lun.
+朗读下列音节，注意韵母省写的部分 SS. 029
+Read the syllables aloud and pay attention to the abbreviated finals.
+xiuxi             shui jioo        lunchudn       niundi
+pijit          dnggui       liuyan        kai hui
+tdolun          zuqiu            Lundun         shirun
+cdnkui          shuiguo        tdozul          shunli
+]]

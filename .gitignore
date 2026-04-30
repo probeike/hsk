@@ -1,0 +1,10 @@
+.DS_Store
+third_party/
+
+# Dependencies
+node_modules/
+
+# Large source assets (kept locally, excluded from git)
+source/pdfs/*.pdf
+source/audio/*.rar
+source/audio/**/*.mp3

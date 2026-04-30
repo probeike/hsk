@@ -1,0 +1,600 @@
+1	255	可是	kěshì	however
+2	28	不过	búguò	However
+3	354	却	què	but
+4	103	而	ér	and
+5	26	并且	bìngqiě	also
+6	516	因此	yīncǐ	therefore
+7	527	由于	yóuyú	Because
+8	534	于是	yúshì	Therefore
+9	356	然而	rán’ér	however
+10	120	否则	fǒuzé	otherwise
+11	31	不仅	bùjǐn	not only
+12	195	既然	jìrán	although
+13	225	尽管	jǐnguǎn	although
+14	191	即使	jíshǐ	even if
+15	30	不管	bùguǎn	no matter
+16	458	无论	wúlùn	no matter what
+17	506	要是	yàoshi	If
+18	572	只要	zhǐyào	as long as
+19	571	只好	zhǐhǎo	have to
+20	29	不得不	bùdébù	have to
+21	86	得（助动词）	děi	have to
+22	512	以	yǐ	with
+23	535	与	yǔ	and
+24	563	之	zhī	of
+25	337	其中	qízhōng	among
+26	417	所有	suǒyǒu	All
+27	351	全部	quánbù	whole
+28	32	部分	bùfen	Part
+29	140	各	gè	various
+30	358	任何	rènhé	whatever, any
+31	511	一切	yíqiè	everything
+32	290	另外	lìngwài	in addition
+33	513	以为	yǐwéi	Think
+34	508	也许	yěxǔ	perhaps
+35	71	大概	dàgài	Probably
+36	73	大约	dàyuē	about
+37	595	左右 	zuǒyòu	About
+38	38	差不多	chàbuduō	Almost
+39	437	挺	tǐng	quite
+40	383	十分	shífēn	very
+41	446	完全	wánquán	completely
+42	50	重新	chóngxīn	again
+43	15	本来	běnlái	originally
+44	540	原来	yuánlái	Original
+45	137	刚	gāng	just
+46	374	甚至	shènzhì	Even to the extent that
+47	361	仍然	réngrán	still
+48	355	确实	quèshí	Exactly
+49	236	竟然	jìngrán	Unexpectedly
+50	239	究竟	jiūjìng	exactly
+51	82	到底	dàodǐ	To the end
+52	81	到处	dàochù	everywhere
+53	60	从来	cónglái	Always
+54	76	当	dāng	When
+55	77	当时	dāngshí	at that time
+56	320	偶尔	ǒu’ěr	occasionally
+57	447	往往	wǎngwǎng	Often
+58	396	首先	shǒuxiān	First
+59	336	其次	qícì	Secondly
+60	220	接着	jiēzhe	Next
+61	440	同时	tóngshí	meanwhile
+62	331	平时	píngshí	peacetime
+63	415	随着	suízhe	along with
+64	414	随便	suíbiàn	casual
+65	369	稍微	shāowēi	slightly
+66	179	互相	hùxiāng	each other
+67	144	共同	gòngtóng	common
+68	388	是否	shìfǒu	Whether
+69	286	连	lián	even
+70	526	由	yóu	from
+71	375	生活	shēnghuó	Life
+72	133	感觉	gǎnjué	feel
+73	105	发生	fāshēng	Happen
+74	106	发展	fāzhǎn	Development
+75	55	出现	chūxiàn	Appear
+76	197	继续	jìxù	Continue
+77	227	进行	jìnxíng	in process of
+78	128	改变	gǎibiàn	change
+79	387	使用	shǐyòng	Use
+80	219	接受	jiēshòu	accept
+81	46	成为	chéngwéi	Become
+82	45	成功	chénggōng	Success
+83	438	通过	tōngguò	through
+84	22	表示	biǎoshì	Express
+85	408	说明	shuōmíng	Explain
+86	278	理解	lǐjiě	Understand
+87	249	考虑	kǎolǜ	Consider
+88	386	使	shǐ	make
+89	398	受到	shòudào	Suffer
+90	185	获得	huòdé	Get
+91	431	提供	tígōng	provide
+92	433	提醒	tíxǐng	remind
+93	432	提前	tíqián	in advance
+94	430	提	tí	carry
+95	517	引起	yǐnqǐ	cause
+96	564	支持	zhīchí	Support
+97	110	反对	fǎnduì	Opposition
+98	325	批评	pīpíng	criticism
+99	228	禁止	jìnzhǐ	prohibit
+100	148	鼓励	gǔlì	encourage
+101	132	感动	gǎndòng	Be moved
+102	441	同情	tóngqíng	Sympathy
+103	9	保护	bǎohù	protect
+104	10	保证	bǎozhèng	ensure
+105	203	坚持	jiānchí	Insist
+106	287	联系	liánxì	contact
+107	88	等 （动）	děng	Wait (verb)
+108	483	行	xíng	That’s ok
+109	131	敢	gǎn	dare
+110	127	负责	fùzé	Be responsible for
+111	297	麻烦	máfan	trouble
+112	581	著名	zhùmíng	famous
+113	530	有趣	yǒuqù	interesting
+114	212	交流	jiāoliú	Communication
+115	173	合适	héshì	appropriate
+116	172	合格	hégé	qualified
+117	389	适合	shìhé	Fit
+118	390	适应	shìyìng	Adapt
+119	567	直接	zhíjiē	direct
+120	467	相同	xiāngtóng	identical
+121	466	相反	xiāngfǎn	Contrary
+122	556	真正	zhēnzhèng	real
+123	560	正确	zhèngquè	Correct
+124	558	正常	zhèngcháng	normal
+125	559	正好	zhènghǎo	Just right
+126	561	正式	zhèngshì	formal
+127	574	至少	zhìshǎo	at least
+128	579	主意	zhǔyi	idea
+129	230	经济	jīngjì	Economics
+130	371	社会	shèhuì	Sociology
+131	232	经验	jīngyàn	experience
+132	231	经历	jīnglì	experience
+133	182	活动	huódòng	activity
+134	163	过程	guòchéng	process
+135	315	内容	nèiróng	content
+136	347	情况	qíngkuàng	Situation
+137	111	方法	fāngfǎ	Method
+138	112	方面	fāngmiàn	Aspect
+139	113	方向	fāngxiàng	direction
+140	435	条件	tiáojiàn	condition
+141	221	结果	jiéguǒ	Result
+142	542	原因	yuányīn	Reason
+143	310	目的	mùdì	objective
+144	476	效果	xiàoguǒ	Effect
+145	599	作用	zuòyòng	Effect
+146	152	关键	guānjiàn	key
+147	316	能力	nénglì	ability
+148	196	技术	jìshù	technology
+149	480	信息	xìnxī	information
+150	471	消息	xiāoxi	message
+151	565	知识	zhīshi	knowledge
+152	218	教育	jiàoyù	education
+153	498	研究	yánjiū	research
+154	252	科学	kēxué	science
+155	515	艺术	yìshù	Art
+156	107	法律	fǎlǜ	Law
+157	160	国际	guójì	international
+158	308	民族	mínzú	Nation
+159	391	世纪	shìjì	century
+160	376	生命	shēngmìng	life
+161	91	地球	dìqiú	earth
+162	589	自然	zìrán	natural
+163	338	气候	qìhòu	climate
+164	453	温度	wēndù	temperature
+165	411	速度	sùdù	speed
+166	491	压力	yālì	pressure
+167	260	空气	kōngqì	air
+168	502	阳光	yángguāng	Sunshine
+169	164	海洋	hǎiyáng	ocean
+170	403	数字	shùzì	number
+171	402	数量	shùliàng	Number
+172	244	距离	jùlí	distance
+173	578	周围	zhōuwéi	around
+174	85	地点	dìdiǎn	location
+175	92	地址	dìzhǐ	address
+176	171	号码	hàomǎ	number
+177	305	密码	mìmǎ	Password
+178	248	看法	kànfǎ	view
+179	514	意见	yìjiàn	Opinion
+180	206	建议	jiànyì	proposal
+181	420	态度	tàidu	attitude
+182	486	性格	xìnggé	character
+183	327	脾气	píqi	Bad temper
+184	518	印象	yìnxiàng	impression
+185	478	心情	xīnqíng	mood
+186	1	爱情	àiqíng	Love
+187	134	感情	gǎnqíng	feeling
+188	532	友谊	yǒuyì	friendship
+189	531	友好	yǒuhǎo	friendly
+190	279	理想	lǐxiǎng	ideal
+191	207	将来	jiānglái	future
+192	181	回忆	huíyì	Memory
+193	194	计划	jìhuà	plan
+194	359	任务	rènwu	task
+195	159	规定	guīdìng	Regulations
+196	154	管理	guǎnlǐ	Administration
+197	551	责任	zérèn	responsibility
+198	439	通知	tōngzhī	notice
+199	562	证明	zhèngmíng	Prove
+200	224	解释	jiěshì	explain
+201	544	阅读	yuèdú	Read
+202	586	准确	zhǔnquè	accuracy
+203	323	判断	pànduàn	judge
+204	94	调查	diàochá	investigation
+205	147	估计	gūjì	estimate
+206	180	怀疑	huáiyí	doubt
+207	401	熟悉	shúxī	be familiar with
+208	135	感谢	gǎnxiè	Thank
+209	580	祝贺	zhùhè	Congratulate
+210	541	原谅	yuánliàng	Forgive
+211	83	道歉	dàoqiàn	apologize
+212	12	抱歉	bàoqiàn	feel sorry
+213	67	打扰	dǎrǎo	Disturb
+214	505	邀请	yāoqǐng	Invitation
+215	324	陪	péi	accompany
+216	291	留	liú	stay
+217	211	交	jiāo	hand over
+218	192	寄	jì	send
+219	392	收	shōu	collect
+220	350	取	qǔ	take
+221	62	存	cún	Deposit
+222	145	够	gòu	enough
+223	299	满	mǎn	full
+224	353	缺少	quēshǎo	Lack
+225	352	缺点	quēdiǎn	shortcoming
+226	523	优点	yōudiǎn	Advantage
+227	524	优秀	yōuxiù	excellent
+228	229	精彩	jīngcǎi	Marvellous
+229	119	丰富	fēngfù	rich
+230	126	复杂	fùzá	complex
+231	468	详细	xiángxì	detailed
+232	496	严格	yángé	strict
+233	497	严重	yánzhòng	serious
+234	334	普遍	pǔbiàn	universal
+235	293	流行	liúxíng	Popular
+236	576	重点	zhòngdiǎn	A key
+237	577	重视	zhòngshì	importance, attach importance to
+238	566	值得	zhídé	Worth
+239	121	符合	fúhé	accord with
+240	258	肯定	kěndìng	sure
+241	385	实在	shízài	really
+242	384	实际	shíjì	Actual
+243	591	总结	zǒngjié	summary
+244	557	整理	zhěnglǐ	Arrangement
+245	394	收拾	shōushi	Tidy
+246	2	安排	ānpái	arrange
+247	36	参观	cānguān	visit
+248	241	举办	jǔbàn	hold
+249	242	举行	jǔxíng	hold
+250	240	举	jǔ	lift
+251	419	抬	tái	Lift
+252	442	推	tuī	push
+253	266	拉	lā	pull
+254	151	挂	guà	hang
+255	341	敲	qiāo	knock
+256	570	指	zhǐ	finger, to point
+257	93	掉	diào	fall
+258	95	丢	diū	lose
+259	360	扔	rēng	throw
+260	74	戴	dài	wear
+261	444	脱	tuō	take off
+262	11	抱	bào	Hold
+263	425	躺	tǎng	lie
+264	484	醒	xǐng	wake up
+265	469	响	xiǎng	ring
+266	379	剩	shèng	Left
+267	130	赶	gǎn	catch up with
+268	400	输	shū	lose, fail
+269	520	赢	yíng	win
+270	318	弄	nòng	get, make
+271	584	转	zhuàn	turn
+272	585	赚	zhuàn	earn
+273	592	租	zū	rent
+274	33	擦	cā	wipe
+275	34	猜	cāi	guess
+276	39	尝	cháng	taste
+277	329	骗	piàn	fool
+278	247	开心	kāixīn	Happy
+279	533	愉快	yúkuài	Cheerful
+280	346	轻松	qīngsōng	Relaxed
+281	226	紧张	jǐnzhāng	Nervous
+282	187	激动	jīdòng	Excited
+283	482	兴奋	xīngfèn	Excitement
+284	313	难受	nánshòu	Uncomfortable
+285	381	失望	shīwàng	Disappointment
+286	368	伤心	shāngxīn	Sad
+287	176	后悔	hòuhuǐ	regret
+288	165	害羞	hàixiū	Shy
+289	49	吃惊	chījīng	Be amazed
+290	215	骄傲	jiāo’ào	Proud
+291	521	勇敢	yǒnggǎn	Brave
+292	276	冷静	lěngjìng	calm down
+293	183	活泼	huópō	lively
+294	274	浪漫	làngmàn	romantic
+295	525	幽默	yōumò	Humor
+296	47	诚实	chéngshí	honest
+297	477	辛苦	xīnkǔ	hard
+298	272	懒	lǎn	lazy
+299	16	笨	bèn	stupid
+300	404	帅	shuài	Handsome
+301	302	美丽	měilì	beautiful
+302	254	可怜	kělián	Poor
+303	256	可惜	kěxī	unfortunately
+304	282	厉害	lìhai	Fierce
+305	405	顺便	shùnbiàn	Incidentally
+306	406	顺利	shùnlì	smoothly
+307	407	顺序	shùnxù	order
+308	4	按时	ànshí	on time
+309	5	按照	ànzhào	according to
+310	339	千万	qiānwàn	Must
+311	261	恐怕	kǒngpà	I’m afraid
+312	312	难道	nándào	could it be said that …
+313	61	粗心	cūxīn	careless
+314	298	马虎	mǎhu	Careless
+315	588	仔细	zǐxì	careful
+316	311	耐心	nàixīn	patience
+317	590	自信	zìxìn	self-confidence
+318	84	得意	déyì	Proud
+319	487	幸福	xìngfú	happiness
+320	264	困	kùn	sleepy
+321	265	困难	kùnnan	difficulty
+322	150	故意	gùyì	deliberately
+323	280	礼貌	lǐmào	politeness
+324	292	流利	liúlì	fluent
+325	122	富	fù	rich
+326	348	穷	qióng	poor
+327	598	座位	zuòwèi	seat
+328	451	味道	wèidào	taste
+329	472	小吃	xiǎochī	snack
+330	109	烦恼	fánnǎo	annoyance
+331	457	无聊	wúliáo	Boring
+332	319	暖和	nuǎnhuo	warm
+333	288	凉快	liángkuai	Pleasantly cool
+334	357	热闹	rènao	lively
+335	259	空	kōng	empty
+336	155	光	guāng	light
+337	303	梦	mèng	dream
+338	184	火	huǒ	fire
+339	545	云	yún	cloud
+340	167	汗	hàn	sweat
+341	300	毛	máo	hair
+342	495	盐	yán	salt
+343	424	糖	táng	sugar
+344	423	汤	tāng	soup
+345	413	酸	suān	acid
+346	268	辣	là	spicy
+347	462	咸	xián	salty
+348	262	苦	kǔ	bitter
+349	465	香	xiāng	fragrant
+350	201	假	jiǎ	false 
+351	89	低	dī	low
+352	90	底	dǐ	bottom
+353	175	厚	hòu	thick
+354	345	轻	qīng	light
+355	575	重	zhòng	heavy
+356	372	深	shēn	deep
+357	99	短信	duǎnxìn	Short message
+358	101	对话	duìhuà	dialogue
+359	59	词语	cíyǔ	terms, words
+360	454	文章	wénzhāng	Article
+361	474	小说	xiǎoshuō	Novel
+362	547	杂志	zázhì	Magazine
+363	509	页	yè	page
+364	328	篇	piān	piece
+365	222	节	jié	section, festival
+366	479	信封	xìnfēng	envelope
+367	481	信心	xìnxīn	confidence
+368	64	答案	dá’àn	Answer
+369	63	错误	cuòwù	error
+370	142	工资	gōngzī	wages
+371	208	奖金	jiǎngjīn	bonus
+372	393	收入	shōurù	income
+373	463	现金	xiànjīn	cash
+374	289	零钱	língqián	Small change
+375	202	价格	jiàgé	Price
+376	123	付款	fùkuǎn	pay
+377	69	打折	dǎzhé	Discount
+378	306	免费	miǎnfèi	Free of charge
+379	146	购物	gòuwù	Shopping
+380	149	顾客	gùkè	customer
+381	399	售货员	shòuhuòyuán	Salesperson
+382	367	商量	shāngliang	discuss
+383	377	生意	shēngyi	business
+384	554	招聘	zhāopìn	recruit
+385	519	应聘	yìngpìn	Apply for
+386	373	申请	shēnqǐng	Apply
+387	199	加班	jiābān	overtime work
+388	52	出差	chūchāi	A business travel
+389	53	出发	chūfā	Set out
+390	54	出生	chūshēng	Birth
+391	18	毕业	bìyè	graduation
+392	13	报名	bàomíng	sign up
+393	87	登机牌	dēngjīpái	Boarding pass
+394	340	签证	qiānzhèng	visa
+395	96	动作	dòngzuò	action
+396	23	表演	biǎoyǎn	perform
+397	24	表扬	biǎoyáng	Praise
+398	21	表格	biǎogé	form
+399	499	演出	yǎnchū	show
+400	500	演员	yǎnyuán	performer, actor
+401	153	观众	guānzhòng	Audience
+402	193	记者	jìzhě	Reporter
+403	234	警察	jǐngchá	Policeman
+404	296	律师	lǜshī	Lawyer
+405	217	教授	jiàoshòu	professor
+406	409	硕士	shuòshì	master
+407	27	博士	bóshì	doctor
+408	75	大夫	dàifu	Doctor
+409	177	护士	hùshi	Nurse
+410	382	师傅	shīfu	Master worker
+411	597	作家	zuòjiā	writer
+412	600	作者	zuòzhě	author
+413	114	房东	fángdōng	landlord
+414	416	孙子	sūnzi	Grandson
+415	344	亲戚	qīnqi	Relative
+416	104	儿童	értóng	children
+417	473	小伙子	xiǎohuǒzi	Young fellow
+418	285	俩	liǎ	Two
+419	548	咱们	zánmen	We
+420	124	父亲	fùqīn	father
+421	309	母亲	mǔqīn	mother
+422	583	专业	zhuānyè	major
+423	582	专门	zhuānmén	specialized
+424	569	职业	zhíyè	Occupation
+425	141	公里	gōnglǐ	kilometre
+426	143	功夫	gōngfu	Kungfu 
+427	283	力气	lìqi	Strength
+428	317	年龄	niánlíng	Age
+429	485	性别	xìngbié	Gender
+430	161	国籍	guójí	nationality
+431	395	首都	shǒudū	capital
+432	378	省	shěng	province
+433	214	郊区	jiāoqū	Suburb
+434	108	翻译	fānyì	translate
+435	125	复印	fùyìn	To copy
+436	68	打印	dǎyìn	Print
+437	66	打扮	dǎban	dress up
+438	65	打招呼	dǎzhāohu	Say hello
+439	70	打针	dǎzhēn	To make an injection
+440	51	抽烟	chōuyān	smoking
+441	503	养成	yǎngchéng	Cultivate
+442	209	降低	jiàngdī	reduce
+443	210	降落	jiàngluò	land
+444	205	减少	jiǎnshǎo	reduce
+445	204	减肥	jiǎnféi	Reduce weight
+446	552	增加	zēngjiā	increase
+447	43	超过	chāoguò	Exceed
+448	443	推迟	tuīchí	delay
+449	436	停	tíng	Stop
+450	461	吸引	xīyǐn	Attract
+451	189	积累	jīlěi	accumulation
+452	188	积极	jījí	positive
+453	190	及时	jíshí	timely
+454	223	节约	jiéyuē	save
+455	273	浪费	làngfèi	Waste
+456	459	误会	wùhuì	Misunderstanding
+457	332	破	pò	broken
+458	294	乱	luàn	chaos
+459	550	脏	zāng	dirty
+460	102	对面	duìmiàn	Opposite side
+461	100	对于	duìyú	about
+462	17	比如	bǐrú	such as
+463	284	例如	lìrú	for example
+464	529	尤其	yóuqí	especially
+465	429	特点	tèdiǎn	Characteristic
+466	349	区别	qūbié	Difference
+467	169	好处	hǎochù	benefit
+468	170	好像	hǎoxiàng	Be like, seem
+469	80	倒	dào	inverted
+470	456	无	wú	nothing
+471	158	逛	guàng	Stroll
+472	504	样子	yàngzi	A look
+473	235	景色	jǐngsè	scenery
+474	42	场	chǎng	site
+475	596	座	zuò	Seat
+476	418	台	tái	platform
+477	426	趟	tàng	Trip
+478	14	倍	bèi	times
+479	19	遍	biàn	Times
+480	118	份	fèn	share (measure word)
+481	307	秒	miǎo	second
+482	251	棵	kē	Tree (measure word)
+483	7	棒 	bàng	stick；excellent
+484	6	百分之 	bǎifēnzhī	percent
+485	35	材料	cáiliào	Material Science
+486	573	质量	zhìliàng	quality
+487	314	内	nèi	within
+488	216	饺子	jiǎozi	Dumplings
+489	8	包子	bāozi	Steamed stuffed bun
+490	25	饼干	bǐnggān	Biscuits
+491	333	葡萄	pútao	Grape
+492	162	果汁	guǒzhī	fruit juice
+493	343	巧克力	qiǎokèlì	Chocolates
+494	250	烤鸭	kǎoyā	Roasted Duck
+495	263	矿泉水	kuàngquánshuǐ	Mineral water
+496	460	西红柿	xīhóngshì	Tomato
+497	37	餐厅	cāntīng	Restaurant
+498	56	厨房	chúfáng	Kitchen
+499	257	客厅	kètīng	A living room
+500	452	卫生间	wèishēngjiān	toilet
+501	44	厕所	cèsuǒ	Toilet
+502	366	沙发	shāfā	Sofa
+503	238	镜子	jìngzi	Mirror
+504	370	勺子	sháozi	Spoon
+505	174	盒子	hézi	Box
+506	78	刀	dāo	knife
+507	301	毛巾	máojīn	Towel
+508	492	牙膏	yágāo	toothpaste
+509	470	橡皮	xiàngpí	rubber
+510	507	钥匙	yàoshi	Key
+511	445	袜子	wàzi	Socks
+512	501	眼镜	yǎnjìng	glasses
+513	57	传真	chuánzhēn	Fax
+514	267	垃圾桶	lājītǒng	Trash
+515	412	塑料袋	sùliàodài	Plastic bag
+516	198	家具	jiājù	furniture
+517	58	窗户	chuānghu	Window
+518	363	入口	rùkǒu	Entrance
+519	342	桥	qiáo	Bridge
+520	40	长城	chángchéng	The Great Wall
+521	41	长江	chángjiāng	The Yangtze River
+522	200	加油站	jiāyóuzhàn	Gas station
+523	72	大使馆	dàshǐguǎn	Embassy
+524	528	邮局	yóujú	Post Office
+525	138	高速公路	gāosùgōnglù	Expressway
+526	178	互联网 	hùliánwǎng	Internet
+527	449	网站	wǎngzhàn	website
+528	448	网球	wǎngqiú	Tennis
+529	538	羽毛球	yǔmáoqiú	Badminton
+530	330	乒乓球	pīngpāngqiú	Table Tennis
+531	233	京剧	jīngjù	Beijing opera
+532	157	广告	guǎnggào	Advertisement
+533	156	广播	guǎngbō	Radio broadcast
+534	139	胳膊	gēbo	Arm
+535	98	肚子	dùzi	belly
+536	326	皮肤	pífū	skin
+537	253	咳嗽	késou	cough
+538	277	理发	lǐfà	Haircut
+539	364	散步	sànbù	Take a walk
+540	117	放松	fàngsōng	Relax
+541	115	放弃	fàngqì	give up
+542	116	放暑假	fàngshǔjià	summer vacation
+543	166	寒假	hánjià	The winter vacation
+544	490	学期	xuéqī	Semester
+545	539	预习	yùxí	Preview
+546	186	基础	jīchǔ	Basics
+547	20	标准	biāozhǔn	standard
+548	365	森林	sēnlín	Forest
+549	275	老虎	lǎohǔ	Tiger
+550	281	礼拜天	lǐbàitiān	Sunday
+551	568	植物	zhíwù	Botany, plant
+552	510	叶子	yèzi	Leaf
+553	455	污染	wūrǎn	contaminated
+554	450	危险	wēixiǎn	danger
+555	3	安全	ānquán	security
+556	246	开玩笑	kāiwánxiào	Make fun of
+557	475	笑话	xiàohua	joke
+558	245	聚会	jùhuì	Party
+559	543	约会	yuēhuì	Date
+560	295	旅行	lǚxíng	travel
+561	79	导游	dǎoyóu	Guide
+562	48	乘坐	chéngzuò	ride
+563	168	航班	hángbān	flight
+564	213	交通	jiāotōng	traffic
+565	97	堵车	dǔchē	Traffic jam
+566	304	迷路	mílù	Get lost
+567	270	来不及	láibují	There’s not enough time
+568	271	来得及	láidejí	In time
+569	269	来自	láizì	Come from
+570	549	暂时	zànshí	temporary
+571	522	永远	yǒngyuǎn	forever
+572	593	最好	zuìhǎo	Best
+573	335	普通话	pǔtōnghuà	Mandarin
+574	537	语言	yǔyán	language
+575	536	语法	yǔfǎ	grammar
+576	362	日记	rìjì	diary
+577	546	允许	yǔnxǔ	allow
+578	243	拒绝	jùjué	refuse
+579	380	失败	shībài	fail
+580	410	死	sǐ	die
+581	321	排队	páiduì	queue; stand in a line
+582	322	排列	páiliè	array
+583	237	竞争	jìngzhēng	compete
+584	553	占线	zhànxiàn	(line) Busy
+585	555	照	zhào	reflect
+586	397	受不了	shòubuliǎo	Cannot bear sth
+587	464	羡慕	xiànmù	Envy
+588	493	亚洲	yàzhōu	Asia
+589	488	修理 	xiūlǐ	repair
+590	489	许多	xǔduō	many
+591	136	干	gān	dry
+592	129	干杯	gānbēi	Cheers!
+593	494	呀	ya	ah
+594	587	准时	zhǔnshí	on time
+595	434	填空	tiánkòng	Fill in the blanks
+596	594	尊重	zūnzhòng	respect
+597	427	讨论	tǎolùn	discuss
+598	428	讨厌	tǎoyàn	Hate
+599	421	谈	tán	talk
+600	422	弹钢琴	tángāngqín	Play the piano

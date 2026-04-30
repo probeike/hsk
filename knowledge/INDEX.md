@@ -1,0 +1,87 @@
+# Knowledge index
+
+## HSK 1 lessons
+
+- [Lesson 01](hsk_1/lesson_01.md) — 你好 (Hello)
+- [Lesson 02](hsk_1/lesson_02.md) — 谢谢你 (Thank you)
+- [Lesson 03](hsk_1/lesson_03.md) — 你叫什么名字 (What's your name)
+- [Lesson 04](hsk_1/lesson_04.md) — 她是我的汉语老师 (She is my Chinese teacher)
+- [Lesson 05](hsk_1/lesson_05.md) — 她女儿今年二十岁 (Her daughter is 20 years old this year)
+- [Lesson 06](hsk_1/lesson_06.md) — 我会说汉语 (I can speak Chinese)
+- [Lesson 07](hsk_1/lesson_07.md) — 今天几号 (What's the date today)
+- [Lesson 08](hsk_1/lesson_08.md) — 我想喝茶 (I'd like some tea)
+- [Lesson 09](hsk_1/lesson_09.md) — 你儿子在哪儿工作 (Where does your son work)
+- [Lesson 10](hsk_1/lesson_10.md) — 我能坐这儿吗 (Can I sit here)
+- [Lesson 11](hsk_1/lesson_11.md) — 现在几点 (What's the time now)
+- [Lesson 12](hsk_1/lesson_12.md) — 明天天气怎么样 (What will the weather be like tomorrow)
+- [Lesson 13](hsk_1/lesson_13.md) — 他在学做中国菜呢 (He is learning to cook Chinese food)
+- [Lesson 14](hsk_1/lesson_14.md) — 她买了不少衣服 (She has bought quite a few clothes)
+- [Lesson 15](hsk_1/lesson_15.md) — 我是坐飞机来的 (I came here by air)
+
+## HSK 2 lessons
+
+- [Lesson 01](hsk_2/lesson_01.md) — 九月去北京旅游最好 (September is the best time to visit Beijing)
+- [Lesson 02](hsk_2/lesson_02.md) — 我每天六点起床 (I get up at six every day)
+- [Lesson 03](hsk_2/lesson_03.md) — 左边那个红色的是我的 (The red one on the left is mine)
+- [Lesson 04](hsk_2/lesson_04.md) — 这个工作是他帮我介绍的 (He recommended me for this job)
+- [Lesson 05](hsk_2/lesson_05.md) — 就买这件吧 (Take this one)
+- [Lesson 06](hsk_2/lesson_06.md) — 你怎么不吃了 (Why don't you eat more)
+- [Lesson 07](hsk_2/lesson_07.md) — 你家离公司远吗 (Do you live far from your company)
+- [Lesson 08](hsk_2/lesson_08.md) — 让我想想再告诉你 (Let me think about it and I'll tell you later)
+- [Lesson 09](hsk_2/lesson_09.md) — 题太多，我没做完 (There were too many questions; I didn't finish all of them)
+- [Lesson 10](hsk_2/lesson_10.md) — 别找了，手机在桌子上 (Stop looking for your cell phone; it's on the desk)
+- [Lesson 11](hsk_2/lesson_11.md) — 他比我大三岁 (He is three years older than me)
+- [Lesson 12](hsk_2/lesson_12.md) — 你穿得太少了 (You're wearing too little)
+- [Lesson 13](hsk_2/lesson_13.md) — 门开着呢 (The door is open)
+- [Lesson 14](hsk_2/lesson_14.md) — 你看过那个电影吗 (Have you seen that movie)
+- [Lesson 15](hsk_2/lesson_15.md) — 新年就要到了 (The New Year is coming)
+
+## HSK 3 lessons
+
+- [Lesson 01](hsk_3/lesson_01.md) — 周末你有什么打算 (What's your plan for the weekend)
+- [Lesson 02](hsk_3/lesson_02.md) — 他什么时候回来 (When will he come back)
+- [Lesson 03](hsk_3/lesson_03.md) — 桌子上放着很多饮料 (There are plenty of drinks on the table)
+- [Lesson 04](hsk_3/lesson_04.md) — 她总是笑着跟客人说话 (She always smiles when talking to customers)
+- [Lesson 05](hsk_3/lesson_05.md) — 我最近越来越胖了 (I am getting fatter and fatter lately)
+- [Lesson 06](hsk_3/lesson_06.md) — 怎么突然找不到了 (Why are they suddenly missing)
+- [Lesson 07](hsk_3/lesson_07.md) — 我跟她都认识五年了 (I've known her for five years)
+- [Lesson 08](hsk_3/lesson_08.md) — 你去哪儿我就去哪儿 (I'll go wherever you go)
+- [Lesson 09](hsk_3/lesson_09.md) — 她的汉语说得跟中国人一样好 (She speaks Chinese like a native)
+- [Lesson 10](hsk_3/lesson_10.md) — 数学比历史难多了 (Maths is much harder than history)
+- [Lesson 11](hsk_3/lesson_11.md) — 别忘了把空调关了 (Don't forget to turn off the air conditioner)
+- [Lesson 12](hsk_3/lesson_12.md) — 把重要的东西放在我这儿吧 (Leave the important items with me)
+- [Lesson 13](hsk_3/lesson_13.md) — 我是走回来的 (I walked back)
+- [Lesson 14](hsk_3/lesson_14.md) — 你把水果拿过来 (Please bring the fruit here)
+- [Lesson 15](hsk_3/lesson_15.md) — 其他都没什么问题 (The rest of them are all OK)
+- [Lesson 16](hsk_3/lesson_16.md) — 我现在累得下了班就想睡觉 (I am so tired that I want to do nothing but sleep after work)
+- [Lesson 17](hsk_3/lesson_17.md) — 谁都有办法看好你的病 (Everybody is able to cure your disease)
+- [Lesson 18](hsk_3/lesson_18.md) — 我相信他们会同意的 (I believe they'll agree)
+- [Lesson 19](hsk_3/lesson_19.md) — 你没看出来吗 (Didn't you recognise him)
+- [Lesson 20](hsk_3/lesson_20.md) — 我被他影响了 (I've been influenced by him)
+
+## HSK 3 grammar appendices
+
+- [Discourse particles (HSK 3)](hsk_3/appendices/particles.md)
+- [The three 了s](hsk_3/appendices/three_les.md)
+
+## HSK 1/2 grammar reference
+
+- [Pronouns · 是 · 吗 · negation](grammar_reference/hsk_1_2/01_pronouns_shi_ma.md)
+- [的 — possessive & nominaliser](grammar_reference/hsk_1_2/02_possessive_de.md)
+- [Question words I: 什么 / 谁 / 哪 / 哪儿](grammar_reference/hsk_1_2/03_question_words_1.md)
+- [Question words II: 几 / 多少 / 怎么 / 怎么样 / 多](grammar_reference/hsk_1_2/04_question_words_2.md)
+- [Numbers & measure words](grammar_reference/hsk_1_2/05_numbers_measure.md)
+- [Time & date expressions](grammar_reference/hsk_1_2/06_time_date.md)
+- [Location: 在 (verb & preposition) · 有 (existential)](grammar_reference/hsk_1_2/07_location.md)
+- [Conjunctions: 和 · 因为…所以 · 虽然…但是 · 也 · 还](grammar_reference/hsk_1_2/08_conjunctions.md)
+- [Modal verbs: 想 / 要 / 会 / 能](grammar_reference/hsk_1_2/09_modals.md)
+- [Degree adverbs: 太 · 最 · 真 · 有点儿 · 还 · 就 · 再](grammar_reference/hsk_1_2/10_degree_adverbs.md)
+- [了 part 1 — completed action](grammar_reference/hsk_1_2/11_le_completed.md)
+- [了 part 2 — change of state & imminent action](grammar_reference/hsk_1_2/12_le_change.md)
+- [在…呢 — ongoing action](grammar_reference/hsk_1_2/13_zai_ne.md)
+- [着 — continuing state](grammar_reference/hsk_1_2/14_zhe.md)
+- [过 — experience · and the big three: 了 / 过 / 着](grammar_reference/hsk_1_2/15_guo_contrast.md)
+- [是…的 focus structure](grammar_reference/hsk_1_2/16_shi_de.md)
+- [Complements: 结果 & 得-state](grammar_reference/hsk_1_2/17_complements.md)
+- [比 comparison · round-up & mixed cumulative](grammar_reference/hsk_1_2/18_bi_roundup.md)
+- [Full reference (single doc)](grammar_reference/hsk_1_2/full_reference.md)
