@@ -172,6 +172,74 @@ html, body {
 }
 .when strong { color: var(--accent); }
 
+/* ---------- First-time learning scaffolds ---------- */
+.bridge,
+.learn-step,
+.decision-guide {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 14px 0;
+}
+.bridge {
+  background: #f7fbff;
+  border-color: #d8e7f7;
+}
+.bridge h3,
+.learn-step h3,
+.decision-guide h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.learn-step ol,
+.decision-guide ol {
+  margin: 0;
+  padding-left: 22px;
+}
+.learn-step li,
+.decision-guide li {
+  margin: 5px 0;
+}
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.mini-table th,
+.mini-table td {
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.mini-table th {
+  text-align: left;
+  color: var(--muted);
+  background: #f3f1eb;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.mini-table tr:last-child td { border-bottom: 0; }
+.mini-table .han { font-size: 19px; }
+@media (max-width: 600px) {
+  .mini-table {
+    font-size: 13px;
+  }
+  .mini-table th,
+  .mini-table td {
+    padding: 7px 8px;
+  }
+}
+
 /* ---------- Schema diagram ---------- */
 .schema {
   display: flex;
@@ -565,3 +633,179 @@ html, body {
   font-family: var(--han);
   font-size: 16px;
 }
+
+/* =====================================================================
+   READING PRACTICE — reading01.html … reading20.html
+   ===================================================================== */
+
+/* Passage box. Characters show by default; pinyin is hidden until the
+   per-passage "Show pinyin" toggle adds .show-pinyin. */
+.reading-text {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 14px 0 18px;
+}
+.reading-text .cn {
+  font-family: var(--han);
+  font-size: 23px;
+  line-height: 1.9;
+  margin: 0;
+  color: var(--ink);
+}
+.reading-text .cn .speaker { color: var(--muted); font-weight: 700; margin-right: 4px; }
+.reading-text .py {
+  display: none;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--rule);
+}
+.reading-text.show-pinyin .py { display: block; }
+
+/* Inline gloss for the ≤2 allowed out-of-list words per passage. */
+.gloss-note {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* "Show pinyin" toggle button */
+.py-toggle {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+  margin: 0 0 8px;
+}
+.py-toggle:hover { background: #fbdce1; }
+.py-toggle[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
+/* Free-writing task area */
+.writing-area textarea {
+  width: 100%;
+  min-height: 110px;
+  font-family: var(--han);
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  resize: vertical;
+}
+
+/* Reading-practice index grid (index.html) */
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+.reading-link {
+  display: block;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  background: var(--surface);
+  font-family: var(--han);
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.reading-link:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+/* =====================================================================
+   READING — matching (配对) and word-bank cloze (选词填空) widgets
+   ===================================================================== */
+
+/* Matching / pairing */
+.match {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 22px;
+  margin: 12px 0;
+}
+.match-col { display: flex; flex-direction: column; gap: 8px; }
+.match-col .col-head {
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2px;
+}
+.match-item {
+  position: relative;
+  display: flex; align-items: center; gap: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: var(--han);
+  font-size: 17px;
+  line-height: 1.4;
+  padding: 10px 12px 10px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.match-item:hover { border-color: var(--accent); }
+.match-item.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.match-item.done, .match-item.paired { background: #f3f8f3; border-color: var(--ok); }
+.match-badge {
+  flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 22px; height: 22px; padding: 0 4px;
+  border-radius: 50%;
+  background: var(--c-marker-bg); color: var(--c-marker);
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+}
+.match-item.paired .match-badge { background: var(--c-verb-bg); color: var(--c-verb); }
+
+/* Word-bank cloze */
+.cloze .wordbank {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 12px;
+  background: #f3f1eb;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.cloze .word {
+  font-family: var(--han);
+  font-size: 17px;
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.cloze .word:hover { border-color: var(--accent); }
+.cloze .word.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.cloze .word.used { opacity: 0.32; pointer-events: none; }
+.cloze-text {
+  font-family: var(--han);
+  font-size: 20px;
+  line-height: 2.3;
+  margin: 0;
+}
+.cloze-text .blank {
+  display: inline-block;
+  min-width: 70px;
+  margin: 0 3px;
+  padding: 0 6px;
+  text-align: center;
+  border-bottom: 2px solid var(--muted);
+  cursor: pointer;
+  color: var(--c-verb);
+  font-weight: 700;
+}
+.cloze-text .blank.filled { border-bottom-color: var(--ok); }
+.cloze-text .blank:empty::before { content: "（　）"; color: var(--muted); font-weight: 400; }

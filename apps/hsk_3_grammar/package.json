@@ -22,6 +22,10 @@
       "main.js",
       "index.html",
       "lesson*.html",
+      "reading*.html",
+      "review*.html",
+      "particles.html",
+      "three-le.html",
       "styles.css",
       "script.js",
       "package.json"
