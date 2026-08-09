@@ -206,10 +206,12 @@ Run these checks (scripts have lived in the session scratchpad; reproduce as nee
 
 ---
 
-## 9. Custom personalized lessons (`three-de`, `timeline`, `aspect`)
+## 9. Custom personalized lessons (`../custom_grammar/`)
 
 Three cross-cutting lesson+reading pairs built for the learner personally (from their own tutoring
-sentences), owned by no textbook chapter — like the appendices, but with paired readings:
+sentences), owned by no textbook chapter. They live in their own collection at `../custom_grammar/`
+(with their own `index.html` and copies of `styles.css`/`script.js`), follow all conventions in this
+document, and cross-link back into this course (e.g. `../hsk_3_grammar/lesson05.html#g3`):
 
 - `three-de.html` / `three-de-reading.html` — 的 / 得 / 地 discrimination, incl. 是…的 and the
   separable-verb repeat (跳舞跳得很好).
