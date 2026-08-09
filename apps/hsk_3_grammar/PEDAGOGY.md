@@ -81,9 +81,13 @@ Data sources for the allowed set (read these; don't invent vocab):
 
 ## 4. Grammar lesson (`lessonNN.html`) conventions
 
-Standard skeleton: `head` → `nav.topnav` → `header.lesson-hero` (title, pinyin, English) → `section.overview`
-("What you'll learn") → numbered `section.gp` grammar points → "Mixed practice" → `nav.lesson-nav` →
-`<script src="script.js">`.
+Standard skeleton: `head` → `nav.topnav` → `header.lesson-hero` (title, pinyin, English) →
+`section.overview.vocab-overview` ("New vocabulary") → `section.overview` ("What you'll learn") →
+numbered `section.gp` grammar points → "Mixed practice" → `nav.lesson-nav` → `<script src="script.js">`.
+
+The vocabulary overview must use the exact new-word table for that chapter from
+`../../knowledge/hsk_3/lesson_0N.md`, which is generated from the textbook OCR in
+`../../lesson_texts/hsk_3/HSK3-LessonNN.txt`.
 
 Within each grammar point (`section.gp`), use these building blocks (all already styled in `styles.css`):
 - `.when` — "When a speaker reaches for this" (function first, principle 1).
@@ -202,7 +206,27 @@ Run these checks (scripts have lived in the session scratchpad; reproduce as nee
 
 ---
 
-## 9. Hard constraints (don't violate)
+## 9. Custom personalized lessons (`three-de`, `timeline`, `aspect`)
+
+Three cross-cutting lesson+reading pairs built for the learner personally (from their own tutoring
+sentences), owned by no textbook chapter — like the appendices, but with paired readings:
+
+- `three-de.html` / `three-de-reading.html` — 的 / 得 / 地 discrimination, incl. 是…的 and the
+  separable-verb repeat (跳舞跳得很好).
+- `timeline.html` / `timeline-reading.html` — calendar navigation (上/下 system), offsets (X个月前,
+  X个星期之后, 过几天), 前两个月 vs 两个月前, and time-word placement (Time+Place+Verb).
+- `aspect.html` / `aspect-reading.html` — the action timeline 还没…呢 → 正在 → 快要/就要…了 →
+  刚/已经…了, plus future-intent 要/想/会/打算 and 当 vs 成为.
+
+**Vocab rule for these pairs (differs from §3):** allowed = HSK 1–2 + HSK 3 lessons 1–8 only + each
+lesson's own "New vocabulary" table, which declares the learner's personal off-list words
+(辞职, 老板, 舞蹈, 工程师, 压力, 搬家…). Roughly half the sentences use the learner's real contexts
+(New York, dance, quitting to become a boss/dance teacher); the rest use the standard cast. If the
+learner advances past HSK 3 lesson 8, later-lesson vocab may be mixed in on revision.
+
+---
+
+## 10. Hard constraints (don't violate)
 
 - **Offline-first.** No CDN, no web fonts, no external assets, no network calls. Everything works from the
   local filesystem.

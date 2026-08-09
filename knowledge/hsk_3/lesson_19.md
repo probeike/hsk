@@ -18,7 +18,7 @@ vocab_count: 11
 | Chinese | Pinyin | English |
 |---|---|---|
 | 张 | zhāng | measure word |
-| 位 wèi (measure word for people (polite)) |  |  |
+| 位 | wèi | measure word for people (polite) |
 | 蓝 | lán | blue |
 | 秋(天) | qiū(tiān) | autumn |
 | 爷爷 | yéye | grandfather |

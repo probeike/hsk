@@ -24,7 +24,7 @@ vocab_count: 14
 | 方便 | fāngbiàn | convenient |
 | 自行车 | zìxíngchē | bicycle |
 | 骑 | qí | to ride |
-| 旧 jiù (old (used)) |  |  |
+| 旧 | jiù | old (used) |
 | 换 | huàn | to exchange, to change |
 | 地方 | dìfang | place |
 | 中介 | zhōngjiè | agency, intermediary |

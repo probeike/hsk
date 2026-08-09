@@ -219,10 +219,26 @@ def _parse_hsk3_vocab_line(entry: str):
     The english is the content of the LAST top-level (...) at end of line;
     the rest splits on first whitespace into chinese / pinyin.
     """
-    m = re.match(r"^(.*)\s+\(([^()]*)\)\s*$", entry)
-    if not m:
+    entry = entry.strip()
+    if not entry.endswith(")"):
         return (entry, "", "")
-    head, english = m.group(1).strip(), m.group(2).strip()
+
+    depth = 0
+    open_idx = None
+    for i in range(len(entry) - 1, -1, -1):
+        if entry[i] == ")":
+            depth += 1
+        elif entry[i] == "(":
+            depth -= 1
+            if depth == 0:
+                open_idx = i
+                break
+
+    if open_idx is None:
+        return (entry, "", "")
+
+    head = entry[:open_idx].strip()
+    english = entry[open_idx + 1 : -1].strip()
     parts = head.split(None, 1)
     if len(parts) == 2:
         return (parts[0].strip(), parts[1].strip(), english)

@@ -120,6 +120,30 @@ html, body {
 .overview a { color: var(--accent); text-decoration: none; }
 .overview a:hover { text-decoration: underline; }
 
+.vocab-overview table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.vocab-overview th,
+.vocab-overview td {
+  border-top: 1px solid var(--rule);
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.vocab-overview th {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.vocab-overview td:first-child {
+  font-family: var(--han);
+  font-size: 17px;
+  white-space: nowrap;
+}
+
 /* ---------- Grammar section ---------- */
 .gp {
   border-top: 1px solid var(--rule);

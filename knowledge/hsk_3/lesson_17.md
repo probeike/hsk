@@ -23,7 +23,7 @@ vocab_count: 16
 | 后来 | hòulái | afterwards |
 | 爱好 | àihào | hobby |
 | 办法 | bànfǎ | way, method |
-| 饱 bǎo (full (after eating)) |  |  |
+| 饱 | bǎo | full (after eating) |
 | 为了 | wèile | for, in order to |
 | 决定 | juédìng | to decide |
 | 选择 | xuǎnzé | to choose |

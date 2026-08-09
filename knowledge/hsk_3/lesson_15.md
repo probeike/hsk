@@ -34,7 +34,7 @@ vocab_count: 22
 | 花 | huā | flower, to spend |
 | 极(了) | jí(le) | extremely |
 | 节日 | jiérì | festival |
-| 举行 jǔxíng (to hold (event)) |  |  |
+| 举行 | jǔxíng | to hold (event) |
 | 世界 | shìjiè | world |
 | 街道 | jiēdào | street |
 | 各 | gè | each, every |

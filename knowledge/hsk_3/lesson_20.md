@@ -23,7 +23,7 @@ vocab_count: 11
 | 声音 | shēngyīn | voice, sound |
 | 试 | shì | to try |
 | 真正 | zhēnzhèng | real, genuine |
-| 多么 duōme (how (adverb of degree)) |  |  |
+| 多么 | duōme | how (adverb of degree) |
 | 只有……才…… | zhǐyǒu...cái... | only if...then... |
 
 ## Grammar introduced

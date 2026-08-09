@@ -20,12 +20,12 @@ vocab_count: 10
 | 同事 | tóngshì | colleague |
 | 以前 | yǐqián | before |
 | 银行 | yínháng | bank |
-| 久 jiǔ (long (time)) |  |  |
+| 久 | jiǔ | long (time) |
 | 感兴趣 | gǎn xìngqù | to be interested in |
 | 结婚 | jiéhūn | to get married |
 | 迟到 | chídào | to be late |
 | 半 | bàn | half |
-| 刻 kè (quarter (of an hour)) |  |  |
+| 刻 | kè | quarter (of an hour) |
 | 差 | chà | lacking, short of |
 
 ## Grammar introduced
