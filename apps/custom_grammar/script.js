@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-exercise="cloze"]').forEach(wireCloze);
   document.querySelectorAll('.py-toggle').forEach(wirePinyinToggle);
   aiInit();
+  progressInit();
+  progressBars();
 });
 
 // Reading passages (reading01.html …): hide pinyin until the learner asks.
@@ -49,6 +51,7 @@ function wireFill(el) {
       fb.textContent = '✓ Correct.';
       fb.className = 'feedback ok';
       if (el._aiBtn) el._aiBtn.style.display = 'none';
+      progressMark(el);
     } else {
       fb.textContent = '✗ Not quite. Try again, or click Show answer.';
       fb.className = 'feedback bad';
@@ -83,6 +86,7 @@ function wireMC(el) {
             x.classList.add('revealed');
           }
         });
+        progressMark(el);
       } else {
         li.classList.add('wrong');
         li.classList.add('revealed');
@@ -122,6 +126,7 @@ function wireBuilder(el) {
     if (answers.some(a => a === got)) {
       fb.textContent = '✓ Correct order.';
       fb.className = 'feedback ok';
+      progressMark(el);
     } else {
       fb.textContent = '✗ Not the right order. Think about where the marker goes.';
       fb.className = 'feedback bad';
@@ -138,7 +143,20 @@ function wireBuilder(el) {
 function wireReveal(el) {
   const btn = el.querySelector('button.reveal');
   const box = el.querySelector('.reveal-box');
-  if (btn && box) btn.addEventListener('click', () => box.classList.toggle('shown'));
+  const ta = el.querySelector('textarea');
+  // Completion: reveals without a textarea (think-then-check, error-correction)
+  // count once the model is opened; with a textarea, the learner must also have
+  // written something (≥5 chars) — in either order.
+  const maybeDone = () => {
+    if (!ta) { progressMark(el); return; }
+    if (el._revealed && ta.value.trim().length >= 5) progressMark(el);
+  };
+  if (btn && box) btn.addEventListener('click', () => {
+    box.classList.toggle('shown');
+    el._revealed = true;
+    maybeDone();
+  });
+  if (ta) ta.addEventListener('input', () => { if (el._revealed) maybeDone(); });
 }
 
 // Matching / pairing (配对). Left items carry data-key; the right item that
@@ -193,6 +211,7 @@ function wireMatch(el) {
     for (const [l, r] of pairOf) { if (l.dataset.key !== r.dataset.match) { ok = false; break; } }
     fb.textContent = ok ? '✓ All matched.' : '✗ Some pairs are wrong — try again.';
     fb.className = 'feedback ' + (ok ? 'ok' : 'bad');
+    if (ok) progressMark(el);
   });
 
   el.querySelector('button.reset') && el.querySelector('button.reset').addEventListener('click', () => {
@@ -238,6 +257,7 @@ function wireCloze(el) {
     const ok = blanks.every(b => ans[b.dataset.key] === b._word.dataset.word);
     fb.textContent = ok ? '✓ Correct.' : '✗ Some words are misplaced — try again.';
     fb.className = 'feedback ' + (ok ? 'ok' : 'bad');
+    if (ok) progressMark(el);
   });
 
   el.querySelector('button.reset') && el.querySelector('button.reset').addEventListener('click', () => {
@@ -385,6 +405,7 @@ function aiAddGradeButton(el) {
         '\n\nModel answer (reference only):\n' + model.trim().slice(0, 600) +
         '\n\nLearner\'s answer:\n' + answer,
         AI_GRADE_SCHEMA);
+      progressMark(el); // an AI grade means the writing was done, whatever the verdict
       const icon = { correct: '✓', minor_issues: '△', incorrect: '✗' }[r.verdict] || '';
       out.className = 'ai-feedback ' + (r.verdict === 'correct' ? 'ok' : r.verdict === 'minor_issues' ? 'mid' : 'bad');
       out.innerHTML = '';
@@ -446,8 +467,139 @@ function aiOfferFillCheck(el, learnerAnswer, answers) {
       out.className = 'ai-feedback ' + (r.acceptable ? 'ok' : 'bad');
       out.textContent = (r.acceptable ? '✓ Your answer is fine. ' : '✗ ') + r.explanation +
         (!r.acceptable && r.corrected ? '  → ' + r.corrected : '');
+      if (r.acceptable) progressMark(el);
     } catch (e) {
       out.textContent = aiErrorMessage(e); out.className = 'ai-feedback bad';
     } finally { btn.disabled = false; }
+  });
+}
+
+/* ===================================================================
+ * Progress tracking. Per-page completion + free-writing drafts persist
+ * in this browser's localStorage (key cg-progress:<page>.html). Each
+ * exercise page shows a live pill (bottom-left) with a two-step reset;
+ * index.html renders a progress bar on every visited page's card.
+ * =================================================================== */
+const PROG_PREFIX = 'cg-progress:';
+
+let progState = null; // { done:Set<number>, drafts:{index:text} }
+let progEls = [];
+let progPill = null;
+
+function progKey(file) {
+  return PROG_PREFIX + (file || location.pathname.split('/').pop() || 'index.html');
+}
+
+function progressInit() {
+  progEls = Array.from(document.querySelectorAll('[data-exercise]'));
+  if (!progEls.length) return; // not an exercise page
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(progKey()) || 'null'); } catch (e) {}
+  progState = {
+    done: new Set(((saved && saved.done) || []).filter(i => i >= 0 && i < progEls.length)),
+    drafts: (saved && saved.drafts) || {},
+  };
+  progEls.forEach((el, i) => {
+    if (progState.done.has(i)) progApplyDone(el, true);
+    const ta = el.querySelector('textarea');
+    if (ta) {
+      if (progState.drafts[i]) ta.value = progState.drafts[i];
+      let t = null;
+      ta.addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          if (ta.value.trim()) progState.drafts[i] = ta.value;
+          else delete progState.drafts[i];
+          progSave();
+        }, 500);
+      });
+    }
+  });
+  progMakePill();
+  progUpdatePill();
+}
+
+function progApplyDone(el, restored) {
+  el.classList.add('done');
+  if (restored) {
+    const fb = el.querySelector('.feedback');
+    if (fb && !fb.textContent) { fb.textContent = '✓ completed earlier'; fb.className = 'feedback ok'; }
+  }
+}
+
+function progressMark(el) {
+  if (!progState) return;
+  const i = progEls.indexOf(el);
+  if (i < 0) return;
+  if (!progState.done.has(i)) {
+    progState.done.add(i);
+    progSave();
+    progUpdatePill();
+  }
+  progApplyDone(el, false);
+}
+
+function progSave() {
+  try {
+    localStorage.setItem(progKey(), JSON.stringify({
+      done: Array.from(progState.done).sort((a, b) => a - b),
+      total: progEls.length,
+      drafts: progState.drafts,
+      updated: Date.now(),
+    }));
+  } catch (e) {}
+}
+
+function progMakePill() {
+  progPill = document.createElement('div');
+  progPill.className = 'progress-pill';
+  progPill.innerHTML =
+    '<div class="pp-bar"><div class="pp-fill"></div></div>' +
+    '<span class="pp-text"></span>' +
+    '<button type="button" class="pp-reset" title="Reset progress for this page">↺</button>' +
+    '<button type="button" class="pp-confirm">reset this page?</button>';
+  document.body.appendChild(progPill);
+  progPill.querySelector('.pp-reset').addEventListener('click', () => {
+    progPill.classList.toggle('confirming');
+  });
+  progPill.querySelector('.pp-confirm').addEventListener('click', () => {
+    progState.done.clear();
+    progState.drafts = {};
+    try { localStorage.removeItem(progKey()); } catch (e) {}
+    progEls.forEach(el => el.classList.remove('done'));
+    progPill.classList.remove('confirming');
+    progUpdatePill();
+  });
+  document.addEventListener('click', e => {
+    if (progPill && !progPill.contains(e.target)) progPill.classList.remove('confirming');
+  });
+}
+
+function progUpdatePill() {
+  if (!progPill) return;
+  const n = progState.done.size;
+  const t = progEls.length;
+  progPill.querySelector('.pp-text').textContent = n + '/' + t + ' ✓';
+  progPill.querySelector('.pp-fill').style.width = (t ? Math.round(100 * n / t) : 0) + '%';
+  progPill.classList.toggle('complete', n === t && t > 0);
+}
+
+// index.html: inject a progress bar into every visited page's card/link.
+function progressBars() {
+  if (!document.querySelector('.lesson-grid')) return;
+  document.querySelectorAll('a.lesson-card, a.reading-link').forEach(a => {
+    const file = (a.getAttribute('href') || '').split('/').pop();
+    if (!file || !file.endsWith('.html')) return;
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem(progKey(file)) || 'null'); } catch (e) {}
+    if (!saved || !saved.total) return;
+    const n = Math.min(((saved.done) || []).length, saved.total);
+    const pct = Math.round(100 * n / saved.total);
+    const slim = a.classList.contains('reading-link');
+    const bar = document.createElement('div');
+    bar.className = 'progress' + (pct === 100 ? ' complete' : '') + (slim ? ' slim' : '');
+    bar.innerHTML = '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+      (slim ? '' : '<span class="progress-label">' + n + '/' + saved.total + '</span>');
+    a.appendChild(bar);
   });
 }

@@ -245,13 +245,13 @@
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="的">
-    <p class="prompt">Fill: <span class="han">昨天我在超市买了一些新鲜 ___ 水果。</span><br><span style="font-size:13px;color:#666">(Yesterday I bought some fresh fruit at the supermarket.)</span></p>
-    <input type="text" placeholder="One character">
+  <div class="exercise" data-exercise="fill" data-answer="昨天我在超市买了一些新鲜的水果|我昨天在超市买了一些新鲜的水果">
+    <p class="prompt"><strong>Type the whole sentence</strong>, choosing 的 / 得 / 地: <span class="han">昨天我在超市买了一些新鲜 ___ 水果。</span><br><span style="font-size:13px;color:#666">(Yesterday I bought some fresh fruit at the supermarket.)</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">的</span> — 新鲜 says what the fruit is <em>like</em>, so it is a description and takes the glue. Contrast <span class="han">汉语老师</span>, where the first word names a <em>kind</em> and no 的 appears.</div>
+    <div class="reveal-box"><span class="han">昨天我在超市买了一些新鲜的水果。</span> — 新鲜 says what the fruit is <em>like</em>, so it is a description and takes the glue. Contrast <span class="han">汉语老师</span>, where the first word names a <em>kind</em> and no 的 appears. 地 and 得 are both impossible here for the same reason: what follows the gap is a <strong>noun</strong>, and neither of them may sit in front of one.</div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="他昨天买的手机很贵|他昨天买的那个手机很贵|他昨天买的手机非常贵|他昨天买的那个手机非常贵">
@@ -270,6 +270,23 @@
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
     <div class="reveal-box"><span class="han">我邻居的狗很可爱。</span> — English marks the owner with an ending ('s); Chinese marks it with 的 sitting <em>between</em> owner and thing. A neighbour is not close family, so unlike <span class="han">我妈妈</span> this 的 stays. (<span class="han">我邻居</span> itself may keep or drop its own 的 — both are said.)</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Write your own.</strong> One true sentence about <strong>something you own and use every day</strong> — a bag, a cup, a jacket, a bike. Build it around Job 4, the hard one: the noun must carry a <em>whole clause</em> in front of it — <span class="han">[who does what] + 的 + noun</span>, the way <span class="han">老师说的话</span> works. Then say something about that thing.</p>
+    <div class="writing-area"><textarea placeholder="我每天…的…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我每天上班带的那个包已经很旧了，可是我还是很喜欢它。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ měitiān shàngbān dài de nà ge bāo yǐjīng hěn jiù le, kěshì wǒ háishi hěn xǐhuan tā.</p>
+      <p style="margin:0 0 10px"><em>The bag I carry to work every day is pretty old now, but I still like it.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your sentence:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Does the whole description sit <em>in front of</em> the noun, with 的 in between? English trails the clause behind the noun ("the bag <em>that I carry</em>"); Chinese never does.</li>
+        <li>Is there a 了 <em>inside</em> the description? Take it out — a description carries no 了, even when the action is finished (<span class="han">我买的包</span>, not <span style="text-decoration:line-through">我买了的包</span>). A 了 after the main adjective, like 很旧了, is a different 了 and is fine.</li>
+        <li>Did you drop 的 in the two places Chinese drops it — close family (<span class="han">我妈妈</span>) and set job/category labels (<span class="han">汉语老师</span>) — and keep it everywhere else?</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -365,15 +382,6 @@
       <li data-correct="false">My sister often flies with him.<span class="why">✗ 认识 is a one-off event (getting to know someone), and 是…的 pins it to a single past occasion, never a habit.</span></li>
     </ul>
     <div class="feedback"></div>
-  </div>
-
-  <div class="exercise" data-exercise="fill" data-answer="的">
-    <p class="prompt">Fill: <span class="han">A: 这件衣服你是在哪儿买 ___ ？ B: 我是在楼下的商店买的。</span><br><span style="font-size:13px;color:#666">(Where did you buy this? — At the shop downstairs.)</span></p>
-    <input type="text" placeholder="One character">
-    <button class="check">Check</button>
-    <div class="feedback"></div>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">的</span> — the frame must be closed even in a question. Both speakers can see the clothes were bought; only the <em>where</em> is at issue, which is exactly the job 是…的 does.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
@@ -629,13 +637,13 @@
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="得">
-    <p class="prompt">Fill: <span class="han">这个孩子今年长 ___ 很高。</span><br><span style="font-size:13px;color:#666">(This child has grown very tall this year.)</span></p>
-    <input type="text" placeholder="One character">
+  <div class="exercise" data-exercise="fill" data-answer="这个孩子今年长得很高|今年这个孩子长得很高|这孩子今年长得很高">
+    <p class="prompt"><strong>Type the whole sentence</strong>, choosing 的 / 得 / 地: <span class="han">这个孩子今年长 ___ 很高。</span><br><span style="font-size:13px;color:#666">(This child has grown very tall this year.)</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">得</span> — a verb (长) sits in front and 很高 is the verdict on how the growing went. 地 is impossible: it would have to come <em>before</em> a verb, and 高 is not a verb. And note which 得 this is — what follows is an <strong>adjective</strong>, so it's the report card. Followed instead by a bare result verb (<span class="han">看得懂</span>, <span class="han">爬得上去</span>) it would be the <em>possibility</em> 得 from Lesson 5.</div>
+    <div class="reveal-box"><span class="han">这个孩子今年长得很高。</span> — a verb (长) sits in front and 很高 is the verdict on how the growing went. 地 is impossible: it would have to come <em>before</em> a verb, and 高 is not a verb. And note which 得 this is — what follows is an <strong>adjective</strong>, so it's the report card. Followed instead by a bare result verb (<span class="han">看得懂</span>, <span class="han">爬得上去</span>) it would be the <em>possibility</em> 得 from Lesson 5.</div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="走">
@@ -690,6 +698,23 @@
         <button class="reset">Reset</button>
       </div>
       <div class="feedback"></div>
+    </div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Write your own.</strong> One true sentence about <strong>your mornings</strong> — how early or late you get up, and whether the weekend is different. Use <span class="han">V + 得 + (很) Adj</span>. Note that <span class="han">起床</span> already drags an object (床) behind the verb, so you will have to make the repeat move.</p>
+    <div class="writing-area"><textarea placeholder="我…起床起得…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我上班的时候起床起得很早，可是周末起得特别晚。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ shàngbān de shíhou qǐchuáng qǐ de hěn zǎo, kěshì zhōumò qǐ de tèbié wǎn.</p>
+      <p style="margin:0 0 10px"><em>On workdays I get up very early, but at the weekend I get up really late.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your sentence:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Does 得 sit immediately after a <strong>bare verb</strong>, with nothing squeezed in between? <span style="text-decoration:line-through">起床得很早</span> ✗ — 床 has pushed 得 off its verb.</li>
+        <li>So either repeat the verb (<span class="han">起床起得很早</span>) or leave the object out altogether (<span class="han">起得很早</span>). Both are normal; what is not allowed is object + 得.</li>
+        <li>Is there a 很 / 太 / 不 / 特别 in front of the adjective? <span class="han">起得早</span> on its own sounds like the opening half of a comparison, not a finished statement.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -820,13 +845,13 @@
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="地">
-    <p class="prompt">Fill: <span class="han">服务员热情 ___ 介绍了他们的新菜单。</span><br><span style="font-size:13px;color:#666">(The waiter warmly introduced their new menu.)</span></p>
-    <input type="text" placeholder="One character">
+  <div class="exercise" data-exercise="fill" data-answer="服务员热情地介绍了他们的新菜单|服务员很热情地介绍了他们的新菜单|服务员热情地介绍他们的新菜单|服务员很热情地介绍他们的新菜单">
+    <p class="prompt"><strong>Type the whole sentence</strong>, choosing 的 / 得 / 地: <span class="han">服务员热情 ___ 介绍了他们的新菜单。</span><br><span style="font-size:13px;color:#666">(The waiter warmly introduced their new menu.)</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">地</span> — 热情 comes <em>before</em> the verb 介绍 and says how he went about it. Move it behind the verb (<span class="han">介绍得很热情</span>) and you would need 得 — and you would be grading the introduction rather than colouring it.</div>
+    <div class="reveal-box"><span class="han">服务员热情地介绍了他们的新菜单。</span> — 热情 comes <em>before</em> the verb 介绍 and says how he went about it. Move it behind the verb (<span class="han">介绍得很热情</span>) and you would need 得 — and you would be grading the introduction rather than colouring it. Notice the sentence keeps its 了 on the verb: 地 sets up the action, it does not block the aspect marker.</div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="他小心地关上了教室的门|他小心地关上教室的门|他很小心地关上了教室的门|他很小心地关上教室的门">
@@ -854,6 +879,23 @@
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
     <div class="reveal-box"><span class="han">他是一个很聪明的学生。</span> — look at what comes <em>next</em>: 学生 is a noun, and only 的 can glue a description to a noun. 地 would need a verb on its right. This is the standard 地 error once the marker has been learned — it gets sprayed onto every adjective.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Write your own.</strong> One true sentence about <strong>what you do when something goes wrong</strong> — you can't find your phone, the train is late, you've forgotten a name. Use <span class="han">Adj + 地 + Verb</span>, and reach for an adjective this page hasn't already worn out: try <span class="han">着急</span>, <span class="han">大声</span> or <span class="han">客气</span> rather than 高兴 / 认真.</p>
+    <div class="writing-area"><textarea placeholder="…的时候，我…地…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">找不到手机的时候，我总是着急地给自己打电话。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Zhǎo bu dào shǒujī de shíhou, wǒ zǒngshì zháojí de gěi zìjǐ dǎ diànhuà.</p>
+      <p style="margin:0 0 10px"><em>When I can't find my phone, I anxiously call myself.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your sentence:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Read rightwards from your 地: is there a <strong>verb</strong> immediately after it, and does the word in front say <em>how</em> you go into that verb?</li>
+        <li>Have you accidentally written the 得 sentence instead? If your adjective is a <em>verdict</em> on how the action turned out, it belongs <em>after</em> the verb with 得 (<span class="han">说得很着急</span>) — that is a different sentence from <span class="han">着急地说</span>.</li>
+        <li>Is the character you actually typed 地 — not 的, not 得? All three sound identical, so the slot has to decide, never the ear.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -918,15 +960,6 @@
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
     <div class="reveal-box"><span class="han">的</span> — a noun (书) comes next, so it is the glue, and everything to its left (我从图书馆借) is the description. 得 is ruled out because no verdict follows the gap.</div>
-  </div>
-
-  <div class="exercise" data-exercise="fill" data-answer="得">
-    <p class="prompt">的, 得 or 地? <span class="han">他今天来 ___ 特别早，因为要准备会议。</span><br><span style="font-size:13px;color:#666">(He came in especially early today, because he had a meeting to get ready.)</span></p>
-    <input type="text" placeholder="One character">
-    <button class="check">Check</button>
-    <div class="feedback"></div>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">得</span> — a verb (来) sits in front and 特别早 grades how the arriving went. There is no noun anywhere to the right of the gap, which rules 的 out at a glance.</div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="地">

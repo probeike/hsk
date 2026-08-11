@@ -84,6 +84,20 @@ Not every point needs all five; every point needs at least one item from stage 3
 Also allowed: **think-then-check rule retrieval** (`reveal`) at the top of mixed practice — "From
 memory: what's the difference between 不 and 没? Say it out loud, then check."
 
+### Weighting rules (2026-08-11, learner feedback)
+
+- **AI-graded open production (reveal + textarea) is the highest-value category** — weight toward
+  it. Target: ≥6 per lesson, ≥3 per sheet.
+- **Single-character 的/得/地 fills are deprecated** outside a small speed-reps block (≤5): the
+  ternary choice is too easy for the slot it occupies. Upgrade path: **P1 full-sentence retype**
+  (learner types the whole sentence with the correct character embedded — the choice now lives
+  inside production, mechanical grading still works, AI fallback arms on a miss). Single-character
+  fills for *semantic* contrasts (还没/正在, 不/没, 也/都, 了/着/过) remain legitimate cued production.
+- **The word-bank cloze widget is reserved for the reading pages' comprehension sections.** In
+  lessons/sheets, use **P3 guided paragraph writes** instead: same scenario, but the learner writes
+  the paragraph with the old bank as required words, checked against a model + checklist and
+  AI-gradable.
+
 ## Grading model — every exercise is exactly one tier
 
 1. **Closed, mechanical** (mc / si / match / cloze / builder / short fill): one correct answer by design.
@@ -171,6 +185,11 @@ personalized-response reveal. Nothing recycled from the paired lesson.
 | Match Q↔A | `match` | `data-key="x"` left ↔ `data-match="x"` right |
 | Word-bank gap fill | `cloze` | `data-answers="a:词;b:词"`, `.blank[data-key]`; comparison is raw `===` — **no punctuation in cloze answers, no per-blank alternatives** |
 | Free writing / self-check | `reveal` | none — `button.reveal` + `.reveal-box`; optional `.writing-area > textarea` |
+
+Progress tracking is automatic: script.js records completion per `[data-exercise]` element by
+DOM-order index (localStorage `cg-progress:<page>`), so authors need to add nothing — but heavy
+reordering/insertion of exercises shifts indices and orphans old ✓ marks (the learner can reset
+from the page's ↺ pill).
 
 Rules that bite:
 - `.feedback` div required in every graded widget (fill/builder/match handlers dereference it unguarded).
