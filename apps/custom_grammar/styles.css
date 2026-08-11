@@ -833,3 +833,87 @@ html, body {
 }
 .cloze-text .blank.filled { border-bottom-color: var(--ok); }
 .cloze-text .blank:empty::before { content: "（　）"; color: var(--muted); font-weight: 400; }
+
+/* ===== AI grading ===== */
+.ai-btn {
+  display: inline-block;
+  margin: 10px 8px 0 0;
+  padding: 7px 14px;
+  border: 1px solid #7a3aa0;
+  border-radius: 6px;
+  background: #f7f0fc;
+  color: #7a3aa0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ai-btn:hover { background: #efe0f9; }
+.ai-btn:disabled { opacity: 0.5; cursor: wait; }
+.ai-btn-small { font-size: 12.5px; padding: 5px 10px; }
+.ai-feedback {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  display: none;
+}
+.ai-feedback.ok, .ai-feedback.mid, .ai-feedback.bad, .ai-feedback.busy { display: block; }
+.ai-feedback.ok { background: #e9f7ea; border: 1px solid #3d8b45; }
+.ai-feedback.mid { background: #fdf6e3; border: 1px solid #c49a12; }
+.ai-feedback.bad { background: #fbecec; border: 1px solid #c0392b; }
+.ai-feedback.busy { background: #f2f2f2; border: 1px solid #bbb; color: #666; }
+.ai-verdict { font-weight: 700; margin-bottom: 4px; text-transform: capitalize; }
+.ai-corrected { margin-top: 6px; font-family: var(--han); font-size: 17px; }
+.ai-key-btn {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  padding: 7px 12px;
+  border: 1px solid #999;
+  border-radius: 18px;
+  background: #fff;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.ai-key-btn.has-key { border-color: #3d8b45; color: #3d8b45; }
+.ai-key-panel {
+  position: fixed;
+  right: 14px;
+  bottom: 54px;
+  z-index: 60;
+  display: none;
+  width: 300px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.18);
+  font-size: 13px;
+}
+.ai-key-panel.shown { display: block; }
+.ai-key-panel label { display: block; margin-bottom: 6px; font-weight: 600; }
+.ai-key-note { font-weight: 400; color: #888; }
+.ai-key-panel input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.ai-key-row { display: flex; align-items: center; gap: 8px; }
+.ai-key-row button {
+  padding: 5px 12px;
+  border: 1px solid #7a3aa0;
+  border-radius: 5px;
+  background: #f7f0fc;
+  color: #7a3aa0;
+  cursor: pointer;
+  font-size: 13px;
+}
+.ai-key-status { color: #999; }
+.ai-key-status.ok { color: #3d8b45; }

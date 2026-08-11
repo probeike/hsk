@@ -47,6 +47,8 @@
       <tr><td>辞职</td><td>cízhí</td><td>to quit one's job</td></tr>
       <tr><td>压力</td><td>yālì</td><td>pressure, stress</td></tr>
       <tr><td>搬家</td><td>bānjiā</td><td>to move house</td></tr>
+      <tr><td>冰箱</td><td>bīngxiāng</td><td>fridge</td></tr>
+      <tr><td>瓶</td><td>píng</td><td>bottle (measure word)</td></tr>
     </tbody>
   </table>
 </section>
@@ -200,32 +202,41 @@
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">You want to say <em>"Xiao Gang didn't eat a single apple."</em> Which is right?</p>
+    <p class="prompt">You want to say <em>"Xiao Gang didn't eat a single egg."</em> Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">小刚一个苹果也没吃。<span class="why">✓ Scope first (一个苹果), sealed with 也, then the negated verb 没吃.</span></li>
-      <li data-correct="false">小刚一个苹果没吃。<span class="why">✗ The most common error: the 也/都 slot is empty. The frame needs one of them before the negator.</span></li>
-      <li data-correct="false">小刚没吃一个苹果。<span class="why">✗ English word order — verb first, scope trailing. Chinese fronts the scope before the verb.</span></li>
+      <li data-correct="true">小刚一个鸡蛋也没吃。<span class="why">✓ Scope first (一个鸡蛋), sealed with 也, then the negated verb 没吃.</span></li>
+      <li data-correct="false">小刚一个鸡蛋没吃。<span class="why">✗ The most common error: the 也/都 slot is empty. The frame needs one of them before the negator.</span></li>
+      <li data-correct="false">小刚没吃一个鸡蛋。<span class="why">✗ English word order — verb first, scope trailing. Chinese fronts the scope before the verb.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="也没|都没">
-    <p class="prompt">Fill: <span class="han">今天太忙了，我一分钟 ___ 休息。</span><br><span style="font-size:13px;color:#666">(Two characters — I was so busy today I didn't rest for a single minute.)</span></p>
+    <p class="prompt">Fill: <span class="han">这个周末我太累了，一个地方 ___ 去。</span><br><span style="font-size:13px;color:#666">(Two characters — I was so tired this weekend I didn't go a single place.)</span></p>
     <input type="text" placeholder="Two characters">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">也没</span> — the slot filler plus the negator. <span class="han">都没</span> is equally good; the resting didn't happen, so it's 没, not 不.</div>
+    <div class="reveal-box"><span class="han">也没</span> — the slot filler plus the negator. <span class="han">都没</span> is equally good; the going didn't happen, so it's 没, not 不.</div>
   </div>
 
   <div class="exercise" data-exercise="si">
-    <p class="prompt">What does this mean?<br><span class="han">我一件衬衫都没买。</span></p>
+    <p class="prompt">What does this mean?<br><span class="han">这个月我一本书都没看。</span></p>
     <ul class="choices">
-      <li data-correct="false">I only bought one shirt.<span class="why">✗ 一…都没 is total negation, not a count. Nothing was bought.</span></li>
-      <li data-correct="true">I didn't buy a single shirt.<span class="why">✓ 一件衬衫 is the scope, 都 seals it, 没买 negates — "not even one".</span></li>
-      <li data-correct="false">I don't want to buy a shirt.<span class="why">✗ 没 reports that the buying didn't happen; nothing here means "want".</span></li>
+      <li data-correct="false">I read only one book this month.<span class="why">✗ 一…都没 is total negation, not a count. The number is zero.</span></li>
+      <li data-correct="true">I haven't read a single book this month.<span class="why">✓ 一本书 is the scope, 都 seals it, 没看 negates — "not even one".</span></li>
+      <li data-correct="false">I don't want to read books this month.<span class="why">✗ 没 reports that the reading didn't happen; a wish would need 不想看.</span></li>
     </ul>
     <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="姐姐一件衣服也没洗|姐姐一件衣服都没洗|姐姐一件衣服也没有洗|姐姐一件衣服都没有洗">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">姐姐没洗衣服。</span> → make it emphatic: <em>"my sister didn't wash a single item of clothing."</em> Keep the subject <span class="han">姐姐</span> and the noun <span class="han">衣服</span>; use the measure <span class="han">件</span>. Type the whole sentence.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">姐姐一件衣服也没洗。</span> — three things move at once: <span class="han">一件</span> appears in front of the noun, the whole scope jumps <em>before</em> the verb, and 也/都 seals it. The negator itself does not change — it was 没 before and it stays 没, because this is still a report about an event that didn't happen. (<span class="han">都</span> works in place of 也.)</div>
   </div>
 </section>
 
@@ -318,51 +329,38 @@
   <div class="exercise" data-exercise="mc">
     <p class="prompt">Which sentence is <strong>NOT</strong> correct?</p>
     <ul class="choices">
-      <li data-correct="true">他一句话没说。<span class="why">✓ Right — this is the broken one. The 也/都 slot is empty, and it is obligatory.</span></li>
-      <li data-correct="false">他一句话也没说。<span class="why">✗ This one is fine — 也 fills the slot.</span></li>
-      <li data-correct="false">他一句话都没说。<span class="why">✗ This one is fine too — 都 fills the slot, with identical meaning.</span></li>
+      <li data-correct="true">妹妹一条裙子没买。<span class="why">✓ Right — this is the broken one. The 也/都 slot is empty, and it is obligatory.</span></li>
+      <li data-correct="false">妹妹一条裙子也没买。<span class="why">✗ This one is fine — 也 fills the slot.</span></li>
+      <li data-correct="false">妹妹一条裙子都没买。<span class="why">✗ This one is fine too — 都 fills the slot, with identical meaning.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="也|都">
-    <p class="prompt">Fill: <span class="han">这些题我一个 ___ 不会做。</span><br><span style="font-size:13px;color:#666">(I can't do a single one of these questions. — one character)</span></p>
+    <p class="prompt">Fill: <span class="han">她给我的照片，我一张 ___ 没找到。</span><br><span style="font-size:13px;color:#666">(The photos she gave me — I couldn't find a single one. One character.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">也</span> or <span class="han">都</span> — both are accepted, because both are right. What matters is that the slot isn't empty.</div>
+    <div class="reveal-box"><span class="han">也</span> or <span class="han">都</span> — both are accepted, because both are right. What matters is that the slot isn't empty. Note the noun is already up front as the topic, so only <span class="han">一张</span> is left inside the frame.</div>
   </div>
 
-  <div class="exercise" data-exercise="si">
-    <p class="prompt">What does this mean?<br><span class="han">我一句话都没说。</span></p>
-    <ul class="choices">
-      <li data-correct="false">I only said one sentence.<span class="why">✗ 一句话都没 is total negation, not a count of one.</span></li>
-      <li data-correct="true">I didn't say a single word — total silence.<span class="why">✓ 一句话 is the scope, 都 seals it, 没说 negates: nothing was said at all.</span></li>
-      <li data-correct="false">I also didn't say anything.<span class="why">✗ That "also" reading needs an ordinary 也 before the whole frame: 我也一句话都没说 — a different structure.</span></li>
-    </ul>
+  <div class="exercise" data-exercise="fill" data-answer="我一个邻居也没看见|我一个邻居都没看见|我一个邻居也没有看见|我一个邻居都没有看见">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">我没看见邻居。</span> → make it emphatic: <em>"I didn't see a single neighbour."</em> Keep the subject <span class="han">我</span> and the noun <span class="han">邻居</span>; use <span class="han">一个</span> and fill the 也/都 slot. Type the whole sentence.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我一个邻居也没看见。</span> (<span class="han">都</span> is just as good.) The plain sentence had nothing between 我 and 没; the emphatic one must have the whole scope <span class="han">一个邻居</span> plus a sealing 也/都 in that gap. Leaving out the seal — <span style="text-decoration:line-through">我一个邻居没看见</span> — is the single commonest error in this lesson.</div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="老板说的话我一句也没听懂">
-    <p class="prompt">Build: <em>"I didn't understand a single thing the boss said."</em></p>
-    <div class="builder">
-      <div class="bank">
-        <span class="chunk">老板说的话</span>
-        <span class="chunk">我</span>
-        <span class="chunk">一句</span>
-        <span class="chunk">也</span>
-        <span class="chunk">没</span>
-        <span class="chunk">听懂</span>
-      </div>
-      <div class="drop" aria-label="Your sentence"></div>
-      <div class="actions">
-        <button class="check">Check order</button>
-        <button class="reset">Reset</button>
-      </div>
-      <div class="feedback"></div>
-      <p style="font-size:12px;color:#777;margin-top:6px">(都 works just as well — this bank happens to use 也.)</p>
-    </div>
+  <div class="exercise" data-exercise="fill" data-answer="她一件礼物也没送|她一件礼物都没送|她一件礼物也没有送|她一件礼物都没有送">
+    <p class="prompt"><strong>Find the error</strong> and type the corrected sentence: <span class="han">她也一件礼物没送。</span><br><span style="font-size:13px;color:#666">(Intended: "She didn't give a single present.")</span></p>
+    <input type="text" placeholder="type the corrected sentence">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">她一件礼物也没送。</span> — the 也 was in the sentence, but in the wrong place. In front of the scope it is ordinary 也 = "she ALSO didn't…", and the frame's own slot is left empty on top of that, so the sentence breaks twice over. The seal goes <em>after</em> the scope and immediately <em>before</em> the negator — nowhere else. (<span class="han">都</span> instead of 也 is equally correct.)</div>
   </div>
 </section>
 
@@ -487,42 +485,58 @@
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="不">
-    <p class="prompt">Fill: <span class="han">我妈妈一杯咖啡也 ___ 喝，她只喝茶。</span><br><span style="font-size:13px;color:#666">(My mum won't drink a single cup of coffee — she only drinks tea. One character.)</span></p>
+    <p class="prompt">Fill: <span class="han">我爷爷一瓶啤酒也 ___ 喝，他只喝茶。</span><br><span style="font-size:13px;color:#666">(My grandad won't drink a single bottle of beer — he only drinks tea. One character.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">不</span> — this is a standing habit, not a report about one occasion. 没 would wrongly turn it into "she didn't drink any (that time)".</div>
+    <div class="reveal-box"><span class="han">不</span> — this is a standing habit, not a report about one occasion. 没 would wrongly turn it into "he didn't drink any (that time)", and the second clause 他只喝茶 makes clear we are describing how he <em>is</em>.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">Someone is refusing to talk <em>right now</em> — nothing needs to have happened yet. Which sentence says that?</p>
+    <p class="prompt">Your friend is a fussy eater — he refuses everything you cook, and this is simply how he always is. Nothing needs to have happened. Which sentence says that?</p>
     <ul class="choices">
-      <li data-correct="true">他一句话都不说。<span class="why">✓ 不 negates disposition: he won't talk. No event is being reported.</span></li>
-      <li data-correct="false">他一句话都没说。<span class="why">✗ This reports a finished stretch of time in which no speaking occurred.</span></li>
-      <li data-correct="false">他一句话都没说过。<span class="why">✗ 没…过 means "never once in his life" — far too strong, and still about occurrence.</span></li>
+      <li data-correct="true">他一个菜都不吃。<span class="why">✓ 不 negates disposition: he won't touch a single dish. No event is being reported.</span></li>
+      <li data-correct="false">他一个菜都没吃。<span class="why">✗ This reports one finished occasion on which no eating occurred — true of a meal, not of a person.</span></li>
+      <li data-correct="false">他一个菜都没吃过。<span class="why">✗ 没…过 means "never once in his life" — far too strong, and still about occurrence rather than disposition.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="他工作一年了一次也没迟到过">
-    <p class="prompt">Build: <em>"He's been working a year and hasn't been late even once."</em></p>
-    <div class="builder">
-      <div class="bank">
-        <span class="chunk">他</span>
-        <span class="chunk">工作一年了</span>
-        <span class="chunk">一次</span>
-        <span class="chunk">也</span>
-        <span class="chunk">没</span>
-        <span class="chunk">迟到过</span>
-      </div>
-      <div class="drop" aria-label="Your sentence"></div>
-      <div class="actions">
-        <button class="check">Check order</button>
-        <button class="reset">Reset</button>
-      </div>
-      <div class="feedback"></div>
-      <p style="font-size:12px;color:#777;margin-top:6px">(过 stays glued to its verb: 迟到过 is one chunk.)</p>
+  <div class="exercise" data-exercise="fill" data-answer="他一个比赛也不参加|他一个比赛都不参加">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">他不参加比赛。</span> → make it emphatic: <em>"he won't take part in a single competition."</em> Keep <span class="han">他</span> and <span class="han">比赛</span>; use <span class="han">一个</span>. Type the whole sentence.<br><span style="font-size:13px;color:#666">(Careful with the negator — decide it from the original sentence, not from the frame.)</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">他一个比赛也不参加。</span> — the frame changes the <em>word order</em>, never the negator. The original said 不参加, a refusal or a habit, so the emphatic version keeps 不. Swapping in 没 (<span style="text-decoration:line-through">他一个比赛也没参加</span>) is a different sentence: "he didn't take part in any of them", a report about a competition season that is over.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="我一次也没去过|我一次都没去过|我一次也没去过北京|我一次都没去过北京|我一次也没有去过|我一次都没有去过|我一次也没有去过北京|我一次都没有去过北京">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">你去过几次北京？</span> — never, not even once. Start with <span class="han">我</span>; use <span class="han">一次</span> + 也/都 + <span class="han">没…过</span>.</p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我一次也没去过。</span> — a 几次 question is about how often something has happened, so the zero answer is 没, never 不, and 过 stays on the verb to keep the "in my whole life so far" reading. What you must not do is answer with a bare <span style="text-decoration:line-through">没有</span> or with <span style="text-decoration:line-through">零次</span>; Chinese counts down to nothing with this frame instead.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Personalise it.</strong> Write <strong>two true sentences about yourself</strong>, both using <span class="han">一 + measure + 也/都</span>. Sentence 1: something you did not do <em>at all</em> yesterday — so the negator is <span class="han">没</span>. Sentence 2: something you <em>never</em> do, as a matter of habit or refusal — so the negator is <span class="han">不</span>.</p>
+    <div class="writing-area"><textarea placeholder="昨天我一…也没…。我一…也不…。"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">昨天我很忙，一个电子邮件也没回。我一瓶啤酒都不喝，因为喝了以后我第二天很累。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Zuótiān wǒ hěn máng, yí ge diànzǐ yóujiàn yě méi huí. Wǒ yì píng píjiǔ dōu bù hē, yīnwèi hē le yǐhòu wǒ dì-èr tiān hěn lèi.</p>
+      <p style="margin:0 0 10px"><em>I was busy yesterday — I didn't reply to a single email. I won't drink a single beer, because the next day I feel exhausted.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your own two sentences:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Does each sentence have something in the 也/都 slot? (The slot is never empty.)</li>
+        <li>Sentence 1: is the negator <span class="han">没</span>, and is there <strong>no</strong> <span class="han">了</span> after the verb?</li>
+        <li>Sentence 2: is the negator <span class="han">不</span> — and is it genuinely a habit, not one occasion?</li>
+        <li>Is the whole scope (<span class="han">一 + measure + noun</span>) <em>in front of</em> the verb, not after it?</li>
+        <li>Does the measure word actually match the noun? (<span class="han">一件衣服</span>, <span class="han">一本书</span>, <span class="han">一杯茶</span>, <span class="han">一张照片</span>.)</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -639,15 +653,45 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="builder" data-answer="房间里一个人也没有">
-    <p class="prompt">Build: <em>"There isn't a single person in the room."</em></p>
+  <div class="exercise" data-exercise="si">
+    <p class="prompt">What does this mean?<br><span class="han">图书馆的书很多，可是他一本也没借。</span></p>
+    <ul class="choices">
+      <li data-correct="false">He borrowed only one of the books.<span class="why">✗ 一本也没借 is total negation — the count is zero, not one.</span></li>
+      <li data-correct="true">The library has plenty of books, but he didn't borrow a single one.<span class="why">✓ The noun 书 is already in the first clause, so 一本 stands alone in the frame — shape 4.</span></li>
+      <li data-correct="false">The library didn't have a single book.<span class="why">✗ That would be the existential shape — 图书馆一本书也没有, with 有 as the verb.</span></li>
+    </ul>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="mc">
+    <p class="prompt">You open the fridge and want to say <em>"There isn't a single bottle of drink in the fridge."</em></p>
+    <ul class="choices">
+      <li data-correct="true">冰箱里一瓶饮料也没有。<span class="why">✓ Existential shape: the place opens the sentence, and the frame ends in 没有. No word corresponds to English "there".</span></li>
+      <li data-correct="false">冰箱里一瓶饮料也没。<span class="why">✗ Bare 没 can't end the sentence — when the verb is 有, you must say 没有 in full.</span></li>
+      <li data-correct="false">冰箱里也一瓶饮料没有。<span class="why">✗ 也 has jumped in front of the scope. It belongs right after 一瓶饮料, immediately before the negator.</span></li>
+    </ul>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="一个也|一个都|一件也|一件都">
+    <p class="prompt">Fill: <span class="han">护照、照相机、行李箱，___ 不能少。</span><br><span style="font-size:13px;color:#666">(Passport, camera, suitcase — not a single one can be left out. Three characters.)</span></p>
+    <input type="text" placeholder="Three characters">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">一个也</span> (or <span class="han">一个都</span>, or 件 in place of 个) — the list is the topic, so the noun after 一个 is dropped; the measure alone points back at it. This is the shape of the lesson's title sentence.</div>
+  </div>
+
+  <div class="exercise" data-exercise="builder" data-answer="妈妈买的水果弟弟一个也没吃">
+    <p class="prompt">Build: <em>"The fruit Mum bought — my little brother didn't eat a single piece."</em> <span style="font-size:13px;color:#666">(Topic first, then the subject, then the frame.)</span></p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">房间里</span>
+        <span class="chunk">妈妈买的水果</span>
+        <span class="chunk">弟弟</span>
         <span class="chunk">一个</span>
-        <span class="chunk">人</span>
         <span class="chunk">也</span>
-        <span class="chunk">没有</span>
+        <span class="chunk">没</span>
+        <span class="chunk">吃</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -655,37 +699,26 @@
         <button class="reset">Reset</button>
       </div>
       <div class="feedback"></div>
-      <p style="font-size:12px;color:#777;margin-top:6px">(No word for English "there" — the place itself opens the sentence.)</p>
+      <p style="font-size:12px;color:#777;margin-top:6px">(Two shapes at once: the noun is fronted as the topic, so only 一个 is left inside the frame.)</p>
     </div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="一个也|一个都">
-    <p class="prompt">Fill: <span class="han">手机、电脑、地图，___ 不能少。</span><br><span style="font-size:13px;color:#666">(Phones, computer, maps — not a single one can be left out. Three characters.)</span></p>
-    <input type="text" placeholder="Three characters">
+  <div class="exercise" data-exercise="fill" data-answer="学校前面一辆自行车也没有|学校前面一辆自行车都没有">
+    <p class="prompt"><strong>Translate.</strong> "There isn't a single bicycle in front of the school."<br><span style="font-size:13px;color:#666">用: 学校前面 · 一辆 · 自行车 · 也 · 没有</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">一个也</span> (or <span class="han">一个都</span>) — the list is the topic, so the noun after 一个 is dropped; the measure alone points back at it.</div>
+    <div class="reveal-box"><span class="han">学校前面一辆自行车也没有。</span> — English hires the dummy subject <em>there</em>; Chinese hires nobody. The place phrase simply opens the sentence and the frame runs straight through to 没有. Watch the two things English will try to make you do: insert a word for "there", and write <span style="text-decoration:line-through">不有</span>.</div>
   </div>
 
-  <div class="exercise" data-exercise="si">
-    <p class="prompt">What does this mean?<br><span class="han">我很喜欢商店里的衣服，可是我一件也没买。</span></p>
-    <ul class="choices">
-      <li data-correct="false">I bought only one of them.<span class="why">✗ 一件也没买 is total negation — the count is zero, not one.</span></li>
-      <li data-correct="true">I liked the clothes in the shop, but I didn't buy a single one.<span class="why">✓ The noun 衣服 is already in the first clause, so 一件 stands alone in the frame.</span></li>
-      <li data-correct="false">The shop didn't have a single one.<span class="why">✗ That would be the existential shape — 商店里一件也没有, with 有 as the verb.</span></li>
-    </ul>
+  <div class="exercise" data-exercise="fill" data-answer="我们家一只狗也没有|我们家一只狗都没有|我家一只狗也没有|我家一只狗都没有">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">你们家有几只狗？</span> — none, not a single one. Start with <span class="han">我们家</span>; use <span class="han">一只狗</span> + 也/都.</p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
     <div class="feedback"></div>
-  </div>
-
-  <div class="exercise" data-exercise="mc">
-    <p class="prompt">You want to say <em>"When I moved to New York last year, I didn't have a single friend."</em></p>
-    <ul class="choices">
-      <li data-correct="true">去年我搬到纽约的时候，一个朋友也没有。<span class="why">✓ Existential/possessive shape: the frame ends in 没有, and the second clause needs no subject.</span></li>
-      <li data-correct="false">去年我搬到纽约的时候，一个朋友也没。<span class="why">✗ Bare 没 can't end the sentence — when the verb is 有, you must say 没有 in full.</span></li>
-      <li data-correct="false">去年我搬到纽约的时候，也一个朋友没有。<span class="why">✗ 也 has jumped in front of the scope. It belongs right after 一个朋友, immediately before the negator.</span></li>
-    </ul>
-    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我们家一只狗也没有。</span> — this is the possessive twin of the existential shape: a person or household at the front instead of a place, and the same 没有 at the end. A flat <span class="han">我们家没有狗</span> would also be true, but it is the neutral answer; the frame is what makes it emphatic — <em>not one</em>.</div>
   </div>
 </section>
 
@@ -784,53 +817,59 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="fill" data-answer="一点儿钱都没带|一点钱都没带|一点儿钱也没带|一点钱也没带">
-    <p class="prompt">Fill the blank: <span class="han">我 ___ ，所以不能买衣服。</span><br><span style="font-size:13px;color:#666">(I didn't bring any money at all, so I can't buy clothes.)</span></p>
-    <input type="text" placeholder="Use 一点儿 … 都/也 没…">
+  <div class="exercise" data-exercise="fill" data-answer="一点儿时间都没有|一点儿时间也没有|一点时间都没有|一点时间也没有">
+    <p class="prompt">Fill the blank: <span class="han">这个周末我 ___ ，所以作业还没写完。</span><br><span style="font-size:13px;color:#666">(I had no free time at all this weekend, so I still haven't finished my homework.)</span></p>
+    <input type="text" placeholder="Use 一点儿 + 时间 + 都/也 + …">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">一点儿钱都没带</span> — "a-bit-money-even-not-brought". 也 works in place of 都, and 一点 without 儿 is equally fine.</div>
+    <div class="reveal-box"><span class="han">一点儿时间都没有</span> — "a-bit-time-even-not-have". 时间 can't be counted with 一 + measure, so 一点儿 takes over the scope slot; 也 works in place of 都, and 一点 without 儿 is equally fine. And because the verb is 有, the negator can only ever be 没.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">Which sentence means <em>"That place isn't far at all"</em>?</p>
+    <p class="prompt">A classmate asks whether yesterday's exam was hard. It wasn't — you want to say <em>"Not even a little bit!"</em></p>
     <ul class="choices">
-      <li data-correct="false">那个地方不远一点儿也。<span class="why">✗ Back to front. The 一点儿也 scope must come <em>before</em> the negated adjective, never after it.</span></li>
-      <li data-correct="true">那个地方一点儿也不远。<span class="why">✓ Scope, seal, negated adjective — "a-bit-even-not-far".</span></li>
-      <li data-correct="false">那个地方一点儿远也不。<span class="why">✗ 也 belongs right in front of 不, not after the adjective; and 不 can't end the sentence.</span></li>
+      <li data-correct="true">一点儿也不难！<span class="why">✓ 一点儿 + 也 + 不 + adjective — total denial, which is exactly what "not even a little" means.</span></li>
+      <li data-correct="false">有点儿难。<span class="why">✗ The false friend: 有点儿难 admits it was somewhat hard — the opposite of what you meant.</span></li>
+      <li data-correct="false">不难一点儿。<span class="why">✗ English word order, with "a bit" tacked on the end. Chinese fronts the scope.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="mc">
-    <p class="prompt">After three hours of dance class your teacher asks whether you're tired. You want to say <em>"Not even a little bit!"</em></p>
-    <ul class="choices">
-      <li data-correct="true">我一点儿也不累！<span class="why">✓ 一点儿 + 也 + 不 + adjective — total denial, which is exactly what "not even a little" means.</span></li>
-      <li data-correct="false">我有点儿累。<span class="why">✗ The false friend: 有点儿累 admits you're somewhat tired — the opposite of what you meant.</span></li>
-      <li data-correct="false">我不累一点儿。<span class="why">✗ English word order, with "a bit" tacked on the end. Chinese fronts the scope.</span></li>
-    </ul>
+  <div class="exercise" data-exercise="fill" data-answer="这个西瓜一点儿也不甜|这个西瓜一点也不甜|这个西瓜一点儿都不甜|这个西瓜一点都不甜">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">这个西瓜不甜。</span> → make it total: <em>"this watermelon isn't the least bit sweet."</em> Keep <span class="han">这个西瓜</span>; add <span class="han">一点儿</span> and the seal. Type the whole sentence.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">这个西瓜一点儿也不甜。</span> — with an adjective there is no noun for 一点儿 to attach to, so it goes straight to 也/都 and then to 不. The negator stays 不, and it can only ever be 不: an adjective describes a state, and states are never events that failed to occur. (<span class="han">都</span> for 也, and 一点 without 儿, are all equally correct.)</div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="跳舞的时候我一点儿压力也没有|我跳舞的时候一点儿压力也没有">
-    <p class="prompt">Build: <em>"When I'm dancing I don't feel any pressure at all."</em></p>
-    <div class="builder">
-      <div class="bank">
-        <span class="chunk">跳舞的时候</span>
-        <span class="chunk">我</span>
-        <span class="chunk">一点儿</span>
-        <span class="chunk">压力</span>
-        <span class="chunk">也</span>
-        <span class="chunk">没有</span>
-      </div>
-      <div class="drop" aria-label="Your sentence"></div>
-      <div class="actions">
-        <button class="check">Check order</button>
-        <button class="reset">Reset</button>
-      </div>
-      <div class="feedback"></div>
-      <p style="font-size:12px;color:#777;margin-top:6px">(压力 is uncountable, so 一点儿 replaces 一 + measure; and 有 always takes 没.)</p>
+  <div class="exercise" data-exercise="fill" data-answer="我的房间一点儿也不干净|我的房间一点也不干净|我的房间一点儿都不干净|我的房间一点都不干净">
+    <p class="prompt"><strong>Translate.</strong> "My room isn't the least bit clean."<br><span style="font-size:13px;color:#666">用: 我的房间 · 一点儿 · 也 · 不 · 干净</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我的房间一点儿也不干净。</span> — English lets <em>not the least bit</em> trail after the adjective; Chinese will not. Everything that measures the negation goes in front of it, in the same order as every other section of this lesson: scope, seal, negated predicate.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Personalise it.</strong> People often assume things about you that aren't true at all. Write <strong>two true sentences</strong> denying such an assumption, each with <span class="han">一点儿也/都不 + adjective</span> and <strong>two different adjectives</strong>. Add a short reason after each with <span class="han">因为</span>.</p>
+    <div class="writing-area"><textarea placeholder="很多人觉得…，可是我一点儿也不…，因为…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">很多人觉得学汉语很难，可是我一点儿也不觉得难，因为我每天都听中文歌。冬天的时候朋友们都说北方很冷，我一点儿都不冷，因为我有很好的衣服。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Hěn duō rén juéde xué Hànyǔ hěn nán, kěshì wǒ yìdiǎnr yě bù juéde nán, yīnwèi wǒ měi tiān dōu tīng Zhōngwén gē. Dōngtiān de shíhou péngyoumen dōu shuō běifāng hěn lěng, wǒ yìdiǎnr dōu bù lěng, yīnwèi wǒ yǒu hěn hǎo de yīfu.</p>
+      <p style="margin:0 0 10px"><em>Lots of people think Chinese is hard, but I don't find it hard at all, because I listen to Chinese songs every day. In winter my friends all say the north is freezing; I'm not cold in the slightest, because I have good clothes.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your own two sentences:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Is <span class="han">一点儿</span> <em>before</em> the adjective, never after it? (<span style="text-decoration:line-through">不冷一点儿</span> ✗)</li>
+        <li>Is the negator <span class="han">不</span> in both? With an adjective it can never be 没.</li>
+        <li>Is the 也/都 slot filled — and filled once, not twice?</li>
+        <li>Did you avoid <span class="han">有点儿</span>? It means the opposite ("kind of…").</li>
+        <li>Two genuinely different adjectives, and two things that are actually true of you?</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -925,34 +964,22 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="builder" data-answer="这些人一个也不能少">
-    <p class="prompt">Build: <em>"Not a single one of these people can be missing."</em></p>
-    <div class="builder">
-      <div class="bank">
-        <span class="chunk">这些人</span>
-        <span class="chunk">一个</span>
-        <span class="chunk">也</span>
-        <span class="chunk">不</span>
-        <span class="chunk">能</span>
-        <span class="chunk">少</span>
-      </div>
-      <div class="drop" aria-label="Your sentence"></div>
-      <div class="actions">
-        <button class="check">Check order</button>
-        <button class="reset">Reset</button>
-      </div>
-      <div class="feedback"></div>
-      <p style="font-size:12px;color:#777;margin-top:6px">(都 is OK too — this bank uses 也.)</p>
-    </div>
-  </div>
-
-  <div class="exercise" data-exercise="fill" data-answer="一句话都不想说|一句话也不想说">
-    <p class="prompt">Fill the blank: <span class="han">他今天不高兴，___ 。</span><br><span style="font-size:13px;color:#666">(He's in a bad mood today — he doesn't want to say a single word.)</span></p>
-    <input type="text" placeholder="一 + 句 + 话 + …">
+  <div class="exercise" data-exercise="fill" data-answer="也不能|都不能">
+    <p class="prompt">Fill: <span class="han">这些照片对我很重要，一张 ___ 少。</span><br><span style="font-size:13px;color:#666">(These photos matter a lot to me — not one of them can go missing. Three characters.)</span></p>
+    <input type="text" placeholder="Three characters">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">一句话都不想说</span> — "not one word does he want to speak". 也 instead of 都 also works; the modal 想 forces 不, not 没.</div>
+    <div class="reveal-box"><span class="han">也不能</span> (or <span class="han">都不能</span>) — three slots in a row: the seal, the negator, the modal. The negator has to be 不 because 能 is a modal, and a modal is about what is <em>possible</em>, never about an event that failed to happen. <span style="text-decoration:line-through">一张也没能少</span> ✗.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="你们一次也不可以迟到|你们一次都不可以迟到">
+    <p class="prompt"><strong>Translate.</strong> "You may not be late even once."<br><span style="font-size:13px;color:#666">用: 你们 · 一次 · 也 · 不可以 · 迟到</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">你们一次也不可以迟到。</span> — <span class="han">一次</span> is its own measure and needs no noun after it. The negated modal 不可以 and the verb 迟到 stay welded together as one block at the end, exactly where 不能少 sits in the title sentence. (<span class="han">都</span> for 也 is equally fine.)</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
@@ -973,6 +1000,15 @@
       <li data-correct="false">You didn't rest for a single day this week.<span class="why">✗ That would need 没 and would report the past; 不能 is about what's allowed going forward.</span></li>
     </ul>
     <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="这些汉字太难了我一个也不会写|这些汉字太难了我一个都不会写|我一个也不会写|我一个都不会写">
+    <p class="prompt"><strong>Find the error</strong> and type the corrected sentence: <span class="han">这些汉字太难了，我一个也没会写。</span><br><span style="font-size:13px;color:#666">(Intended: "These characters are too hard — I can't write a single one.")</span></p>
+    <input type="text" placeholder="type the corrected sentence">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">这些汉字太难了，我一个也不会写。</span> — the scope, the seal and the word order were all fine; only the negator was wrong. <span style="text-decoration:line-through">没会</span> does not exist in Chinese: 会 is a modal about ability, and ability is a state, not an event that could have failed to occur. Every modal in this section — 能, 想, 会, 可以 — takes 不 and only 不.</div>
   </div>
 </section>
 
@@ -1061,12 +1097,21 @@
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="谁">
-    <p class="prompt">Fill: <span class="han">我在纽约 ___ 都不认识。</span><br><span style="font-size:13px;color:#666">(I don't know a single person in New York. One character.)</span></p>
+    <p class="prompt">Fill with <span class="han">谁</span>, <span class="han">什么</span> or <span class="han">哪儿</span>: <span class="han">昨天下大雨，我们班 ___ 都没来上课。</span><br><span style="font-size:13px;color:#666">(It poured yesterday — nobody in our class came to the lesson. One character.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">谁</span> — with 都不 after it, 谁 stops being a question word and becomes "anybody" → "nobody".</div>
+    <div class="reveal-box"><span class="han">谁</span> — with 都没 after it, 谁 stops being a question word and becomes "anybody" → "nobody". 什么 would sweep over <em>things</em> and 哪儿 over <em>places</em>; only 谁 sweeps over people, and it is people who come to a lesson.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="我哪儿都没去|我哪儿也没去|我哪都没去|我哪也没去">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">周末你去哪儿了？</span> — nowhere at all; you stayed at home. Start with <span class="han">我</span>; use <span class="han">哪儿</span> + 都/也 + <span class="han">没</span>.</p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我哪儿都没去。</span> — the question word from the question comes straight back in the answer, but now sealed with 都/也 so that it sweeps instead of asking. The negator is 没 because the weekend is over and no going happened; 不去 would be a refusal about the future. Note too that the 了 from the question does <em>not</em> survive into a 没 answer.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
@@ -1084,7 +1129,12 @@
 <!-- Mixed practice -->
 <!-- =============================================================== -->
 <section class="gp" id="mixed">
-  <h2>Mixed practice <span class="en-sub">All seven points together</span></h2>
+  <h2>Mixed practice <span class="en-sub">All seven points together — shuffled</span></h2>
+
+  <p style="margin:0 0 18px">Nothing below comes in section order, so before you can build a sentence you have to decide which
+     shape it needs and which negator goes in it — which is exactly what speaking asks of you. Three items aren't from
+     this lesson at all: one <span class="han">的/得/地</span> decision, one time-word placement and one
+     <span class="han">还没…呢</span> rewrite, dropped in to keep the older machinery running.</p>
 
   <div class="exercise" data-exercise="cloze" data-answers="a:都;b:不;c:一点儿;d:少;e:没">
     <p class="prompt">选词填空 — five blanks, six words: one of them is a decoy that fits nowhere.</p>
@@ -1101,6 +1151,15 @@
     </div>
     <div class="actions"><button class="check">Check</button><button class="reset">Reset</button></div>
     <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="得">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier lesson.</span> Fill with <span class="han">的</span>, <span class="han">得</span> or <span class="han">地</span>: <span class="han">奶奶跳舞跳 ___ 很好，可是她一次比赛也没参加过。</span></p>
+    <input type="text" placeholder="one character">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">得</span> — the gap sits <em>after</em> a repeated verb and introduces a judgement of how the dancing goes, so it is the complement 得. 的 would need a noun after it (<span class="han">奶奶的舞蹈</span>); 地 goes <em>before</em> a verb (<span class="han">她很努力地跳舞</span>). And notice the second clause: 参加过 is an occurrence, so its negator is 没, not 不.</div>
   </div>
 
   <div class="exercise" data-exercise="builder" data-answer="搬家的时候这些东西一件也不能少">
@@ -1124,52 +1183,80 @@
     </div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="辞职的事我一个同事也不想告诉|辞职的事我一个同事都不想告诉">
-    <p class="prompt">Translate: <em>"As for quitting — I don't want to tell a single colleague."</em><br><span style="font-size:13px;color:#666">(Start with the topic 辞职的事.)</span></p>
-    <input type="text" placeholder="type in Chinese">
-    <button class="check">Check</button>
-    <div class="feedback"></div>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">辞职的事，我一个同事也不想告诉。</span> — topic first, then the frame; 想 is a wish, so the negator is 不. 都 works in place of 也.</div>
-  </div>
-
   <div class="exercise" data-exercise="mc">
     <p class="prompt">Which sentence is <strong>WRONG</strong>?</p>
     <ul class="choices">
-      <li data-correct="true">房间里一个人也不有。<span class="why">✓ Right — this is the broken one. 有 is negated with 没, never with 不; 不有 does not exist.</span></li>
-      <li data-correct="false">房间里一个人也没有。<span class="why">✗ This one is correct — the existential shape, ending in 没有.</span></li>
-      <li data-correct="false">我一点儿也不冷。<span class="why">✗ This one is correct too — an adjective, so the negator is 不.</span></li>
+      <li data-correct="true">上个星期他一天也没休息了。<span class="why">✓ Right — this is the broken one. 没 and 了 cannot share a clause: a non-event has no completion to mark. Say 上个星期他一天也没休息.</span></li>
+      <li data-correct="false">教室里一个学生也没有。<span class="why">✗ This one is correct — the existential shape, ending in 没有.</span></li>
+      <li data-correct="false">这本书一点儿也不贵。<span class="why">✗ This one is correct too — an adjective, so the negator is 不.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="si">
-    <p class="prompt">What does this mean?<br><span class="han">老师说的话我一句都没听懂，可是我一点儿也不着急。</span></p>
-    <ul class="choices">
-      <li data-correct="false">I understood the teacher, but I'm a little worried.<span class="why">✗ Both halves are reversed: 一句都没听懂 is total non-understanding, and 一点儿也不着急 is total calm.</span></li>
-      <li data-correct="true">I didn't understand a single sentence the teacher said, but I'm not worried at all.<span class="why">✓ 没 for the event that didn't happen, 不 for the state — the two halves of section 3 in one sentence.</span></li>
-      <li data-correct="false">I didn't understand one sentence, so I'm worried.<span class="why">✗ 可是 signals a contrast, and 一点儿也不着急 denies the worry outright.</span></li>
-    </ul>
+  <div class="exercise" data-exercise="fill" data-answer="爸爸还没打扫房间呢|爸爸还没有打扫房间呢|爸爸还没打扫房间|爸爸还没有打扫房间">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier lesson.</span> <strong>Transform.</strong> <span class="han">爸爸打扫房间了。</span> → rewrite it so the cleaning still hasn't happened but is coming: <em>"Dad hasn't cleaned the room yet."</em> Keep the subject <span class="han">爸爸</span>; use <span class="han">还没…呢</span>. Type the whole sentence.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">爸爸还没打扫房间呢。</span> — 还没 goes in front of the verb and the 了 <em>disappears</em>. That same 没-never-takes-了 rule is what makes <span style="text-decoration:line-through">他一天也没休息了</span> wrong in the item above: it is one rule showing up in two different structures.</div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="他今天上班的时候一句话都没说">
-    <p class="prompt">Build: <em>"He didn't say a single word at work today."</em></p>
-    <div class="builder">
-      <div class="bank">
-        <span class="chunk">他今天</span>
-        <span class="chunk">上班的时候</span>
-        <span class="chunk">一句话</span>
-        <span class="chunk">都</span>
-        <span class="chunk">没</span>
-        <span class="chunk">说</span>
-      </div>
-      <div class="drop" aria-label="Your sentence"></div>
-      <div class="actions">
-        <button class="check">Check order</button>
-        <button class="reset">Reset</button>
-      </div>
-      <div class="feedback"></div>
+  <div class="exercise" data-exercise="fill" data-answer="考试成绩的事她一个同学也没告诉|考试成绩的事她一个同学都没告诉|考试成绩的事她一个同学也没有告诉|考试成绩的事她一个同学都没有告诉">
+    <p class="prompt"><strong>Translate.</strong> "As for her exam results — she hasn't told a single classmate."<br><span style="font-size:13px;color:#666">(Start with the topic <span class="han">考试成绩的事</span>. 用: 她 · 一个同学 · 也 · 没 · 告诉)</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">考试成绩的事，她一个同学也没告诉。</span> — three separate decisions land in one short sentence. The topic goes first and leaves the object slot after 告诉 empty. The scope <span class="han">一个同学</span> is fronted <em>before</em> the verb, sealed with 也 (or 都). And the negator is 没, not 不, because English "hasn't told" reports an event that did not occur — swap in 不想告诉 and you have changed it into "doesn't want to tell", a wish rather than a report.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="他每天早上都在公园跑步|每天早上他都在公园跑步">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier lesson.</span> <strong>Word order.</strong> Put these five pieces into one sentence: <span class="han">跑步 · 每天早上 · 在公园 · 他 · 都</span><br><span style="font-size:13px;color:#666">("He goes running in the park every morning.")</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">他每天早上都在公园跑步。</span> — Chinese sets the scene before it acts: <em>when</em>, then <em>where</em>, then the verb. English does the reverse and puts both at the end ("goes running in the park every morning"), which is why <span style="text-decoration:line-through">他跑步在公园每天早上</span> feels natural and is wrong. 都 belongs directly after the time phrase it sums up. The time-before-place order is the same instinct as this whole lesson: frame first, verb last.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Three errors.</strong> This little paragraph has exactly three mistakes, one per sentence — all three are things this lesson warned you about. Find them, write the corrected paragraph, then check.<br>
+      <span class="han" style="display:block;margin-top:8px">上个星期我很忙，一天也没休息了。桌子上的蛋糕很好吃，可是弟弟一块没吃。老板还说，下个月我们一天也没能请假。</span></p>
+    <div class="writing-area"><textarea placeholder="改写在这里…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show the corrections</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 10px">上个星期我很忙，一天也没休息。桌子上的蛋糕很好吃，可是弟弟一块<strong>也</strong>没吃。老板还说，下个月我们一天也<strong>不</strong>能请假。</p>
+      <ol style="margin:0;padding-left:20px;font-size:14px;line-height:1.9">
+        <li><span class="han">没休息了 → 没休息</span>. 没 and 了 cannot share a clause. 没 says the resting never happened, so there is no completed boundary for 了 to mark.</li>
+        <li><span class="han">一块没吃 → 一块也没吃</span>. The 也/都 slot is empty. It is obligatory in this frame — and which of the two words you use makes no difference at all, so there is no excuse for leaving it out.</li>
+        <li><span class="han">没能请假 → 不能请假</span>. 能 is a modal about what is permitted, and permission is a state, not an event that failed to occur. Every modal in this lesson — 能, 想, 会, 可以 — takes 不.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Write it all.</strong> Write <strong>three true sentences</strong> about yourself, each using
+      <span class="han">一 + measure + 也/都</span> or one of its cousins (<span class="han">一点儿…也/都</span>,
+      <span class="han">谁/什么/哪儿…都</span>). At least <strong>one</strong> must use <span class="han">没</span> —
+      something you haven't done even once — and at least <strong>one</strong> must use <span class="han">不</span> —
+      something you never do, or a state you deny completely. Give each sentence a short reason or a second clause so it
+      sounds like speech rather than a drill.</p>
+    <div class="writing-area"><textarea placeholder="用中文写在这里…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我来这个城市三年了，一次医院也没去过，因为我身体很好。工作很忙的时候我什么都不想做，只想睡觉。可是跳舞以后我一点儿都不着急，我觉得那是最好的运动。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ lái zhège chéngshì sān nián le, yí cì yīyuàn yě méi qù guo, yīnwèi wǒ shēntǐ hěn hǎo. Gōngzuò hěn máng de shíhou wǒ shénme dōu bù xiǎng zuò, zhǐ xiǎng shuìjiào. Kěshì tiàowǔ yǐhòu wǒ yìdiǎnr dōu bù zháojí, wǒ juéde nà shì zuì hǎo de yùndòng.</p>
+      <p style="margin:0 0 10px"><em>I've been in this city three years and haven't been to hospital even once, because I'm healthy. When work is busy I don't want to do anything at all, only sleep. But after dancing I'm not anxious in the slightest — I think it's the best exercise there is.</em></p>
+      <p style="margin:0 0 4px"><strong>Self-check — go through your three sentences one at a time:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Does every sentence have exactly one word in the 也/都 slot — never zero, never both?</li>
+        <li>Is the whole scope <em>in front of</em> the verb? Anything trailing after the verb is English word order.</li>
+        <li>Is each negator chosen on purpose — 没 for an event that didn't occur, 不 for a habit, refusal, modal or adjective?</li>
+        <li>No <span class="han">了</span> anywhere after a <span class="han">没</span>. Check every negative sentence.</li>
+        <li>Where the verb is <span class="han">有</span>, did you write <span class="han">没有</span> — never <span style="text-decoration:line-through">不有</span>, never a bare 没 at the end?</li>
+        <li>Do your measure words match their nouns, and is at least one sentence 没 and one 不?</li>
+      </ul>
     </div>
   </div>
 </section>

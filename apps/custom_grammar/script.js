@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-exercise="match"]').forEach(wireMatch);
   document.querySelectorAll('[data-exercise="cloze"]').forEach(wireCloze);
   document.querySelectorAll('.py-toggle').forEach(wirePinyinToggle);
+  aiInit();
 });
 
 // Reading passages (reading01.html …): hide pinyin until the learner asks.
@@ -47,9 +48,15 @@ function wireFill(el) {
     if (answers.some(a => a === val)) {
       fb.textContent = '✓ Correct.';
       fb.className = 'feedback ok';
+      if (el._aiBtn) el._aiBtn.style.display = 'none';
     } else {
       fb.textContent = '✗ Not quite. Try again, or click Show answer.';
       fb.className = 'feedback bad';
+      // Full-sentence items: offer an AI second opinion (the answer list may
+      // be missing a valid variant). Short 1-3 char fills don't need it.
+      if (answers.length && answers[0].length >= 5 && val.length >= 4) {
+        aiOfferFillCheck(el, input.value, (el.getAttribute('data-answer') || '').split('|'));
+      }
     }
   };
   btn && btn.addEventListener('click', check);
@@ -237,5 +244,210 @@ function wireCloze(el) {
     blanks.forEach(b => { b._word = null; b.textContent = ''; b.classList.remove('filled'); });
     words.forEach(w => w.classList.remove('used', 'active'));
     active = null; fb.textContent = ''; fb.className = 'feedback';
+  });
+}
+
+/* ===================================================================
+ * AI grading (Claude). Free-production reveals get a "Grade with AI"
+ * button; full-sentence fills marked wrong get an "Ask AI" fallback
+ * that checks whether the answer is a valid variant the answer list
+ * missed. Needs an Anthropic API key — click the "AI ⚙" button
+ * (bottom-right of every page) and paste it once; it is stored in
+ * this browser's localStorage only, never in any file.
+ * =================================================================== */
+const AI_MODEL = 'claude-haiku-4-5';
+const AI_KEY_STORAGE = 'anthropic_api_key';
+
+function aiKey() { try { return localStorage.getItem(AI_KEY_STORAGE) || ''; } catch (e) { return ''; } }
+
+function aiInit() {
+  aiKeyPanel();
+  // Free-production graders: any reveal exercise with a textarea
+  document.querySelectorAll('[data-exercise="reveal"]').forEach(el => {
+    if (el.querySelector('textarea')) aiAddGradeButton(el);
+  });
+}
+
+function aiKeyPanel() {
+  const btn = document.createElement('button');
+  btn.className = 'ai-key-btn';
+  btn.type = 'button';
+  btn.textContent = 'AI ⚙';
+  btn.title = 'Set your Anthropic API key for AI grading';
+  const panel = document.createElement('div');
+  panel.className = 'ai-key-panel';
+  panel.innerHTML =
+    '<label>Anthropic API key <span class="ai-key-note">(stored only in this browser)</span></label>' +
+    '<input type="password" placeholder="sk-ant-...">' +
+    '<div class="ai-key-row"><button type="button" class="ai-save">Save</button>' +
+    '<button type="button" class="ai-clear">Clear</button>' +
+    '<span class="ai-key-status"></span></div>';
+  document.body.appendChild(btn);
+  document.body.appendChild(panel);
+  const input = panel.querySelector('input');
+  const status = panel.querySelector('.ai-key-status');
+  const setStatus = () => {
+    const has = !!aiKey();
+    status.textContent = has ? '✓ key set' : 'no key';
+    status.className = 'ai-key-status ' + (has ? 'ok' : '');
+    btn.classList.toggle('has-key', has);
+  };
+  setStatus();
+  btn.addEventListener('click', () => {
+    panel.classList.toggle('shown');
+    if (panel.classList.contains('shown')) { input.value = aiKey(); input.focus(); }
+  });
+  panel.querySelector('.ai-save').addEventListener('click', () => {
+    try { localStorage.setItem(AI_KEY_STORAGE, input.value.trim()); } catch (e) {}
+    setStatus(); panel.classList.remove('shown');
+  });
+  panel.querySelector('.ai-clear').addEventListener('click', () => {
+    try { localStorage.removeItem(AI_KEY_STORAGE); } catch (e) {}
+    input.value = ''; setStatus();
+  });
+}
+
+async function aiCall(system, userText, schema) {
+  const key = aiKey();
+  if (!key) throw new Error('NO_KEY');
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: AI_MODEL,
+      max_tokens: 600,
+      system: system,
+      messages: [{ role: 'user', content: userText }],
+      output_config: { format: { type: 'json_schema', schema: schema } },
+    }),
+  });
+  if (res.status === 401 || res.status === 403) throw new Error('BAD_KEY');
+  if (!res.ok) throw new Error('HTTP_' + res.status);
+  const data = await res.json();
+  const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+  return JSON.parse(text);
+}
+
+function aiErrorMessage(e) {
+  if (e.message === 'NO_KEY') return 'No API key — click "AI ⚙" (bottom-right) and paste your Anthropic key.';
+  if (e.message === 'BAD_KEY') return 'API key rejected — click "AI ⚙" to update it.';
+  return 'AI grading unavailable (offline, or: ' + e.message + ').';
+}
+
+function aiFeedbackDiv(el) {
+  let d = el.querySelector('.ai-feedback');
+  if (!d) { d = document.createElement('div'); d.className = 'ai-feedback'; el.appendChild(d); }
+  return d;
+}
+
+const AI_GRADE_SCHEMA = {
+  type: 'object',
+  properties: {
+    verdict: { type: 'string', enum: ['correct', 'minor_issues', 'incorrect'] },
+    feedback: { type: 'string' },
+    corrected: { type: 'string' },
+  },
+  required: ['verdict', 'feedback', 'corrected'],
+  additionalProperties: false,
+};
+
+function aiAddGradeButton(el) {
+  const ta = el.querySelector('textarea');
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'ai-btn';
+  btn.textContent = 'Grade with AI';
+  const anchor = el.querySelector('button.reveal');
+  anchor ? anchor.after(btn) : el.appendChild(btn);
+  btn.addEventListener('click', async () => {
+    const out = aiFeedbackDiv(el);
+    const answer = (ta.value || '').trim();
+    if (!answer) { out.textContent = 'Write your answer first.'; out.className = 'ai-feedback bad'; return; }
+    const prompt = (el.querySelector('.prompt') || {}).textContent || '';
+    const model = (el.querySelector('.reveal-box') || {}).textContent || '';
+    out.textContent = 'Grading…'; out.className = 'ai-feedback busy';
+    btn.disabled = true;
+    try {
+      const r = await aiCall(
+        'You grade a Mandarin production exercise written by an adult English-speaking learner at ~HSK 3. ' +
+        'Judge grammar and whether the required structures named in the exercise prompt are used correctly; ' +
+        'accept any natural HSK 1-3 vocabulary and any content the learner chose — do NOT require them to match the model answer. ' +
+        'verdict: "correct" = grammatical and uses the required structure(s); "minor_issues" = understandable, small slips; ' +
+        '"incorrect" = required structure wrong or missing. ' +
+        'feedback: 2-4 short English sentences; name each error and WHY it is wrong, referencing the target structure; be encouraging. ' +
+        'corrected: a corrected version of the learner\'s own sentences (unchanged if correct).',
+        'Exercise prompt:\n' + prompt.trim() +
+        '\n\nModel answer (reference only):\n' + model.trim().slice(0, 600) +
+        '\n\nLearner\'s answer:\n' + answer,
+        AI_GRADE_SCHEMA);
+      const icon = { correct: '✓', minor_issues: '△', incorrect: '✗' }[r.verdict] || '';
+      out.className = 'ai-feedback ' + (r.verdict === 'correct' ? 'ok' : r.verdict === 'minor_issues' ? 'mid' : 'bad');
+      out.innerHTML = '';
+      const head = document.createElement('div'); head.className = 'ai-verdict';
+      head.textContent = icon + ' ' + r.verdict.replace('_', ' ');
+      const body = document.createElement('div'); body.textContent = r.feedback;
+      out.appendChild(head); out.appendChild(body);
+      if (r.verdict !== 'correct' && r.corrected) {
+        const fix = document.createElement('div'); fix.className = 'ai-corrected';
+        fix.textContent = '→ ' + r.corrected;
+        out.appendChild(fix);
+      }
+    } catch (e) {
+      out.textContent = aiErrorMessage(e); out.className = 'ai-feedback bad';
+    } finally { btn.disabled = false; }
+  });
+}
+
+const AI_CHECK_SCHEMA = {
+  type: 'object',
+  properties: {
+    acceptable: { type: 'boolean' },
+    explanation: { type: 'string' },
+    corrected: { type: 'string' },
+  },
+  required: ['acceptable', 'explanation', 'corrected'],
+  additionalProperties: false,
+};
+
+// Called from wireFill when a full-sentence answer is marked wrong: offers a
+// second opinion in case the learner produced a valid variant the answer list missed.
+function aiOfferFillCheck(el, learnerAnswer, answers) {
+  if (el._aiBtn) { el._aiBtn.style.display = ''; return; }
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'ai-btn ai-btn-small';
+  btn.textContent = 'Ask AI — is my answer actually OK?';
+  el._aiBtn = btn;
+  const fb = el.querySelector('.feedback');
+  fb ? fb.after(btn) : el.appendChild(btn);
+  btn.addEventListener('click', async () => {
+    const out = aiFeedbackDiv(el);
+    const input = el.querySelector('input[type="text"]');
+    const current = input ? input.value.trim() : learnerAnswer;
+    const prompt = (el.querySelector('.prompt') || {}).textContent || '';
+    out.textContent = 'Checking…'; out.className = 'ai-feedback busy';
+    btn.disabled = true;
+    try {
+      const r = await aiCall(
+        'A Mandarin exercise for a ~HSK 3 learner marked their typed answer wrong because it is not in the accepted-answer list. ' +
+        'Decide whether their answer is nonetheless a fully correct, natural completion of the exercise. ' +
+        'acceptable: true ONLY if it is grammatical AND satisfies everything the prompt asks (required words, required structure, intended meaning). ' +
+        'explanation: 1-3 short English sentences saying why, referencing the grammar point. ' +
+        'corrected: the closest fully-correct version of their answer.',
+        'Exercise prompt:\n' + prompt.trim() +
+        '\n\nAccepted answers:\n' + answers.join('\n') +
+        '\n\nLearner\'s answer:\n' + current,
+        AI_CHECK_SCHEMA);
+      out.className = 'ai-feedback ' + (r.acceptable ? 'ok' : 'bad');
+      out.textContent = (r.acceptable ? '✓ Your answer is fine. ' : '✗ ') + r.explanation +
+        (!r.acceptable && r.corrected ? '  → ' + r.corrected : '');
+    } catch (e) {
+      out.textContent = aiErrorMessage(e); out.className = 'ai-feedback bad';
+    } finally { btn.disabled = false; }
   });
 }

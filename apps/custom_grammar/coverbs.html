@@ -165,31 +165,36 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Fix the sentence: <span class="han">我吃饭在家。</span></p>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">我在家吃饭。</span> — 在家 is a coverb phrase, so it must sit between
-      the subject and the verb. English says "eat at home"; Chinese says "at-home eat".</div>
-  </div>
-
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">"I practise dancing at home every day." Which is right?</p>
+    <p class="prompt">"She reads the newspaper at the library every day." Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">我每天在家练习跳舞。<span class="why">✓ Subject 我 → time 每天 → coverb phrase 在家 → verb 练习跳舞.</span></li>
-      <li data-correct="false">我每天练习跳舞在家。<span class="why">✗ Straight out of English ("practise dancing at home"). The place phrase can never trail the verb.</span></li>
-      <li data-correct="false">我每天家练习跳舞。<span class="why">✗ The slot is right but the coverb is missing — a place noun needs 在 in front of it.</span></li>
+      <li data-correct="true">她每天在图书馆看报纸。<span class="why">✓ Subject 她 → time 每天 → coverb phrase 在图书馆 → verb 看报纸.</span></li>
+      <li data-correct="false">她每天看报纸在图书馆。<span class="why">✗ Straight out of English ("reads the newspaper at the library"). The place phrase can never trail the verb.</span></li>
+      <li data-correct="false">她每天图书馆看报纸。<span class="why">✗ The slot is right but the coverb is missing — a bare place noun cannot stand there; it needs 在 in front of it.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="小丽每天在地铁上看书|每天小丽在地铁上看书">
-    <p class="prompt">Build: <em>"Xiao Li reads on the subway every day."</em> (The time word may go before or after 小丽 — both are accepted.)</p>
+  <div class="exercise" data-exercise="fill" data-answer="我在超市买东西|在超市我买东西">
+    <p class="prompt"><strong>Find the error</strong> and type the corrected sentence: <span class="han">我买东西在超市。</span><br>
+      <span style="font-size:13px;color:#666">(Intended: "I do my shopping at the supermarket." Keep every word — change only the order.)</span></p>
+    <input type="text" placeholder="type the corrected sentence">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我在超市买东西。</span> — 在超市 is a coverb phrase, so the whole scene loads
+      <em>before</em> the verb fires: subject → where → action. The broken version is a word-for-word photocopy of English
+      "I shop at the supermarket", which is the exact shape your ear will keep offering you for all five coverbs.</div>
+  </div>
+
+  <div class="exercise" data-exercise="builder" data-answer="小刚每天早上在公园跑步|每天早上小刚在公园跑步">
+    <p class="prompt">Build: <em>"Xiao Gang goes running in the park every morning."</em> (The time phrase may go before or after 小刚 — both are accepted.)</p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">小丽</span>
-        <span class="chunk">每天</span>
-        <span class="chunk">在地铁上</span>
-        <span class="chunk">看书</span>
+        <span class="chunk">小刚</span>
+        <span class="chunk">每天早上</span>
+        <span class="chunk">在公园</span>
+        <span class="chunk">跑步</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -301,24 +306,38 @@
   <h3>Practice</h3>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">You're telling 小刚 where his coffee is — you put it down there. Which is right?</p>
+    <p class="prompt">You have just put 小丽's passport away for her, and you're telling her where it ended up. Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">你的咖啡放在桌子上。<span class="why">✓ 放 is a placement verb: the resting place rides on the back of the verb.</span></li>
-      <li data-correct="false">你的咖啡在桌子上放。<span class="why">✗ 在 in front would say the <em>act of putting</em> was carried out on the table. The end position must follow 放.</span></li>
-      <li data-correct="false">你的咖啡放桌子上在。<span class="why">✗ 在 can never come last — it always sits in front of its place word.</span></li>
+      <li data-correct="true">你的护照放在包里。<span class="why">✓ 放 is a placement verb: the resting place rides on the back of the verb.</span></li>
+      <li data-correct="false">你的护照在包里放。<span class="why">✗ 在 in front would say the <em>act of putting</em> was carried out inside the bag. The end position must follow 放.</span></li>
+      <li data-correct="false">你的护照放在包。<span class="why">✗ Right slot, unfinished place word. A container noun has to be closed off with 里 (or 上, 旁边…) before 在 will accept it: 在包里.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="fill" data-answer="在家|在家里">
-    <p class="prompt">Fill with <strong>在 + the place</strong>: <span class="han">下班以后我 ___ 练习跳舞。</span><br>
-      <span style="font-size:13px;color:#666">(After work I practise dancing <em>at home</em>.)</span></p>
+  <div class="exercise" data-exercise="fill" data-answer="在医院|在医院里">
+    <p class="prompt">Fill with <strong>在 + the place</strong>: <span class="han">我阿姨 ___ 医院工作，她的同事都很热情。</span><br>
+      <span style="font-size:13px;color:#666">(My aunt works <em>at a hospital</em>; her colleagues are all very warm.)</span></p>
     <input type="text" placeholder="type in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">在家</span> (or <span class="han">在家里</span>) — 练习 is not a placement
-      verb, so the location stays in front of it.</div>
+    <div class="reveal-box"><span class="han">在医院</span> — nothing is being set down anywhere, so 工作 is not a placement
+      verb and the location stays in front of it. <span style="text-decoration:line-through">我阿姨工作在医院</span> ✗ is the
+      English order sneaking back in.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="姐姐住在公园附近|我姐姐住在公园附近|我的姐姐住在公园附近|姐姐住在公园的附近|我姐姐住在公园的附近|我的姐姐住在公园的附近">
+    <p class="prompt"><strong>Translate.</strong> "My older sister lives near the park."<br>
+      <span style="font-size:13px;color:#666">用: 姐姐 · 住 · 在 · 公园附近</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">姐姐住在公园附近。</span> — 住 belongs to the small family of verbs that
+      <em>deposit</em> someone somewhere, so its place rides behind it, exactly like 放在／坐在／写在. Front the 在 and you get
+      a different sentence: <span class="han">姐姐在公园附近等我</span> ✓ (waiting is an event, so 在 goes first), but
+      <span class="han">姐姐在公园附近住</span> foregrounds the act of living as an event, which is not what you mean here.</div>
   </div>
 </section>
 
@@ -379,24 +398,53 @@
   <h3>Practice</h3>
 
   <div class="exercise" data-exercise="fill" data-answer="离">
-    <p class="prompt"><strong>离, 从 or 往?</strong> <span class="han">我家 ___ 公司很远，坐地铁要一个小时。</span><br>
-      <span style="font-size:13px;color:#666">(My place is a long way from the office — an hour by subway.)</span></p>
+    <p class="prompt"><strong>离, 从 or 往?</strong> <span class="han">这家饭店 ___ 学校很远，走路要半个小时。</span><br>
+      <span style="font-size:13px;color:#666">(That restaurant is a long way from the school — half an hour on foot.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">离</span> — nothing is travelling in this clause; it's a plain
-      measurement between two fixed points, so 离 is the only option.</div>
+    <div class="reveal-box"><span class="han">离</span> — the first clause contains no verb of motion at all, just a
+      measurement between two things that are sitting still, so only 离 fits. The half-hour walk in the second clause is a
+      separate statement; it does not license 从 back in the first.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">"My home is very far from the office." Which is right?</p>
+    <p class="prompt">"How far is the bank from here?" Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">我家离公司很远。<span class="why">✓ A 离 B + 很远 — the standard distance frame.</span></li>
-      <li data-correct="false">我家从公司很远。<span class="why">✗ 从 marks the start of a journey and needs a motion verb. Plain distance takes 离.</span></li>
-      <li data-correct="false">我家很远离公司。<span class="why">✗ The coverb phrase 离公司 has to come before 很远, exactly like every other coverb phrase comes before the verb.</span></li>
+      <li data-correct="true">银行离这儿多远？<span class="why">✓ A 离 B + 多远 — the standard way to ask for the gap between two fixed points.</span></li>
+      <li data-correct="false">银行从这儿多远？<span class="why">✗ 从 marks the start of a journey and needs a motion verb behind it. A plain measurement takes 离.</span></li>
+      <li data-correct="false">银行多远离这儿？<span class="why">✗ The coverb phrase 离这儿 has to come before 多远, exactly like every other coverb phrase comes before what it modifies.</span></li>
     </ul>
     <div class="feedback"></div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="我朋友家离公园很近|我的朋友家离公园很近|朋友家离公园很近|我朋友的家离公园很近">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">从我朋友家走到公园只要五分钟。</span> → say the same thing as a
+      plain <em>measurement</em>, with nobody travelling in it. Start with <span class="han">我朋友家</span>, use
+      <span class="han">离</span> and <span class="han">很近</span>, and type that one clause only.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我朋友家离公园很近。</span> — the original had somebody <em>walking</em>, and that
+      walking is the only reason 从…到 was allowed. Take the journey away and 从 has nothing to start, so the sentence collapses
+      into the static frame A 离 B + 很近. <span style="text-decoration:line-through">我朋友家从公园很近</span> ✗ is precisely the
+      error this transform exists to kill.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="他家离机场很远，坐公共汽车要一个半小时|小刚家离机场很远，坐公共汽车要一个半小时|他家离机场很远，坐公共汽车得一个半小时|小刚家离机场很远，坐公共汽车得一个半小时">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">小刚家离机场远吗？</span> — yes, a long way: an hour
+      and a half by bus. Answer in <strong>one sentence</strong>, starting with <span class="han">他家</span>.<br>
+      <span style="font-size:13px;color:#666">用: 他家 · 离 · 机场 · 很远 · 坐公共汽车 · 要一个半小时</span></p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">他家离机场很远，坐公共汽车要一个半小时。</span> — a 远吗？question is answered by
+      keeping the whole 离 frame and swapping only the last piece. Notice that 离 does <em>not</em> drop out of the answer:
+      <span style="text-decoration:line-through">他家机场很远</span> ✗ just piles two nouns on top of each other. The travel time
+      is a second, separate clause — it never gets folded into the 离 clause.</div>
   </div>
 </section>
 
@@ -458,15 +506,15 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="builder" data-answer="我每天从家走到地铁站|每天我从家走到地铁站">
-    <p class="prompt">Build: <em>"Every day I walk from home to the subway station."</em> (The time word may go before or after 我 — both are accepted.)</p>
+  <div class="exercise" data-exercise="builder" data-answer="小丽每天早上从家坐公共汽车到学校|每天早上小丽从家坐公共汽车到学校">
+    <p class="prompt">Build: <em>"Every morning Xiao Li takes the bus from home to school."</em> (The time phrase may go before or after 小丽 — both are accepted.)</p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">我</span>
-        <span class="chunk">每天</span>
+        <span class="chunk">小丽</span>
+        <span class="chunk">每天早上</span>
         <span class="chunk">从家</span>
-        <span class="chunk">走到</span>
-        <span class="chunk">地铁站</span>
+        <span class="chunk">坐公共汽车</span>
+        <span class="chunk">到学校</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -479,14 +527,29 @@
 
   <div class="exercise" data-exercise="fill" data-answer="从到">
     <p class="prompt">Type the two missing characters <strong>in order</strong>:<br>
-      <span class="han">___ 九点 ___ 五点，我都在公司工作。</span><br>
-      <span style="font-size:13px;color:#666">(From nine to five I'm at the office working. Two characters, e.g. 从到 — no spaces needed.)</span></p>
+      <span class="han">___ 星期一 ___ 星期五，我叔叔都在银行上班。</span><br>
+      <span style="font-size:13px;color:#666">(Monday to Friday my uncle works at the bank. Two characters, e.g. 从到 — no spaces needed.)</span></p>
     <input type="text" placeholder="Two characters">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">从 · 到</span> — the same pair that spans two places also spans two
-      clock times: 从九点到五点.</div>
+    <div class="reveal-box"><span class="han">从 · 到</span> — the pair that spans two places spans two points on the calendar
+      just as happily: 从星期一到星期五, 从早上到晚上, 从去年到今年. Half a pair is not a sentence —
+      <span style="text-decoration:line-through">从星期一星期五</span> ✗.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="他从家骑自行车到办公室|他骑自行车从家到办公室|他每天从家骑自行车到办公室|他每天骑自行车从家到办公室">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">小刚每天怎么去上班？</span> — he cycles, from home
+      to the office. Start with <span class="han">他</span>.<br>
+      <span style="font-size:13px;color:#666">用: 他 · 从家 · 骑自行车 · 到办公室</span></p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">他从家骑自行车到办公室。</span> — 从 opens the journey, 骑自行车 does the travelling,
+      and 到 lands it. You may also keep the two halves of the pair together in front:
+      <span class="han">他骑自行车从家到办公室</span> ✓. What you may never do is let a coverb drift behind the verb —
+      <span style="text-decoration:line-through">他骑自行车到办公室从家</span> ✗.</div>
   </div>
 </section>
 
@@ -538,24 +601,27 @@
   <h3>Practice</h3>
 
   <div class="exercise" data-exercise="fill" data-answer="往|向">
-    <p class="prompt">Fill: <span class="han">一直往前走，到了路口 ___ 右走就到了。</span><br>
-      <span style="font-size:13px;color:#666">(Keep going straight; turn right at the intersection and you're there.)</span></p>
+    <p class="prompt">Fill: <span class="han">出了银行 ___ 右走，医院就在第二个路口旁边。</span><br>
+      <span style="font-size:13px;color:#666">(Come out of the bank and turn right; the hospital is by the second intersection.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">往</span> — 往右走 is the everyday way to say "turn right".
-      (<span class="han">向</span> is also correct here but belongs to a later level; stick with 往 for directions.)</div>
+    <div class="reveal-box"><span class="han">往</span> — 往右走 is the everyday way to say "turn right", and like every coverb
+      phrase 往右 sits in front of its verb 走, never after it. (<span class="han">向</span> is also correct here but belongs to
+      a later level; stick with 往 for directions.)</div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="地铁站在前面，往前走三分钟就到了">
-    <p class="prompt">Build: <em>"The subway station is up ahead — three minutes straight on and you're there."</em></p>
+  <div class="exercise" data-exercise="builder" data-answer="图书馆离这儿不远，一直往前走十分钟就到了">
+    <p class="prompt">Build: <em>"The library isn't far from here — keep going straight for ten minutes and you're there."</em>
+      <span style="font-size:13px;color:#666">(Two coverbs in one sentence: the distance first, then the direction.)</span></p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">地铁站</span>
-        <span class="chunk">在前面</span>
+        <span class="chunk">图书馆</span>
+        <span class="chunk">离这儿不远</span>
+        <span class="chunk">一直</span>
         <span class="chunk">往前走</span>
-        <span class="chunk">三分钟</span>
+        <span class="chunk">十分钟</span>
         <span class="chunk">就到了</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
@@ -565,6 +631,19 @@
       </div>
       <div class="feedback"></div>
     </div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="出了火车站往左走，咖啡馆就在路口|出了火车站以后往左走，咖啡馆就在路口|出火车站往左走，咖啡馆就在路口|出火车站以后往左走，咖啡馆就在路口">
+    <p class="prompt"><strong>Translate.</strong> "Come out of the train station and turn left — the café is right at the intersection."<br>
+      <span style="font-size:13px;color:#666">用: 出了火车站 · 往左走 · 咖啡馆 · 就在路口</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">出了火车站往左走，咖啡馆就在路口。</span> — 往 takes a <em>direction</em> word (前／左／右)
+      and hands it straight to 走. It cannot take the destination: <span style="text-decoration:line-through">往咖啡馆</span> on its
+      own is not a sentence. The café's position is reported separately with 在, because that clause is about where a thing
+      <em>is</em>, not where anybody is heading.</div>
   </div>
 </section>
 
@@ -637,61 +716,141 @@
   <h3>Practice</h3>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">"My boss is very good to me." Which is right?</p>
+    <p class="prompt">"My neighbour is very kind to my children." Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">我老板对我很好。<span class="why">✓ An attitude aimed at a person takes 对.</span></li>
-      <li data-correct="false">我老板给我很好。<span class="why">✗ 给 hands something over — 给我打电话, 给我买咖啡. It can't carry an attitude.</span></li>
-      <li data-correct="false">我老板在我很好。<span class="why">✗ 在 needs a <em>place</em>. It can never take a person as its noun.</span></li>
+      <li data-correct="true">我的邻居对我的孩子很好。<span class="why">✓ An attitude aimed at a person takes 对 — and 对我的孩子 sits in front of 很好, like every coverb phrase.</span></li>
+      <li data-correct="false">我的邻居给我的孩子很好。<span class="why">✗ 给 hands something over — 给孩子买东西, 给我打电话. It cannot carry an attitude.</span></li>
+      <li data-correct="false">我的邻居很好对我的孩子。<span class="why">✗ The English order again ("kind to my children"). 对 + person is a coverb phrase, so it can never trail 很好.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="对|对于">
-    <p class="prompt">Fill: <span class="han">跳舞 ___ 身体很好，所以我每天都练习。</span><br>
-      <span style="font-size:13px;color:#666">(Dancing is good for your health, so I practise every day.)</span></p>
+    <p class="prompt">Fill: <span class="han">我弟弟 ___ 中国历史很感兴趣，每个周末都去图书馆看书。</span><br>
+      <span style="font-size:13px;color:#666">(My little brother is really interested in Chinese history — he's at the library every weekend.)</span></p>
     <input type="text" placeholder="One character">
     <button class="check">Check</button>
     <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">对</span> — 身体 is the target that benefits: 对身体很好 is a set phrase
-      you'll hear constantly.</div>
+    <div class="reveal-box"><span class="han">对</span> — 感兴趣 always names its target with 对, and the whole phrase
+      对中国历史 is a coverb phrase like any other, so it loads first.
+      <span style="text-decoration:line-through">我弟弟很感兴趣中国历史</span> ✗ — English "interested <em>in</em> X" puts X last;
+      Chinese puts it first.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Personalise it.</strong> Write <strong>two true sentences</strong> with <span class="han">对</span>:
+      one about a <em>person</em> and how they treat someone (对 + person + 很好／很热情／很客气), and one about something that is
+      <em>good or bad for</em> something else (对 + 身体／工作／学习 + 很好／不好). Use two different targets.</p>
+    <div class="writing-area"><textarea placeholder="…对…很好。"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我的同事对新来的人都很热情，所以我在办公室很快乐。每天走路上班对身体很好，可是冬天太冷了。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ de tóngshì duì xīn lái de rén dōu hěn rèqíng, suǒyǐ wǒ zài bàngōngshì hěn kuàilè. Měitiān zǒulù shàngbān duì shēntǐ hěn hǎo, kěshì dōngtiān tài lěng le.</p>
+      <p style="margin:0 0 10px"><em>My colleagues are all very warm to newcomers, so I'm happy in the office. Walking to work every day is good for you — but winter is too cold.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your own two sentences:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Does <span class="han">对</span> + its target sit <em>before</em> 很好／很热情, never after? (<span style="text-decoration:line-through">他很好对我</span> ✗)</li>
+        <li>Is the thing after 对 a target of an attitude or a benefit — never a location? 对 can't mean "at".</li>
+        <li>Did you resist <span class="han">给</span>? 给 hands something over; it cannot carry an attitude.</li>
+        <li>Adjective after the target, with its <span class="han">很</span>: 对身体很好 ✓, not <span style="text-decoration:line-through">对很好身体</span> ✗.</li>
+        <li>Two genuinely different targets — one a person, one a thing?</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- =============================================================== -->
 <section class="gp" id="mixed">
-  <h2>7. Mixed practice <span class="en-sub">All five coverbs in one commute</span></h2>
+  <h2>7. Mixed practice <span class="en-sub">Shuffled — plus two things from earlier sheets</span></h2>
 
-  <div class="exercise" data-exercise="cloze" data-answers="a:离;b:从;c:在;d:往;e:对">
+  <p style="margin:0 0 18px">Nothing below comes in section order, so you have to work out <em>which</em> coverb a sentence
+     needs before you can build it. Two items aren't from this sheet at all — one <span class="han">得</span> complement and
+     one <span class="han">比</span> comparison — dropped in to keep the older machinery running.</p>
+
+  <div class="exercise" data-exercise="cloze" data-answers="a:对;b:离;c:从;d:往;e:在">
     <p class="prompt">选词填空。 <span style="font-size:13px;color:#666">Pick the right coverb for each blank (one word is extra).</span></p>
     <div class="cloze">
       <div class="wordbank">
-        <button class="word" data-word="离" type="button">离</button>
-        <button class="word" data-word="从" type="button">从</button>
-        <button class="word" data-word="在" type="button">在</button>
         <button class="word" data-word="往" type="button">往</button>
         <button class="word" data-word="对" type="button">对</button>
+        <button class="word" data-word="在" type="button">在</button>
         <button class="word" data-word="比" type="button">比</button>
+        <button class="word" data-word="从" type="button">从</button>
+        <button class="word" data-word="离" type="button">离</button>
       </div>
-      <p class="cloze-text">我家<span class="blank" data-key="a"></span>地铁站很近，走路只要五分钟。我每天早上<span class="blank" data-key="b"></span>家走到地铁站，坐地铁去公司，<span class="blank" data-key="c"></span>公司工作八个小时。下班以后我去练习跳舞，出了地铁站<span class="blank" data-key="d"></span>右走，三分钟就到了。舞蹈老师<span class="blank" data-key="e"></span>我很好，他说我跳舞跳得越来越好。</p>
+      <p class="cloze-text">星期六早上小刚的妈妈给我打电话，请我去他们的新家吃饭。她<span class="blank" data-key="a"></span>我很客气，说饭店的菜没有家里的好吃。他们家<span class="blank" data-key="b"></span>火车站不远，所以我<span class="blank" data-key="c"></span>火车站走过去，只用了十几分钟。出了火车站<span class="blank" data-key="d"></span>前走，到了第二个路口再往右走就到了。那天下午我们<span class="blank" data-key="e"></span>他家里聊天，晚上我坐公共汽车回家。</p>
     </div>
     <div class="actions"><button class="check">Check</button><button class="reset">Reset</button></div>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Translate: <em>"Keep going straight, at the intersection go right, and you'll arrive at the coffee shop."</em></p>
+  <div class="exercise" data-exercise="fill" data-answer="得">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier sheet.</span> Fill with <span class="han">的</span>,
+      <span class="han">得</span> or <span class="han">地</span>: <span class="han">我同事打篮球打 ___ 很好，每个周末都去公园打球。</span></p>
+    <input type="text" placeholder="one character">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">一直往前走，到了路口往右走，就到咖啡馆了。</span> — two 往 phrases, each one
-      sitting in front of its 走.</div>
+    <div class="reveal-box"><span class="han">得</span> — the gap sits <em>after</em> a repeated verb and introduces a judgement
+      of how the playing goes, so it is the complement 得. 的 would need a noun behind it; 地 goes <em>in front of</em> a verb
+      (<span class="han">他很快地走</span> — a different, more literary sentence).</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="坐出租车比坐公共汽车快|坐出租车比公共汽车快">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier sheet.</span>
+      <strong>Combine into one sentence with <span class="han">比</span>:</strong>
+      <span class="han">坐出租车很快。坐公共汽车不太快。</span> Start with <span class="han">坐出租车</span>, and add no degree
+      word (no 更, 还, 得多).</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">坐出租车比坐公共汽车快。</span> — 比 is a coverb too, and it obeys the same rule as
+      the other five: 比坐公共汽车 sits in front of the adjective it measures. The other half of the rule is that a 比 sentence
+      drops 很 completely — <span style="text-decoration:line-through">坐出租车比坐公共汽车很快</span> ✗.</div>
   </div>
 
   <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Translate: <em>"I work in New York; my home isn't far from the office, and my boss is very good to me."</em></p>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">我在纽约工作，我家离公司不远，我老板对我很好。</span> — three coverbs, three
-      different jobs: 在 = where the work happens, 离 = the distance, 对 = who the kindness is aimed at. All three sit
-      in front of what they modify.</div>
+    <p class="prompt"><strong>Three errors.</strong> This little paragraph has exactly three mistakes, one per sentence, and all
+      three are coverb mistakes. Find them, write out the corrected paragraph, then check.<br>
+      <span class="han" style="display:block;margin-top:8px">我家从医院很远，坐公共汽车要四十分钟。我每天早上从家走地铁站，然后坐地铁上班。我们的新经理很热情对每个人，所以大家都喜欢她。</span></p>
+    <div class="writing-area"><textarea placeholder="改写在这里…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show the corrections</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 10px">我家<strong>离</strong>医院很远，坐公共汽车要四十分钟。我每天早上从家走<strong>到</strong>地铁站，然后坐地铁上班。我们的新经理<strong>对每个人很热情</strong>，所以大家都喜欢她。</p>
+      <ol style="margin:0;padding-left:20px;font-size:14px;line-height:1.9">
+        <li><span class="han">从医院 → 离医院</span>. Nothing travels in that clause — it is a plain measurement between two
+          fixed points, and only 离 does that job. 从 needs a journey and a motion verb behind it. English hides the difference
+          because it says "far <em>from</em>" and "walk <em>from</em>" with the same word.</li>
+        <li><span class="han">走地铁站 → 走到地铁站</span>. 从 opened a journey and then abandoned it halfway: once 从 A is on
+          the table the sentence owes you an end point, and the end point is carried by 到 riding on the verb — 走到, 坐到, 开到.</li>
+        <li><span class="han">很热情对每个人 → 对每个人很热情</span>. The one rule this whole sheet is built on: a coverb phrase
+          can never trail what it modifies. English "warm <em>to</em> everyone" puts the target last; Chinese loads it first.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Write it all — your commute.</strong> Describe how you actually get to work (or to your dance class)
+      in <strong>four sentences</strong>, one coverb per sentence: <span class="han">离</span> (how far it is),
+      <span class="han">从…到…</span> (the journey itself), <span class="han">在</span> (something you do on the way or once you
+      arrive), and <span class="han">往</span> (one turn somebody would have to make to find the place).</p>
+    <div class="writing-area"><textarea placeholder="我家离…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我家离办公室不太远，可是早上路上人很多。从我家到办公室要三十五分钟。路上我经常在公共汽车上看新闻。下了公共汽车往右走两分钟，就能看见我们的楼。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ jiā lí bàngōngshì bú tài yuǎn, kěshì zǎoshang lù shang rén hěn duō. Cóng wǒ jiā dào bàngōngshì yào sānshíwǔ fēnzhōng. Lù shang wǒ jīngcháng zài gōnggòng qìchē shang kàn xīnwén. Xià le gōnggòng qìchē wǎng yòu zǒu liǎng fēnzhōng, jiù néng kànjiàn wǒmen de lóu.</p>
+      <p style="margin:0 0 10px"><em>My place isn't too far from the office, but the roads are crowded in the morning. It takes thirty-five minutes from home to the office. On the way I often read the news on the bus. Get off the bus, walk two minutes to the right, and you can see our building.</em></p>
+      <p style="margin:0 0 4px"><strong>Self-check — one line per sentence:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Sentence 1: is it <span class="han">离</span> and not <span class="han">从</span>? Nothing moves in a distance measurement.</li>
+        <li>Sentence 2: did <span class="han">从</span> get its <span class="han">到</span>? A journey that starts must also land.</li>
+        <li>Sentence 3: is 在 + place <em>in front of</em> the verb? (Only 住／放／坐／站／写 take it behind.)</li>
+        <li>Sentence 4: does <span class="han">往</span> take a direction word (前／左／右) and hand it to 走 — not a destination? <span style="text-decoration:line-through">往办公室</span> on its own is not a sentence.</li>
+        <li>Read all four aloud: is every coverb phrase to the <em>left</em> of its verb? That one check catches most of it.</li>
+      </ul>
+    </div>
   </div>
 </section>
 

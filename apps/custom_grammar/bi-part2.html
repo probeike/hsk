@@ -89,40 +89,53 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="fill" data-answer="三岁">
-    <p class="prompt">Fill the degree slot: <span class="han">他比我大 ___ 。</span><br>
-      <span style="font-size:13px;color:#666">(He's three years older than me.)</span></p>
-    <input type="text" placeholder="type in Chinese">
+  <div class="exercise" data-exercise="fill" data-answer="我比我弟弟大六岁|我比弟弟大六岁|我弟弟比我小六岁|弟弟比我小六岁">
+    <p class="prompt"><strong>Combine into one sentence with <span class="han">比</span>.</strong>
+      <span class="han">我三十岁。我弟弟二十四岁。</span> → say in <em>one</em> sentence exactly how much older you are.
+      Start with <span class="han">我</span> (or start with <span class="han">我弟弟</span> and flip it round).</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我比我弟弟大六岁。</span> — the amount is the <em>last</em> thing in the
+      sentence: adjective 大 first, then 六岁. English loads the number in front ("six years older") and that is exactly
+      the order Chinese refuses: <span style="text-decoration:line-through">我比我弟弟六岁大</span> ✗. Flipping the two
+      people also flips the adjective — <span class="han">我弟弟比我小六岁</span> is the same fact told the other way.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">"Today is a bit colder than yesterday." Which is right?</p>
+    <p class="prompt">"The tea here is a bit cheaper than the coffee." Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">今天比昨天冷一点儿。<span class="why">✓ Adjective first, amount after: 冷 + 一点儿.</span></li>
-      <li data-correct="false">今天比昨天一点儿冷。<span class="why">✗ That's the English order ("a bit colder"). The amount goes after the adjective.</span></li>
-      <li data-correct="false">今天比昨天很冷。<span class="why">✗ 很 is banned inside 比 sentences.</span></li>
+      <li data-correct="true">这儿的茶比咖啡便宜一点儿。<span class="why">✓ Adjective first, amount after: 便宜 + 一点儿.</span></li>
+      <li data-correct="false">这儿的茶比咖啡一点儿便宜。<span class="why">✗ That's the English order ("a bit cheaper"). The amount goes after the adjective, never in front of it.</span></li>
+      <li data-correct="false">这儿的茶比咖啡很便宜。<span class="why">✗ 很 is banned inside 比 sentences — and it isn't what "a bit" means anyway.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Fix the sentence: <span class="han">纽约的房子比北京的很贵。</span></p>
+  <div class="exercise" data-exercise="fill" data-answer="这个超市的水果比那个超市的便宜得多|这个超市的水果比那个超市的便宜多了|这个超市的水果比那个超市的便宜很多|这个超市的水果比那个的便宜得多|这个超市的水果比那个的便宜多了|这个超市的水果比那个的便宜很多|这个超市的水果比那个超市的便宜|这个超市的水果比那个的便宜">
+    <p class="prompt"><strong>Find the error</strong> and type the corrected sentence:
+      <span class="han">这个超市的水果比那个超市的很便宜。</span><br>
+      <span style="font-size:13px;color:#666">(Intended: "The fruit at this supermarket is much cheaper than at that one.")</span></p>
+    <input type="text" placeholder="type the corrected sentence">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">纽约的房子比北京的贵得多。</span> — delete 很; if you want "much more
-      expensive", the intensity goes <em>after</em> the adjective as 得多 (or 多了).</div>
+    <div class="reveal-box"><span class="han">这个超市的水果比那个超市的便宜得多。</span> — <span class="han">很</span> cannot
+      live inside a 比 sentence at all, so it is not a matter of moving it: it goes. The "much" it was trying to carry
+      reappears <em>behind</em> the adjective as <span class="han">得多</span> (or <span class="han">多了</span>). Simply
+      deleting 很 — <span class="han">…比那个超市的便宜</span> — is also correct Chinese; you just lose the "much".</div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="这件衣服比那件贵五十块">
-    <p class="prompt">Build: <em>"This piece of clothing is fifty kuai more expensive than that one."</em></p>
+  <div class="exercise" data-exercise="builder" data-answer="这条裤子比那条贵八十块">
+    <p class="prompt">Build: <em>"These trousers are eighty kuai more expensive than those."</em></p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">这件衣服</span>
+        <span class="chunk">这条裤子</span>
         <span class="chunk">比</span>
-        <span class="chunk">那件</span>
+        <span class="chunk">那条</span>
         <span class="chunk">贵</span>
-        <span class="chunk">五十块</span>
+        <span class="chunk">八十块</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -134,11 +147,29 @@
   </div>
 
   <div class="exercise" data-exercise="fill" data-answer="得多|多了|很多">
-    <p class="prompt">Fill: <span class="han">我的汉语比去年好 ___ 。</span><br>
-      <span style="font-size:13px;color:#666">(My Chinese is a lot better than last year.)</span></p>
+    <p class="prompt">Fill the degree slot: <span class="han">这个星期我比上个星期忙 ___ 。</span><br>
+      <span style="font-size:13px;color:#666">(I'm a lot busier this week than last week.)</span></p>
     <input type="text" placeholder="type in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">得多</span> (also <span class="han">多了</span> /
+      <span class="han">很多</span>) — all three mean "by a lot" and all three stand <em>behind</em> the adjective.
+      The one word that can never go there, or anywhere else in this sentence, is
+      <span style="text-decoration:line-through">很忙</span> ✗.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="今天的作业比昨天的难一点儿|今天的作业比昨天的难一点|今天的作业比昨天的作业难一点儿|今天的作业比昨天的作业难一点">
+    <p class="prompt"><strong>Translate.</strong> "Today's homework is a bit harder than yesterday's."<br>
+      <span style="font-size:13px;color:#666">用: 今天的作业 · 比 · 昨天的 · 难 · 一点儿</span></p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">今天的作业比昨天的难一点儿。</span> — English "a bit harder" puts the
+      softener first; Chinese puts 难 first and lets 一点儿 trail. Watch the near-twin:
+      <span class="han">有点儿</span> goes <em>before</em> an adjective and means "a bit too …" as a complaint
+      (<span class="han">今天的作业有点儿难</span>) — it is not a comparison word and cannot appear in a 比 sentence.</div>
   </div>
 </section>
 
@@ -174,24 +205,24 @@
   <h3>Practice</h3>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">"He runs much faster than me." Which is right?</p>
+    <p class="prompt">"My neighbour cleans the room a lot more thoroughly than I do." Which is right?</p>
     <ul class="choices">
-      <li data-correct="true">他跑得比我快得多。<span class="why">✓ 跑 + 得 (how he runs), then 比我, then 快 + 得多 (how much faster).</span></li>
-      <li data-correct="false">他跑得比我很快。<span class="why">✗ 很 is still banned in a 比 sentence, even with 得.</span></li>
-      <li data-correct="false">他比我跑快得多。<span class="why">✗ 得 is missing after 跑 — the "how" reading needs 跑得.</span></li>
+      <li data-correct="true">我邻居打扫房间打扫得比我干净得多。<span class="why">✓ Object present, so the verb repeats before 得 (打扫房间 → 打扫得), then 比我, then 干净 + 得多.</span></li>
+      <li data-correct="false">我邻居打扫房间得比我干净得多。<span class="why">✗ 得 can only hang off a bare verb. With 房间 in the way, the verb has to be said twice: 打扫房间打扫得。</span></li>
+      <li data-correct="false">我邻居打扫房间打扫得比我很干净。<span class="why">✗ 很 is banned in a 比 sentence even when the comparison sits inside the 得-slot.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="她跳舞跳得比我好|她跳舞比我跳得好">
-    <p class="prompt">Build: <em>"She dances better than me."</em> (Two orders are accepted.)</p>
+  <div class="exercise" data-exercise="builder" data-answer="我同学说话说得比我慢|我同学说话比我说得慢">
+    <p class="prompt">Build: <em>"My classmate speaks more slowly than I do."</em> (Two orders are accepted.)</p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">她</span>
-        <span class="chunk">跳舞</span>
-        <span class="chunk">跳得</span>
+        <span class="chunk">我同学</span>
+        <span class="chunk">说话</span>
+        <span class="chunk">说得</span>
         <span class="chunk">比我</span>
-        <span class="chunk">好</span>
+        <span class="chunk">慢</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -202,11 +233,39 @@
     </div>
   </div>
 
+  <div class="exercise" data-exercise="fill" data-answer="得">
+    <p class="prompt">Fill with one character: <span class="han">这个孩子做作业做 ___ 比他姐姐认真。</span><br>
+      <span style="font-size:13px;color:#666">(This child does his homework more carefully than his older sister.)</span></p>
+    <input type="text" placeholder="one character">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">得</span> — the gap sits after a repeated verb and introduces a judgement
+      of <em>how</em> the homework gets done, so it is the complement 得. <span class="han">的</span> would need a noun
+      behind it; <span class="han">地</span> goes in front of the verb. Note where 比他姐姐 lands: after the 得, not
+      before 做 — <span style="text-decoration:line-through">这个孩子比他姐姐做作业做认真</span> ✗.</div>
+  </div>
+
   <div class="exercise" data-exercise="reveal">
     <p class="prompt">Translate: <em>"My teacher speaks faster than I do."</em></p>
     <button class="reveal">Show answer</button>
     <div class="reveal-box"><span class="han">我的老师说得比我快。</span> (or
       <span class="han">我的老师说话说得比我快。</span> with the object spelled out — then the verb repeats.)</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="小丽唱歌唱得比我好|小丽唱歌比我唱得好|小丽比我唱得好|小丽比我唱歌唱得好|小丽唱得比我好">
+    <p class="prompt"><strong>Combine into one sentence with <span class="han">比</span>.</strong>
+      <span class="han">小丽唱歌唱得很好。我唱歌唱得不太好。</span> → one sentence starting with
+      <span class="han">小丽</span>, and add <em>no</em> degree word (no 得多, no 一点儿).</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">小丽唱歌唱得比我好。</span> — the object 歌 forces the verb to be repeated
+      before 得; 比我 then slots in either straight after the 得 or straight before that repeated verb
+      (<span class="han">小丽唱歌比我唱得好</span>), and both are said. The <span class="han">很</span> from the first
+      sentence simply vanishes: once an adjective is being measured against something it no longer needs its 很 crutch,
+      and a 比 sentence will not accept it.</div>
   </div>
 </section>
 
@@ -247,33 +306,38 @@
 
   <h3>Practice</h3>
 
-  <div class="exercise" data-exercise="fill" data-answer="没有">
-    <p class="prompt">Fill: <span class="han">我妹妹 ___ 我高。</span><br>
-      <span style="font-size:13px;color:#666">(My little sister isn't as tall as me.)</span></p>
+  <div class="exercise" data-exercise="fill" data-answer="没有|没">
+    <p class="prompt">Fill: <span class="han">这个城市的地铁 ___ 北京的方便。</span><br>
+      <span style="font-size:13px;color:#666">(This city's subway isn't as convenient as Beijing's.)</span></p>
     <input type="text" placeholder="type in Chinese">
     <button class="check">Check</button>
     <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">没有</span> (the short <span class="han">没</span> is also heard) — to
+      negate a comparison you do not negate 比, you <em>replace</em> it. 比 leaves the sentence completely:
+      <span style="text-decoration:line-through">这个城市的地铁不比北京的方便</span> would mean something else, and
+      <span style="text-decoration:line-through">…比北京的不方便</span> is not a structure at all.</div>
   </div>
 
   <div class="exercise" data-exercise="mc">
-    <p class="prompt">Your friend insists you're taller than your brother. You're actually the same height. You say:</p>
+    <p class="prompt">A colleague insists your phone cost more than his. In fact the two cost the same. You say:</p>
     <ul class="choices">
-      <li data-correct="true">我不比他高。<span class="why">✓ "I'm not taller than him" — rejects the claim, leaves room for "same height".</span></li>
-      <li data-correct="false">我没有他高。<span class="why">✗ This says he's the tall one — that's a different fact.</span></li>
-      <li data-correct="false">我比他不高。<span class="why">✗ Not a structure — negation never goes after 比 B.</span></li>
+      <li data-correct="true">我的手机不比他的贵。<span class="why">✓ "Mine isn't the more expensive one" — it rejects his claim and leaves room for "they're the same".</span></li>
+      <li data-correct="false">我的手机没有他的贵。<span class="why">✗ That says his is the expensive one — a different fact, and not the one you're correcting.</span></li>
+      <li data-correct="false">我的手机比他的不贵。<span class="why">✗ Not a structure at all — a negation never goes after 比 B.</span></li>
     </ul>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="builder" data-answer="她跟我一样大">
-    <p class="prompt">Build: <em>"She's the same age as me."</em></p>
+  <div class="exercise" data-exercise="builder" data-answer="我的自行车跟他的一样新">
+    <p class="prompt">Build: <em>"My bike is as new as his."</em></p>
     <div class="builder">
       <div class="bank">
-        <span class="chunk">她</span>
+        <span class="chunk">我的自行车</span>
         <span class="chunk">跟</span>
-        <span class="chunk">我</span>
+        <span class="chunk">他的</span>
         <span class="chunk">一样</span>
-        <span class="chunk">大</span>
+        <span class="chunk">新</span>
       </div>
       <div class="drop" aria-label="Your sentence"></div>
       <div class="actions">
@@ -284,45 +348,149 @@
     </div>
   </div>
 
-  <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Translate: <em>"She speaks Chinese as well as a Chinese person."</em></p>
+  <div class="exercise" data-exercise="fill" data-answer="我的电脑没有小刚的快|我的电脑没有小刚的电脑快|我的电脑没有他的快|我的电脑没小刚的快|我的电脑没有小刚的那么快|我的电脑没有小刚的电脑那么快|我的电脑没小刚的那么快">
+    <p class="prompt"><strong>Transform.</strong> <span class="han">小刚的电脑比我的快。</span> → tell the same fact from
+      the other side, using <span class="han">没有</span>. Start with <span class="han">我的电脑</span>.</p>
+    <input type="text" placeholder="type the whole sentence in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">她(的)汉语说得跟中国人一样好。</span> — the whole 跟…一样好
-      phrase sits in the 得-slot.</div>
+    <div class="reveal-box"><span class="han">我的电脑没有小刚的快。</span> — three things move at once: the two sides
+      swap places, 比 becomes 没有, and the adjective stays exactly as it was (快, not 慢). One thing cannot come along —
+      a degree word. <span style="text-decoration:line-through">我的电脑没有小刚的快得多</span> ✗: 没有 says "doesn't
+      reach it", and there is no way to fall short of something "by a lot" in this frame.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="我家没有他家近|我家没有他家那么近|我家没他家近|我家没他家那么近">
+    <p class="prompt"><strong>Find the error</strong> and type the corrected sentence:
+      <span class="han">我家不比他家近。</span><br>
+      <span style="font-size:13px;color:#666">(Intended: "My place isn't as close as his" — his really is the nearer one.)</span></p>
+    <input type="text" placeholder="type the corrected sentence">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">我家没有他家近。</span> — <span class="han">不比</span> only denies that
+      <em>you</em> are the closer one; it leaves "exactly the same distance" wide open, so it can never report that his
+      place wins. Flat "not as … as" is 没有. Keep 不比 for the one job it does well — pushing back at a claim someone
+      has just made, exactly as in the pitfall box above.</div>
+  </div>
+
+  <div class="exercise" data-exercise="reveal">
+    <p class="prompt"><strong>Personalise it.</strong> Write <strong>two true sentences</strong> comparing yourself with
+      someone you actually know: one with <span class="han">没有</span> ("I'm not as … as X"), one with
+      <span class="han">跟…一样</span> ("X and I are equally …"). Two <em>different</em> adjectives.</p>
+    <div class="writing-area"><textarea placeholder="我没有…；我跟…一样…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我同事没有我忙，可是他工作得跟我一样认真。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ tóngshì méiyǒu wǒ máng, kěshì tā gōngzuò de gēn wǒ yíyàng rènzhēn.</p>
+      <p style="margin:0 0 10px"><em>My colleague isn't as busy as I am, but he works just as carefully as I do.</em></p>
+      <p style="margin:0 0 4px"><strong>Check your own two sentences:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Is the adjective bare — no <span class="han">很 / 非常 / 太</span> in front of it?
+          (<span class="han">没有我忙</span> ✓ · <span style="text-decoration:line-through">没有我很忙</span> ✗)</li>
+        <li>Does <span class="han">一样</span> sit directly against the adjective, with nothing wedged in between?</li>
+        <li>Did you resist <span class="han">不比</span>? It denies a claim; it does not mean "not as … as".</li>
+        <li>If your 一样 sentence describes <em>how</em> something is done, is there a <span class="han">得</span>
+          holding the comparison onto the verb (工作<strong>得</strong>跟我一样认真)?</li>
+        <li>Two different adjectives — and both statements actually true?</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- =============================================================== -->
 <section class="gp" id="mixed">
-  <h2>4. Mixed practice</h2>
+  <h2>4. Mixed practice <span class="en-sub">Shuffled — plus two things from other sheets</span></h2>
 
-  <div class="exercise" data-exercise="cloze" data-answers="a:三岁;b:得多;c:一点儿;d:没有;e:一样">
+  <p style="margin:0 0 18px">Nothing below arrives in section order, so you have to decide <em>which</em> frame a
+    sentence needs before you can build it. Two items aren't about 比 at all: one <span class="han">得</span> decision
+    and one <span class="han">了 / 着 / 过</span> choice, dropped in to keep the older machinery running.</p>
+
+  <div class="exercise" data-exercise="cloze" data-answers="a:得多;b:没有;c:比;d:一点儿;e:一样">
     <p class="prompt">选词填空。 <span style="font-size:13px;color:#666">Pick the right word for each blank (one word is extra).</span></p>
     <div class="cloze">
       <div class="wordbank">
-        <button class="word" data-word="三岁" type="button">三岁</button>
         <button class="word" data-word="得多" type="button">得多</button>
-        <button class="word" data-word="一点儿" type="button">一点儿</button>
         <button class="word" data-word="没有" type="button">没有</button>
+        <button class="word" data-word="比" type="button">比</button>
+        <button class="word" data-word="一点儿" type="button">一点儿</button>
         <button class="word" data-word="一样" type="button">一样</button>
         <button class="word" data-word="很" type="button">很</button>
       </div>
-      <p class="cloze-text">我哥哥比我大<span class="blank" data-key="a"></span>，他也比我高<span class="blank" data-key="b"></span>。我妹妹跳舞跳得比我好<span class="blank" data-key="c"></span>。我<span class="blank" data-key="d"></span>哥哥高，可是我跟妈妈<span class="blank" data-key="e"></span>高。</p>
+      <p class="cloze-text">这个月比上个月热<span class="blank" data-key="a"></span>，我走了十分钟就累了。我们公司的新办公室<span class="blank" data-key="b"></span>旧的大，可是很安静。我同事走路走得<span class="blank" data-key="c"></span>我快<span class="blank" data-key="d"></span>，他的手表也跟我的<span class="blank" data-key="e"></span>旧。</p>
     </div>
     <div class="actions"><button class="check">Check</button><button class="reset">Reset</button></div>
     <div class="feedback"></div>
   </div>
 
-  <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Translate: <em>"The subway in New York is much older than the one in Beijing."</em></p>
+  <div class="exercise" data-exercise="fill" data-answer="我没有他说得好|我说得没有他好|我的中文没有他说得好|我的中文没有他好|我的中文没有他的好|我没有他好|我中文说得没有他好|我的中文说得没有他好">
+    <p class="prompt"><strong>Answer the question.</strong> <span class="han">你的中文说得跟你同事一样好吗？</span> —
+      No: he's the better one. Answer with <span class="han">没有</span> (plain 没有 — no <span class="han">那么</span>),
+      starting with <span class="han">我</span>.</p>
+    <input type="text" placeholder="type the whole answer in Chinese">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
     <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">纽约的地铁比北京的旧得多。</span></div>
+    <div class="reveal-box"><span class="han">我没有他说得好。</span> (also <span class="han">我说得没有他好</span> /
+      <span class="han">我的中文没有他好</span>) — a 跟…一样 question is turned down with 没有, never with
+      <span style="text-decoration:line-through">跟他不一样好</span> ✗ and not with 不比 either, which would only be
+      denying that <em>you</em> are the better speaker. The 没有-comparison can sit inside the 得-slot, or wrap around
+      the whole 得-phrase; both orders are said.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="得">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier sheet.</span> Fill with
+      <span class="han">的</span>, <span class="han">得</span> or <span class="han">地</span>:
+      <span class="han">我朋友吃饭吃 ___ 很慢，我已经吃完了。</span></p>
+    <input type="text" placeholder="one character">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">得</span> — it follows a repeated verb and introduces a judgement of how
+      the eating goes, so it is the complement 得. 的 would need a noun behind it; 地 goes in front of the verb. Now
+      notice what happens the moment a comparison arrives: <span class="han">我朋友吃饭吃得比我慢</span> — the 很 has to
+      disappear, because 比 has taken over the job of measuring 慢.</div>
+  </div>
+
+  <div class="exercise" data-exercise="fill" data-answer="过">
+    <p class="prompt"><span style="font-size:13px;color:#666">From an earlier sheet.</span> Fill with
+      <span class="han">了</span>, <span class="han">着</span> or <span class="han">过</span>:
+      <span class="han">你吃 ___ 中国菜吗？我觉得比这个饭店的菜好吃得多。</span></p>
+    <input type="text" placeholder="one character">
+    <button class="check">Check</button>
+    <div class="feedback"></div>
+    <button class="reveal">Show answer</button>
+    <div class="reveal-box"><span class="han">过</span> — the question asks whether you have <em>ever</em> had the
+      experience, which is exactly 过's job. <span class="han">了</span> would ask whether you finished eating it just
+      now, and <span class="han">着</span> would claim the eating is going on as we speak.</div>
   </div>
 
   <div class="exercise" data-exercise="reveal">
-    <p class="prompt">Say it three ways: <em>"He's older than me"</em> — (a) a little older, (b) much older, (c) exactly two years older.</p>
-    <button class="reveal">Show answer</button>
-    <div class="reveal-box"><span class="han">(a) 他比我大一点儿。 (b) 他比我大得多。/ 他比我大多了。 (c) 他比我大两岁。</span></div>
+    <p class="prompt"><strong>Write it all.</strong> Compare yourself <em>now</em> with yourself <strong>two years
+      ago</strong>, in <strong>three sentences</strong>: one with <span class="han">比</span> <em>and</em> a degree word
+      (得多 / 一点儿 / an exact amount), one with <span class="han">没有</span>, one with
+      <span class="han">跟…一样</span>.</p>
+    <div class="writing-area"><textarea placeholder="我现在比两年以前…"></textarea></div>
+    <button class="reveal" style="margin-top:10px">Show a model answer + checklist</button>
+    <div class="reveal-box">
+      <p class="han" style="font-size:20px;line-height:1.9;margin:0 0 8px">我现在比两年以前忙得多，每天要工作十个小时。可是我没有两年以前累，因为我住的地方离公司很近。我跟两年以前一样喜欢跳舞，每个星期都去两次。</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:#666;line-height:1.8;margin:0 0 10px">Wǒ xiànzài bǐ liǎng nián yǐqián máng de duō, měi tiān yào gōngzuò shí ge xiǎoshí. Kěshì wǒ méiyǒu liǎng nián yǐqián lèi, yīnwèi wǒ zhù de dìfang lí gōngsī hěn jìn. Wǒ gēn liǎng nián yǐqián yíyàng xǐhuan tiàowǔ, měi ge xīngqī dōu qù liǎng cì.</p>
+      <p style="margin:0 0 10px"><em>I'm much busier now than two years ago — ten hours a day. But I'm not as tired as I was then, because the place I live is close to the office. I like dancing just as much as I did two years ago: I go twice a week.</em></p>
+      <p style="margin:0 0 4px"><strong>Self-check — one pass per line:</strong></p>
+      <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8">
+        <li>Sentence 1: is the degree word <em>behind</em> the adjective (忙得多), never in front of it?</li>
+        <li>Is every <span class="han">很 / 非常 / 太</span> gone from the comparison clauses? They may survive only in
+          a clause that isn't comparing anything (…离公司<strong>很</strong>近 ✓).</li>
+        <li>Sentence 2 uses <span class="han">没有</span>, not <span class="han">不比</span> — unless you genuinely mean
+          "I'm not the more tired one, we're about the same".</li>
+        <li>Sentence 3: <span class="han">跟</span> X <span class="han">一样</span> + the adjective or verb, with
+          nothing between 一样 and what it measures.</li>
+        <li>No degree word riding along on the 没有 sentence
+          (<span style="text-decoration:line-through">没有两年以前累得多</span> ✗).</li>
+        <li>Three different frames — and three true statements?</li>
+      </ul>
+    </div>
   </div>
 </section>
 
