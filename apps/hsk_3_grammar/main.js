@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, shell } = require('electron');
+const { app, BrowserWindow, Menu, shell, nativeTheme } = require('electron');
 const path = require('path');
 
 function createWindow() {
@@ -8,7 +8,7 @@ function createWindow() {
     minWidth: 640,
     minHeight: 480,
     title: 'HSK 3 Grammar',
-    backgroundColor: '#fafaf7',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#1e1e1e' : '#fafaf7',
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,

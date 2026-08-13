@@ -218,8 +218,44 @@
     return oldest ? { sheet: oldest, reason: "due" } : null;
   }
 
+  // --- Theme toggle ---------------------------------------------------------
+  // The head snippet on every page applies the saved theme (key below,
+  // falling back to the system preference) before first paint; this wires
+  // the ☾/☀ button that flips data-theme on <html> and persists the choice.
+  // Deliberately a separate key from STORAGE_KEY so "Reset progress"
+  // (which removes STORAGE_KEY) keeps the chosen theme.
+  const THEME_KEY = "hsk12review.theme";
+
+  function themeInit() {
+    const root = document.documentElement;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "theme-toggle";
+    const paint = () => {
+      const dark = root.getAttribute("data-theme") === "dark";
+      btn.textContent = dark ? "☀" : "☾";
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    };
+    btn.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(THEME_KEY, next); } catch { /* private mode */ }
+      paint();
+    });
+    paint();
+    const nav = document.querySelector(".topnav");
+    if (nav) {
+      nav.appendChild(btn);
+    } else {
+      btn.classList.add("theme-toggle--fixed");
+      document.body.appendChild(btn);
+    }
+  }
+
   // --- Bootstrap ------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", () => {
+    themeInit();
     initSheet();
     initDashboard();
   });

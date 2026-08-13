@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  themeInit();
   document.querySelectorAll('[data-exercise="fill"]').forEach(wireFill);
   document.querySelectorAll('[data-exercise="mc"]').forEach(wireMC);
   document.querySelectorAll('[data-exercise="builder"]').forEach(wireBuilder);
@@ -602,4 +603,39 @@ function progressBars() {
       (slim ? '' : '<span class="progress-label">' + n + '/' + saved.total + '</span>');
     a.appendChild(bar);
   });
+}
+
+/* ===================================================================
+ * Theme toggle. The head snippet on every page applies the saved
+ * theme (localStorage key cg-theme, falling back to the system
+ * preference) before first paint; this wires the ☾/☀ button that
+ * flips data-theme on <html> and persists the explicit choice.
+ * =================================================================== */
+const THEME_KEY = 'cg-theme';
+
+function themeInit() {
+  const root = document.documentElement;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'theme-toggle';
+  const paint = () => {
+    const dark = root.getAttribute('data-theme') === 'dark';
+    btn.textContent = dark ? '☀' : '☾';
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  };
+  btn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    paint();
+  });
+  paint();
+  const nav = document.querySelector('.topnav');
+  if (nav) {
+    nav.appendChild(btn);
+  } else {
+    btn.classList.add('theme-toggle--fixed');
+    document.body.appendChild(btn);
+  }
 }

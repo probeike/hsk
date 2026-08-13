@@ -1,13 +1,23 @@
 /* HSK 3 Grammar Lessons — shared styles */
 
 :root {
+  color-scheme: light;
+
   --bg: #fafaf7;
   --surface: #ffffff;
+  --surface-2: #f3f1eb;
   --ink: #1c1c1c;
+  --ink-2: #333;
+  --ink-3: #555;
   --muted: #666;
+  --muted-2: #777;
   --rule: #e5e2da;
+  --rule-strong: #999;
   --accent: #b23a48;
   --accent-soft: #fce8eb;
+  --accent-soft-strong: #fbdce1;
+  --accent-strong: #931d2b;
+  --on-accent: #fff;
 
   /* Colour-coded roles — consistent across all 20 lessons */
   --c-subject: #2a6cb0;       /* blue */
@@ -23,6 +33,23 @@
 
   --ok: #2f7a3b;
   --bad: #b23a48;
+
+  /* Semantic tones for callouts, exercise states, and diagrams */
+  --ok-strong: #3d8b45;
+  --ok-soft: #e9f7ea;
+  --warn: #c49a12;
+  --warn-soft: #fdf6e3;
+  --danger: #c0392b;
+  --danger-soft: #fbecec;
+  --note-soft: #fff9f0;
+  --note-rule: #f0e4cc;
+  --info-soft: #f7fbff;
+  --info-rule: #d8e7f7;
+  --formula-bg: #1c1c1c;
+  --formula-ink: #fff;
+  --formula-rule: transparent;
+  --track: #e8e4dc;
+  --c-marker-bg-strong: #efe0f9;
 
   --han: "Songti SC", "SimSun", "Noto Serif CJK SC", "STSong", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -90,7 +117,7 @@ html, body {
 }
 .lesson-hero .en {
   font-size: 20px;
-  color: #333;
+  color: var(--ink-2);
   font-style: italic;
   margin: 0;
 }
@@ -179,16 +206,16 @@ html, body {
   color: var(--accent);
 }
 .callout p { margin: 0; }
-.callout.trap { border-left-color: #c46c12; }
-.callout.trap h3 { color: #c46c12; }
+.callout.trap { border-left-color: var(--c-object); }
+.callout.trap h3 { color: var(--c-object); }
 .callout.pts { border-left-color: var(--c-complement); }
 .callout.pts h3 { color: var(--c-complement); }
 .callout.pitfall { border-left-color: var(--bad); }
 .callout.pitfall h3 { color: var(--bad); }
 
 .when {
-  background: #fff9f0;
-  border: 1px solid #f0e4cc;
+  background: var(--note-soft);
+  border: 1px solid var(--note-rule);
   border-radius: 6px;
   padding: 12px 16px;
   margin: 14px 0;
@@ -207,8 +234,8 @@ html, body {
   margin: 14px 0;
 }
 .bridge {
-  background: #f7fbff;
-  border-color: #d8e7f7;
+  background: var(--info-soft);
+  border-color: var(--info-rule);
 }
 .bridge h3,
 .learn-step h3,
@@ -247,7 +274,7 @@ html, body {
 .mini-table th {
   text-align: left;
   color: var(--muted);
-  background: #f3f1eb;
+  background: var(--surface-2);
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -291,8 +318,9 @@ html, body {
   gap: 10px;
   flex-wrap: wrap;
   padding: 16px;
-  background: #1c1c1c;
-  color: #fff;
+  background: var(--formula-bg);
+  color: var(--formula-ink);
+  border: 1px solid var(--formula-rule);
   border-radius: 8px;
   margin: 16px 0;
   font-family: var(--han);
@@ -348,17 +376,17 @@ html, body {
 .ex .gloss {
   font-family: var(--mono);
   font-size: 13px;
-  color: #555;
+  color: var(--ink-3);
   margin: 0 0 6px;
   padding: 6px 10px;
-  background: #f3f1eb;
+  background: var(--surface-2);
   border-radius: 4px;
   letter-spacing: 0.01em;
 }
 .ex .en {
   margin: 4px 0 0;
   font-style: italic;
-  color: #333;
+  color: var(--ink-2);
 }
 
 /* ---------- Contrast pair ---------- */
@@ -388,7 +416,7 @@ html, body {
 }
 .contrast .mean {
   font-size: 14px;
-  color: #555;
+  color: var(--ink-3);
 }
 @media (max-width: 600px) {
   .contrast { grid-template-columns: 1fr; }
@@ -396,7 +424,7 @@ html, body {
 
 /* ---------- Exercises ---------- */
 .exercise {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--rule);
   border-left: 4px solid var(--accent);
   border-radius: 6px;
@@ -419,7 +447,7 @@ html, body {
   border: 2px solid var(--rule);
   border-radius: 4px;
   min-width: 200px;
-  background: #fff;
+  background: var(--surface);
 }
 .exercise input[type="text"]:focus {
   outline: none;
@@ -428,7 +456,7 @@ html, body {
 
 .exercise button.check {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -436,7 +464,7 @@ html, body {
   cursor: pointer;
   margin-left: 8px;
 }
-.exercise button.check:hover { background: #931d2b; }
+.exercise button.check:hover { background: var(--accent-strong); }
 .exercise button.reveal {
   background: transparent;
   color: var(--accent);
@@ -468,21 +496,21 @@ html, body {
   border: 2px solid var(--rule);
   border-radius: 6px;
   cursor: pointer;
-  background: #fff;
+  background: var(--surface);
   transition: background 0.15s, border-color 0.15s;
   font-family: var(--han);
   font-size: 20px;
   line-height: 1.4;
 }
-.exercise .choices li:hover { background: #f7f4ed; }
+.exercise .choices li:hover { background: var(--surface-2); }
 .exercise .choices li.picked { border-color: var(--accent); background: var(--accent-soft); }
-.exercise .choices li.correct { border-color: var(--ok); background: #e5f3e8; }
-.exercise .choices li.wrong { border-color: var(--bad); background: #fce8eb; }
+.exercise .choices li.correct { border-color: var(--ok); background: var(--c-verb-bg); }
+.exercise .choices li.wrong { border-color: var(--bad); background: var(--accent-soft); }
 .exercise .choices li .why {
   display: none;
   font-family: var(--sans);
   font-size: 13px;
-  color: #555;
+  color: var(--ink-3);
   margin-top: 4px;
   font-style: italic;
 }
@@ -502,11 +530,11 @@ html, body {
   margin: 8px 0;
 }
 .builder .bank {
-  background: #f3f1eb;
+  background: var(--surface-2);
   border: 2px dashed var(--rule);
 }
 .builder .drop {
-  background: #fff;
+  background: var(--surface);
   border: 2px solid var(--accent);
   min-height: 56px;
 }
@@ -514,7 +542,7 @@ html, body {
   font-family: var(--han);
   font-size: 22px;
   padding: 6px 14px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--rule);
   border-radius: 4px;
   cursor: pointer;
@@ -530,7 +558,7 @@ html, body {
   font-family: var(--han);
   font-size: 28px;
   padding: 10px 14px;
-  background: #f3f1eb;
+  background: var(--surface-2);
   border-radius: 6px;
   margin: 10px 0;
   text-align: center;
@@ -541,7 +569,7 @@ html, body {
   display: none;
   margin-top: 8px;
   padding: 10px 14px;
-  background: #f3f1eb;
+  background: var(--surface-2);
   border-radius: 4px;
   font-size: 15px;
 }
@@ -563,7 +591,7 @@ html, body {
 }
 .lesson-nav a:hover { text-decoration: underline; }
 .lesson-nav a.disabled {
-  color: #bbb;
+  color: var(--rule-strong);
   pointer-events: none;
 }
 
@@ -617,7 +645,7 @@ html, body {
 }
 .lesson-card .en {
   font-size: 14px;
-  color: #555;
+  color: var(--ink-3);
   font-style: italic;
   margin: 0 0 8px;
 }
@@ -628,7 +656,7 @@ html, body {
 }
 .lesson-card .topic-tag {
   display: inline-block;
-  background: #f3f1eb;
+  background: var(--surface-2);
   padding: 2px 8px;
   border-radius: 10px;
   margin: 2px 3px 2px 0;
@@ -713,8 +741,8 @@ html, body {
   cursor: pointer;
   margin: 0 0 8px;
 }
-.py-toggle:hover { background: #fbdce1; }
-.py-toggle[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.py-toggle:hover { background: var(--accent-soft-strong); }
+.py-toggle[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
 
 /* Free-writing task area */
 .writing-area textarea {
@@ -782,7 +810,7 @@ html, body {
 }
 .match-item:hover { border-color: var(--accent); }
 .match-item.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
-.match-item.done, .match-item.paired { background: #f3f8f3; border-color: var(--ok); }
+.match-item.done, .match-item.paired { background: var(--ok-soft); border-color: var(--ok); }
 .match-badge {
   flex: 0 0 auto;
   display: inline-flex; align-items: center; justify-content: center;
@@ -797,7 +825,7 @@ html, body {
 .cloze .wordbank {
   display: flex; flex-wrap: wrap; gap: 8px;
   padding: 12px;
-  background: #f3f1eb;
+  background: var(--surface-2);
   border: 1px solid var(--rule);
   border-radius: 8px;
   margin-bottom: 14px;
@@ -833,3 +861,144 @@ html, body {
 }
 .cloze-text .blank.filled { border-bottom-color: var(--ok); }
 .cloze-text .blank:empty::before { content: "（　）"; color: var(--muted); font-weight: 400; }
+
+/* =====================================================================
+   THEME TOGGLE — button injected by themeInit() in script.js
+   ===================================================================== */
+.theme-toggle {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--rule-strong); }
+.theme-toggle--fixed {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 60;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+@media print { .theme-toggle { display: none; } }
+
+/* =====================================================================
+   DARK MODE — variable overrides only. The head snippet sets
+   data-theme on <html> before first paint; @media screen keeps
+   printing light regardless of the chosen theme.
+   ===================================================================== */
+@media screen {
+  html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #1e1e1e;
+    --surface: #262626;
+    --surface-2: #2c2a27;
+    --ink: #e8e6e3;
+    --ink-2: #d9d6d1;
+    --ink-3: #b8b4ae;
+    --muted: #a8a49e;
+    --muted-2: #93908a;
+    --rule: #3d3b37;
+    --rule-strong: #5b5852;
+    --accent: #e07a86;
+    --accent-soft: #46262b;
+    --accent-soft-strong: #55313a;
+    --accent-strong: #e999a2;
+    --on-accent: #1a1a1a;
+
+    --c-subject: #7db3e8;
+    --c-subject-bg: #1f3348;
+    --c-verb: #7cc98a;
+    --c-verb-bg: #1f3a26;
+    --c-object: #e6a45c;
+    --c-object-bg: #40311c;
+    --c-marker: #c495e6;
+    --c-marker-bg: #362544;
+    --c-complement: #63c5c5;
+    --c-complement-bg: #1c3a3a;
+
+    --ok: #7cc98a;
+    --bad: #e07a86;
+
+    --ok-strong: #6dbb76;
+    --ok-soft: #213827;
+    --warn: #d9b04a;
+    --warn-soft: #3a3117;
+    --danger: #e0776b;
+    --danger-soft: #402523;
+    --note-soft: #332b1d;
+    --note-rule: #4d422c;
+    --info-soft: #232e38;
+    --info-rule: #374a5e;
+    --formula-bg: #141414;
+    --formula-ink: #ececec;
+    --formula-rule: #3d3b37;
+    --track: #3a3833;
+    --c-marker-bg-strong: #43305a;
+  }
+
+  /* Schema diagrams: CSS fill/stroke properties override the SVGs'
+     hard-coded presentation attributes, so the diagrams follow the
+     theme without touching the markup. Scoped to dark so light mode
+     stays pixel-identical. */
+  html[data-theme="dark"] svg [fill="#7a3aa0"] { fill: var(--c-marker); }
+  html[data-theme="dark"] svg [stroke="#7a3aa0"] { stroke: var(--c-marker); }
+  html[data-theme="dark"] svg [fill="#2f7a3b"] { fill: var(--c-verb); }
+  html[data-theme="dark"] svg [stroke="#2f7a3b"] { stroke: var(--c-verb); }
+  html[data-theme="dark"] svg [fill="#2a6cb0"] { fill: var(--c-subject); }
+  html[data-theme="dark"] svg [stroke="#2a6cb0"] { stroke: var(--c-subject); }
+  html[data-theme="dark"] svg [fill="#0f7a7a"] { fill: var(--c-complement); }
+  html[data-theme="dark"] svg [stroke="#0f7a7a"] { stroke: var(--c-complement); }
+  html[data-theme="dark"] svg [fill="#c46c12"] { fill: var(--c-object); }
+  html[data-theme="dark"] svg [stroke="#c46c12"] { stroke: var(--c-object); }
+  html[data-theme="dark"] svg [fill="#b23a48"] { fill: var(--accent); }
+  html[data-theme="dark"] svg [stroke="#b23a48"] { stroke: var(--accent); }
+  html[data-theme="dark"] svg [fill="#b02a2a"] { fill: var(--bad); }
+  html[data-theme="dark"] svg [stroke="#b02a2a"] { stroke: var(--bad); }
+  html[data-theme="dark"] svg [fill="#c69c0a"] { fill: var(--warn); }
+  html[data-theme="dark"] svg [stroke="#c69c0a"] { stroke: var(--warn); }
+
+  html[data-theme="dark"] svg [fill="#f1e6fa"] { fill: var(--c-marker-bg); }
+  html[data-theme="dark"] svg [fill="#f6e9ff"] { fill: var(--c-marker-bg); }
+  html[data-theme="dark"] svg [fill="#e5f3e8"] { fill: var(--c-verb-bg); }
+  html[data-theme="dark"] svg [fill="#eafaf1"] { fill: var(--ok-soft); }
+  html[data-theme="dark"] svg [fill="#e7f0fb"] { fill: var(--c-subject-bg); }
+  html[data-theme="dark"] svg [fill="#eaf6ff"] { fill: var(--c-subject-bg); }
+  html[data-theme="dark"] svg [fill="#daf0ef"] { fill: var(--c-complement-bg); }
+  html[data-theme="dark"] svg [fill="#faeedc"] { fill: var(--c-object-bg); }
+  html[data-theme="dark"] svg [fill="#fce8eb"] { fill: var(--accent-soft); }
+  html[data-theme="dark"] svg [fill="#fffbea"] { fill: var(--warn-soft); }
+  html[data-theme="dark"] svg [fill="#fff1f1"] { fill: var(--danger-soft); }
+
+  html[data-theme="dark"] svg [fill="#f3f1eb"] { fill: var(--surface-2); }
+  html[data-theme="dark"] svg [fill="#fafaf7"] { fill: var(--bg); }
+
+  html[data-theme="dark"] svg [fill="#333"] { fill: var(--ink-2); }
+  html[data-theme="dark"] svg [fill="#555"] { fill: var(--ink-3); }
+  html[data-theme="dark"] svg [stroke="#555"] { stroke: var(--ink-3); }
+  html[data-theme="dark"] svg [fill="#666"] { fill: var(--muted); }
+  html[data-theme="dark"] svg [fill="#777"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [stroke="#777"] { stroke: var(--muted-2); }
+  html[data-theme="dark"] svg [fill="#888"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [fill="#8a8578"] { fill: var(--muted); }
+  html[data-theme="dark"] svg [fill="#b3ad9f"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [fill="#a8a294"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [fill="#aaa"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [stroke="#aaa"] { stroke: var(--muted-2); }
+  html[data-theme="dark"] svg [fill="#bbb"] { fill: var(--muted-2); }
+  html[data-theme="dark"] svg [stroke="#bbb"] { stroke: var(--muted-2); }
+
+  html[data-theme="dark"] svg [fill="#c9c4b8"] { fill: var(--rule-strong); }
+  html[data-theme="dark"] svg [stroke="#c9c4b8"] { stroke: var(--rule-strong); }
+  html[data-theme="dark"] svg [stroke="#d8d4c8"] { stroke: var(--rule-strong); }
+  html[data-theme="dark"] svg [stroke="#ccc"] { stroke: var(--rule-strong); }
+  html[data-theme="dark"] svg [stroke="#ddd"] { stroke: var(--rule-strong); }
+  html[data-theme="dark"] svg [fill="#eee"] { fill: var(--surface-2); }
+}

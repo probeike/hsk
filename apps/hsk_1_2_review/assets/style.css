@@ -5,16 +5,20 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 :root {
+  color-scheme: light;
+
   --ink:        #1a1a1a;
   --ink-soft:   #4a4a4a;
   --paper:      #fbf7ef;
   --paper-alt:  #f3ecdd;
+  --paper-warm: #fff8ea;
   --rule:       #d6cdb7;
   --accent:     #b33a3a;
   --accent-dim: #d28a8a;
   --ok:         #2f7d4f;
   --shaky:      #c48a1a;
   --redo:       #b33a3a;
+  --on-status:  white;
   --shadow:     0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.06);
   --radius:     6px;
   --maxw:       780px;
@@ -179,7 +183,7 @@ summary::-webkit-details-marker { display: none; }
 .answers .hanzi { font-weight: 500; }
 
 .cumulative {
-  background: #fff8ea;
+  background: var(--paper-warm);
   border: 1px dashed var(--shaky);
   border-radius: var(--radius);
   padding: 1rem 1rem .5rem 1rem;
@@ -225,9 +229,9 @@ summary::-webkit-details-marker { display: none; }
   transition: all .15s;
 }
 .assess button:hover { border-color: var(--ink-soft); }
-.assess button[data-mark="solid"].active { background: var(--ok); color: white; border-color: var(--ok); }
-.assess button[data-mark="shaky"].active { background: var(--shaky); color: white; border-color: var(--shaky); }
-.assess button[data-mark="redo"].active  { background: var(--redo);  color: white; border-color: var(--redo); }
+.assess button[data-mark="solid"].active { background: var(--ok); color: var(--on-status); border-color: var(--ok); }
+.assess button[data-mark="shaky"].active { background: var(--shaky); color: var(--on-status); border-color: var(--shaky); }
+.assess button[data-mark="redo"].active  { background: var(--redo);  color: var(--on-status); border-color: var(--redo); }
 .assess .last-done { margin-top: .8rem; font-size: .85rem; color: var(--ink-soft); }
 
 /* ── Dashboard (index.html) ─────────────────────────────────────────────── */
@@ -323,7 +327,7 @@ summary::-webkit-details-marker { display: none; }
   content: "due";
   font-size: .7rem;
   background: var(--accent);
-  color: white;
+  color: var(--on-status);
   padding: 1px 6px;
   border-radius: 3px;
   font-family: "Helvetica Neue", sans-serif;
@@ -380,4 +384,54 @@ summary::-webkit-details-marker { display: none; }
   .progress-card { flex-direction: column; text-align: center; }
   .sheet-list li { grid-template-columns: auto 1fr auto; }
   .sheet-list .when { grid-column: 2 / -1; margin-left: 3rem; }
+}
+
+/* ── Theme toggle ───────────────────────────────────────────────────────── */
+
+.theme-toggle {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--ink-soft); }
+.theme-toggle--fixed {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 60;
+  box-shadow: var(--shadow);
+}
+@media print { .theme-toggle { display: none; } }
+
+/* ── Dark mode ──────────────────────────────────────────────────────────────
+   Variable overrides only: a warm dark grey that keeps the rice-paper
+   character. The head snippet sets data-theme on <html> before first
+   paint; @media screen keeps printing light regardless of theme. */
+
+@media screen {
+  html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --ink:        #e9e4da;
+    --ink-soft:   #b3aca0;
+    --paper:      #22201a;
+    --paper-alt:  #2e2b23;
+    --paper-warm: #332c1c;
+    --rule:       #454037;
+    --accent:     #d96c6c;
+    --accent-dim: #7d4a4a;
+    --ok:         #6fbb8a;
+    --shaky:      #d4a545;
+    --redo:       #d96c6c;
+    --on-status:  #22201a;
+    --shadow:     0 1px 2px rgba(0,0,0,.35), 0 4px 12px rgba(0,0,0,.45);
+  }
 }
