@@ -49,6 +49,13 @@ any of them are implemented.
   **English meaning** of a Chinese sentence whose form is the only clue; in discrimination the
   learner picks between **Chinese forms** that differ in exactly one dimension, with distractors
   drawn from real English-speaker errors.
+- Words the learner is still encoding — introduced this week, or repeatedly missed — get
+  **recognition-first scaffolding**: before such a word is produced, one choice item teaches how
+  the word is *used* — which words it pairs with (collocations), which situations call for it —
+  with distractors drawn from word-for-word English transfer (in Chinese you 关 a 灯; a machine
+  is 坏了, not "sick"). The same word is still produced later in the set: recognition opens the
+  gate, production consolidates. Sets grow by one item per such word, so scaffolding never
+  crowds out production, and the set note names any scaffold the generator failed to deliver.
 - Constrained production uses PEDAGOGY.md's formats (transformation, constrained translation,
   question→answer). Typed full sentences are graded against an enumerated variant list; an item
   whose variant space cannot be confidently enumerated is demoted to free writing instead of

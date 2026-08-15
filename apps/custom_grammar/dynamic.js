@@ -22,6 +22,10 @@ const DYN_BUCKET_CAP = 30;
 const DYN_SET_KEY = 'cg-dyn:set';
 const DYN_LESSONS_KEY = 'cg-dyn:lessons';
 const dynN = t => Math.min(14, Math.max(6, 2 * t));
+// NEW (recent) and SHAKY (struggling) targets each earn one extra usage-mc
+// scaffold item on top of the base size, within the same cap.
+const dynScaffoldTargets = targets => targets.filter(w => w.bucket === 'struggling' || w.bucket === 'recent');
+const dynScaffoldN = targets => Math.min(dynScaffoldTargets(targets).length, 14 - dynN(targets.length));
 
 // Closed-class function words the deck/wordlists lack as standalone notes.
 // The learner reads these fine; without them segmentation would reject
@@ -289,7 +293,8 @@ function dynPassive(targets) {
 function dynUpdateGen() {
   const btn = dynEl('dyn-generate');
   const t = dynSel.size;
-  btn.textContent = (dynState ? 'Regenerate' : 'Generate') + (t ? ' ' + dynN(t) + ' exercises' : '');
+  const total = t ? dynN(t) + dynScaffoldN(dynTargets()) : 0;
+  btn.textContent = (dynState ? 'Regenerate' : 'Generate') + (t ? ' ' + total + ' exercises' : '');
   btn.disabled = dynBusy || !t || !dynWords;
 }
 
@@ -362,6 +367,14 @@ const DYN_SYSTEM =
   'the learner answers in writing (2-3 sentences), naming the structures to use. ' +
   'explain = one model answer in Chinese followed by a short English gloss in parentheses. ' +
   'checklist = 3-5 short English self-check items naming the required structures and likely mistakes.\n\n' +
+  'New-word scaffolding: targets tagged [NEW] (just introduced) or [SHAKY] (frequently missed) are words the ' +
+  'learner recognizes but cannot yet USE — the typical failure is an English calque (reaching for 开/闭 where ' +
+  'Chinese pairs 关 with 灯, or 病 where a machine is 坏了). For EACH such target: ' +
+  '(1) one "mc" item tests usage — which word combines with it (collocation), or which word the situation ' +
+  'calls for — with distractors that are exactly the words an English speaker would pick by translating ' +
+  'word-for-word. Never use a distractor that is also correct or nearly correct; the "why" lines teach the pairing. ' +
+  '(2) The same word must ALSO appear in at least one later fill/builder/reveal item, so it gets produced, ' +
+  'not just recognized. If there are fewer mc slots than NEW/SHAKY targets, scaffold the SHAKY ones first.\n\n' +
   'Hard rules:\n' +
   '- prompt is CHINESE ONLY (Chinese punctuation; no English words, no pinyin). All English scaffolding — ' +
   'situational setup, hints — goes in hint_en (shown only on request; "" if none needed). ' +
@@ -377,37 +390,43 @@ const DYN_SYSTEM =
   'Rotate vocabulary: no content word (noun/verb/adjective) is central to more than 2 items in the set.\n' +
   '- explain teaches the rule, not just the answer.';
 
-// Per-stage mix for a set of n items (n is always even, 6-14). Weighted toward
+// Per-stage mix: base counts from nBase (always even, 6-14), weighted toward
 // production per PEDAGOGY's target ratios; fillShort absorbs the remainder and
-// stays >= 1 for every legal n.
-function dynMix(n) {
-  const reveal = Math.max(2, Math.round(n * 0.25));
-  const builder = n >= 10 ? 2 : 1;
-  const si = n >= 8 ? 1 : 0;
-  const mc = n >= 12 ? 2 : 1;
-  const fillFull = Math.max(1, Math.round(n * 0.2));
-  const fillShort = n - si - mc - fillFull - builder - reveal;
+// stays >= 1 for every legal nBase. Each granted scaffold slot adds one
+// usage-mc on top, so the set totals nBase + scaffold.
+function dynMix(nBase, scaffold) {
+  const reveal = Math.max(2, Math.round(nBase * 0.25));
+  const builder = nBase >= 10 ? 2 : 1;
+  const si = nBase >= 8 ? 1 : 0;
+  const mc = (nBase >= 12 ? 2 : 1) + (scaffold || 0);
+  const fillFull = Math.max(1, Math.round(nBase * 0.2));
+  const fillShort = nBase - si - (nBase >= 12 ? 2 : 1) - fillFull - builder - reveal;
   return { si: si, mc: mc, fillShort: fillShort, fillFull: fillFull, builder: builder, reveal: reveal };
 }
 
-function dynPrompt(targets, n) {
+const DYN_TAG = { struggling: 'SHAKY', recent: 'NEW', due: 'REVIEW' };
+
+function dynPrompt(targets, n, scaffold) {
   const passive = dynPassive(targets);
   const pts = dynLessonPts();
-  const m = dynMix(n);
+  const m = dynMix(n, scaffold);
+  const scaffolded = dynScaffoldTargets(targets);
   return 'ALLOWED WORDS (complete list — use no Chinese word outside it):\n' +
     Array.from(dynKnownAll()).join(' ') + '\n\n' +
     'TARGET WORDS (drill each one):\n' +
-    targets.map(w => w.zh + ' (' + w.py + ' — ' + w.en + ') [' + w.bucket + ']').join('\n') + '\n\n' +
+    targets.map(w => w.zh + ' (' + w.py + ' — ' + w.en + ') [' + (DYN_TAG[w.bucket] || w.bucket) + ']').join('\n') + '\n\n' +
     'PASSIVE WORDS (supporting vocabulary only):\n' +
     (passive.length ? passive.slice(0, 40).map(w => w.zh).join(' ') : '(none)') + '\n\n' +
     'ALLOWED HSK 3 GRAMMAR POINTS:\n' +
     (pts.length ? pts.map(p => '- ' + p).join('\n') : '(none ticked — HSK 1-2 grammar only)') + '\n\n' +
-    'Generate exactly ' + n + ' exercises, in this order: ' +
-    (m.si ? m.si + ' si, ' : '') + m.mc + ' mc, ' + m.fillShort + ' short fill, ' +
+    'Generate exactly ' + (n + (scaffold || 0)) + ' exercises, in this order: ' +
+    (m.si ? m.si + ' si, ' : '') + m.mc + ' mc' +
+    (scaffolded.length ? ' (including one usage-mc per NEW/SHAKY target — see the scaffolding rule)' : '') +
+    ', ' + m.fillShort + ' short fill, ' +
     m.fillFull + ' full-sentence fill (F1/F2/F4), ' + m.builder + ' builder, ' + m.reveal + ' reveal.';
 }
 
-async function dynCallGenerate(targets, n, onProgress) {
+async function dynCallGenerate(targets, n, scaffold, onProgress) {
   const key = aiKey();
   if (!key) throw new Error('NO_KEY');
   dynAbort = new AbortController();
@@ -425,7 +444,7 @@ async function dynCallGenerate(targets, n, onProgress) {
       max_tokens: DYN_MAXTOK,
       stream: true,
       system: DYN_SYSTEM,
-      messages: [{ role: 'user', content: dynPrompt(targets, n) }],
+      messages: [{ role: 'user', content: dynPrompt(targets, n, scaffold) }],
       output_config: { effort: DYN_EFFORT, format: { type: 'json_schema', schema: DYN_SCHEMA } },
     }),
   });
@@ -562,6 +581,20 @@ function dynValidate(items, known) {
   return { kept: kept, dropped: dropped };
 }
 
+// Every NEW/SHAKY target should be featured by a recognition item (si/mc)
+// before it is produced. The arc sort already puts all si/mc first, so the
+// check reduces to: does such an item exist at all? Gaps are surfaced in the
+// set note, never dropped — a set missing a scaffold is still usable.
+function dynScaffoldGaps(items, targets) {
+  const gaps = [];
+  for (const w of dynScaffoldTargets(targets)) {
+    const has = items.some(it => (it.type === 'mc' || it.type === 'si') &&
+      [it.prompt].concat((it.choices || []).map(c => c.text)).some(s => (s || '').indexOf(w.zh) >= 0));
+    if (!has) gaps.push(w.zh);
+  }
+  return gaps;
+}
+
 /* ============================ Renderer ============================ */
 
 function dynEsc(s) {
@@ -646,6 +679,7 @@ function dynNote() {
   dynEl('dyn-note').textContent =
     'Generated ' + s.gen + ' · kept ' + s.kept +
     (s.gen > s.kept ? ' (' + (s.gen - s.kept) + ' failed the vocabulary/format checks)' : '') +
+    (s.scaffoldGaps && s.scaffoldGaps.length ? ' · no usage-mc for ' + s.scaffoldGaps.join('、') : '') +
     ' · ' + (s.usage.in / 1000).toFixed(1) + 'k in / ' + (s.usage.out / 1000).toFixed(1) + 'k out ≈ $' +
     cost.toFixed(2) + ' · ' + s.model;
 }
@@ -694,7 +728,9 @@ async function dynMockGenerate(onProgress) {
 async function dynGenerate() {
   const targets = dynTargets();
   if (!targets.length || dynBusy) return;
-  const n = dynN(targets.length);
+  const nb = dynN(targets.length);
+  const sc = dynScaffoldN(targets);
+  const n = nb + sc;
   dynBusy = true;
   dynUpdateGen();
   dynEl('dyn-cancel').hidden = false;
@@ -706,7 +742,7 @@ async function dynGenerate() {
   };
   try {
     dynStatus('Connecting…', 'busy');
-    const r = DYN_MOCK_AI ? await dynMockGenerate(onProgress) : await dynCallGenerate(targets, n, onProgress);
+    const r = DYN_MOCK_AI ? await dynMockGenerate(onProgress) : await dynCallGenerate(targets, nb, sc, onProgress);
     if (r.stop === 'max_tokens') throw new Error('response truncated — raise DYN_MAXTOK');
     const items = (JSON.parse(r.acc).items) || [];
     const v = dynValidate(items, dynKnownAll());
@@ -716,6 +752,7 @@ async function dynGenerate() {
     dynState = {
       at: Date.now(), model: DYN_MODEL, usage: r.usage,
       gen: items.length, kept: ordered.length, items: ordered, done: {}, drafts: {},
+      scaffoldGaps: dynScaffoldGaps(ordered, targets),
     };
     dynSave();
     dynRender();
