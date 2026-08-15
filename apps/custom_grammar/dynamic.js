@@ -6,10 +6,12 @@
  * Test without Anki / API spend: dynamic.html?mock=all (or ?mock=anki / ?mock=ai).
  */
 
-const DYN_MODEL = 'claude-sonnet-5';   // flip to 'claude-haiku-4-5' for cheap tests
+// Generation model. Revert to Sonnet: model 'claude-sonnet-5', price [3, 15],
+// maxtok 10000. Grading stays on Haiku (script.js) either way.
+const DYN_MODEL = 'claude-opus-5';     // best vocab-constraint compliance
 const DYN_EFFORT = 'low';              // explicit reasoning effort for generation
-const DYN_MAXTOK = 10000;              // caps thinking + JSON together — keep headroom
-const DYN_PRICE = [3, 15];             // Sonnet 5 $/MTok in, out (sticker price)
+const DYN_MAXTOK = 16000;              // caps thinking + JSON together — Opus 5 thinks by default
+const DYN_PRICE = [5, 25];             // Opus 5 $/MTok in, out
 const DYN_ANKI_URL = 'http://127.0.0.1:8765';
 const DYN_DECK = 'HSK new';
 const DYN_Q = {
@@ -426,7 +428,10 @@ function dynPrompt(targets, n, scaffold) {
     m.fillFull + ' full-sentence fill (F1/F2/F4), ' + m.builder + ' builder, ' + m.reveal + ' reveal.';
 }
 
-async function dynCallGenerate(targets, n, scaffold, onProgress) {
+// Shared call shape for the generate and repair passes. The system prompt
+// carries a cache breakpoint so the repair call (seconds later) reads it from
+// cache instead of re-paying for it.
+async function dynCall(userContent, onProgress) {
   const key = aiKey();
   if (!key) throw new Error('NO_KEY');
   dynAbort = new AbortController();
@@ -443,14 +448,43 @@ async function dynCallGenerate(targets, n, scaffold, onProgress) {
       model: DYN_MODEL,
       max_tokens: DYN_MAXTOK,
       stream: true,
-      system: DYN_SYSTEM,
-      messages: [{ role: 'user', content: dynPrompt(targets, n, scaffold) }],
+      system: [{ type: 'text', text: DYN_SYSTEM, cache_control: { type: 'ephemeral' } }],
+      messages: [{ role: 'user', content: userContent }],
       output_config: { effort: DYN_EFFORT, format: { type: 'json_schema', schema: DYN_SCHEMA } },
     }),
   });
   if (res.status === 401 || res.status === 403) throw new Error('BAD_KEY');
   if (!res.ok) throw new Error('HTTP_' + res.status);
   return dynStream(res, onProgress);
+}
+
+function dynCallGenerate(targets, n, scaffold, onProgress) {
+  return dynCall(dynPrompt(targets, n, scaffold), onProgress);
+}
+
+// One bounded follow-up: rewrite ONLY the items that failed validation, and
+// author any usage-mc scaffolds the first pass skipped. Never a regenerate;
+// repairs that fail validation again are dropped for good.
+function dynRepairPrompt(dropped, gaps) {
+  let p = '';
+  if (dropped.length) {
+    p += 'These generated exercises FAILED validation. Fix each one: keep its type, target word and ' +
+      'pedagogical intent, and change only what the failure reason requires (usually replacing words ' +
+      'that are not in ALLOWED WORDS, or adding missing answer variants):\n\n' +
+      dropped.map((d, i) => (i + 1) + '. FAILURE: ' + d.err + '\n' + JSON.stringify(d.it)).join('\n\n') + '\n\n';
+  }
+  if (gaps.length) {
+    p += 'ALSO MISSING: a usage-mc (see the scaffolding rule) for these NEW/SHAKY targets — ' +
+      'author one per word:\n' + gaps.join('、') + '\n\n';
+  }
+  return p +
+    'ALLOWED WORDS (complete list — use no Chinese word outside it):\n' +
+    Array.from(dynKnownAll()).join(' ') + '\n\n' +
+    'Return ONLY the fixed and newly authored exercises.';
+}
+
+function dynCallRepair(dropped, gaps, onProgress) {
+  return dynCall(dynRepairPrompt(dropped, gaps), onProgress);
 }
 
 async function dynStream(res, onProgress) {
@@ -575,7 +609,7 @@ function dynValidate(items, known) {
   const kept = [], dropped = [];
   for (const it of items) {
     const err = dynCheckItem(it, known);
-    if (err) { dropped.push(it.type + ': ' + err); console.warn('[dyn] dropped', err, it); }
+    if (err) { dropped.push({ it: it, err: it.type + ': ' + err }); console.warn('[dyn] dropped', err, it); }
     else kept.push(it);
   }
   return { kept: kept, dropped: dropped };
@@ -678,6 +712,7 @@ function dynNote() {
   const cost = (s.usage.in / 1e6) * DYN_PRICE[0] + (s.usage.out / 1e6) * DYN_PRICE[1];
   dynEl('dyn-note').textContent =
     'Generated ' + s.gen + ' · kept ' + s.kept +
+    (s.repaired ? ' (' + s.repaired + ' repaired)' : '') +
     (s.gen > s.kept ? ' (' + (s.gen - s.kept) + ' failed the vocabulary/format checks)' : '') +
     (s.scaffoldGaps && s.scaffoldGaps.length ? ' · no usage-mc for ' + s.scaffoldGaps.join('、') : '') +
     ' · ' + (s.usage.in / 1000).toFixed(1) + 'k in / ' + (s.usage.out / 1000).toFixed(1) + 'k out ≈ $' +
@@ -725,6 +760,12 @@ async function dynMockGenerate(onProgress) {
   return { acc: text, usage: { in: 2900, out: 3400 }, stop: 'end_turn' };
 }
 
+async function dynMockRepair(onProgress) {
+  onProgress();
+  await new Promise(r => setTimeout(r, 600));
+  return { acc: JSON.stringify(DYN_MOCK_REPAIR), usage: { in: 1400, out: 600 }, stop: 'end_turn' };
+}
+
 async function dynGenerate() {
   const targets = dynTargets();
   if (!targets.length || dynBusy) return;
@@ -746,13 +787,36 @@ async function dynGenerate() {
     if (r.stop === 'max_tokens') throw new Error('response truncated — raise DYN_MAXTOK');
     const items = (JSON.parse(r.acc).items) || [];
     const v = dynValidate(items, dynKnownAll());
-    if (!v.kept.length) throw new Error('all ' + items.length + ' generated items failed validation');
+    const usage = { in: r.usage.in, out: r.usage.out };
+    let all = v.kept, gen = items.length, repaired = 0;
+    let gaps = dynScaffoldGaps(v.kept, targets);
+    // Repair pass: one bounded follow-up for the failures and missing
+    // scaffolds. Best-effort — any error (including Cancel) keeps the set.
+    if (v.dropped.length || gaps.length) {
+      const nFix = v.dropped.length + gaps.length;
+      const rp = () => dynStatus('Repairing ' + nFix + ' item' + (nFix > 1 ? 's' : '') + '…', 'busy');
+      rp();
+      try {
+        const rr = DYN_MOCK_AI ? await dynMockRepair(rp) : await dynCallRepair(v.dropped, gaps, rp);
+        if (rr.stop === 'max_tokens') throw new Error('repair truncated');
+        usage.in += rr.usage.in; usage.out += rr.usage.out;
+        const fixes = (JSON.parse(rr.acc).items) || [];
+        const v2 = dynValidate(fixes, dynKnownAll());
+        gen += fixes.length;
+        repaired = v2.kept.length;
+        all = all.concat(v2.kept);
+        gaps = dynScaffoldGaps(all, targets);
+      } catch (e2) {
+        console.warn('[dyn] repair pass failed — keeping the validated set', e2);
+      }
+    }
+    if (!all.length) throw new Error('all ' + gen + ' generated items failed validation');
     // Sort into arc order once, before persisting — done{} keys by index.
-    const ordered = v.kept.slice().sort((a, b) => dynStageOrder(a) - dynStageOrder(b));
+    const ordered = all.slice().sort((a, b) => dynStageOrder(a) - dynStageOrder(b));
     dynState = {
-      at: Date.now(), model: DYN_MODEL, usage: r.usage,
-      gen: items.length, kept: ordered.length, items: ordered, done: {}, drafts: {},
-      scaffoldGaps: dynScaffoldGaps(ordered, targets),
+      at: Date.now(), model: DYN_MODEL, usage: usage,
+      gen: gen, kept: ordered.length, repaired: repaired, items: ordered, done: {}, drafts: {},
+      scaffoldGaps: gaps,
     };
     dynSave();
     dynRender();
@@ -830,4 +894,16 @@ const DYN_MOCK_BATCH = { items: [
   dynMockItem('mc', '我___去上班。', 'Deliberately broken mock item — the validator must drop it.', { choices: [
     { text: '昨天', correct: true, why: 'broken' },
     { text: '今天', correct: true, why: 'broken — two correct answers' } ] }),
+] };
+
+// Canned repair-pass response for mock mode: a fixed version of the broken
+// item above, plus one usage-mc scaffold (as if 遇到 were a SHAKY target).
+const DYN_MOCK_REPAIR = { items: [
+  dynMockItem('mc', '我___去上班。', 'Repaired by the mock repair pass.', { choices: [
+    { text: '昨天', correct: true, why: 'Time words like 昨天 sit before the verb: 我昨天去上班。' },
+    { text: '去昨天', correct: false, why: 'English order ("went yesterday") — in Chinese the time word cannot follow the verb.' } ] }),
+  dynMockItem('mc', '我今天在公园___了一个朋友。', 'Usage scaffold authored by the mock repair pass.', { choices: [
+    { text: '遇到', correct: true, why: '遇到 = run into by chance — the pairing for unplanned meetings.' },
+    { text: '找到', correct: false, why: '找到 = found after searching — it implies you were looking for them.' },
+    { text: '经过', correct: false, why: '经过 = pass by a place; it cannot take a person you meet.' } ] }),
 ] };

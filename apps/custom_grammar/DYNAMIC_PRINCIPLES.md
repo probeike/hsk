@@ -82,9 +82,18 @@ any of them are implemented.
   never scraped out of free text.
 - **Streaming** is used for long generations, with progress visible to the learner while the
   model works.
-- **Reasoning effort is set explicitly** to match the task, and the **model is right-sized** to
-  content authoring rather than defaulting to the largest available.
-- **Cost is transparent**: token usage is tracked and an estimated cost per set is visible.
+- **Reasoning effort is set explicitly** to match the task, and each call's **model is
+  right-sized to its job**: generation runs on a high-capability model because its binding
+  constraint — composing natural sentences inside a closed ~500-word vocabulary — is exactly
+  what weaker models fail at, while grading stays on a small fast model.
+- **Failed items are repaired, not discarded.** Content that fails the vocabulary/format checks
+  goes through one bounded follow-up call that rewrites only the failing items (and authors any
+  missing new-word scaffolds); repairs that fail again are dropped for good. Never more than one
+  repair call, and never a full regenerate.
+- **Repeated context is cached**: the static part of the generation prompt carries a cache
+  breakpoint so the repair call and quick regenerates read it at cache price.
+- **Cost is transparent**: token usage is tracked across both calls and an estimated cost per
+  set is visible.
 
 ## Session behavior
 
