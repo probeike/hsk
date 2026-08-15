@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HSK 3 · Dynamic practice — 今天复习的词，今天就用</title>
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem("cg-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
+</head>
+<body>
+<div class="page">
+
+<nav class="topnav">
+  <a href="index.html">← Index</a>
+  <span class="crumb">Dynamic practice</span>
+</nav>
+
+<header class="lesson-hero">
+  <div class="lesson-number">Dynamic · from your Anki deck</div>
+  <h1>今天复习的词，今天就用</h1>
+  <p class="pinyin">Jīntiān fùxí de cí, jīntiān jiù yòng</p>
+  <p class="en">The words you reviewed today, put to work today — a fresh exercise set every time.</p>
+</header>
+
+<section class="overview" id="dyn-setup">
+  <h2>1 · Pick target words</h2>
+  <p class="dyn-help">Words come live from Anki. Tap the ones to drill — everything else in the pool
+  stays available to the generator as supporting vocabulary.</p>
+  <div id="dyn-anki"></div>
+  <div id="dyn-buckets"></div>
+
+  <h2>2 · Grammar scope</h2>
+  <p class="dyn-help">HSK 1–2 structures are always allowed. Tick the HSK 3 lessons you have covered
+  to allow their structures too (把 / 被 / complements stay off until you tick them).</p>
+  <div id="dyn-lessons"></div>
+
+  <h2>3 · Generate</h2>
+  <div class="dyn-genrow">
+    <button type="button" id="dyn-generate" disabled>Generate</button>
+    <button type="button" id="dyn-cancel" hidden>Cancel</button>
+    <span id="dyn-status" class="dyn-status"></span>
+  </div>
+</section>
+
+<section class="gp" id="dyn-set" hidden>
+  <h2>Your set</h2>
+  <div id="dyn-note" class="dyn-note"></div>
+  <div id="dyn-items"></div>
+</section>
+
+</div>
+<script src="script.js"></script>
+<script src="dynamic.js"></script>
+</body>
+</html>

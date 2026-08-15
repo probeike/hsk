@@ -1175,3 +1175,49 @@ html, body {
   html[data-theme="dark"] svg [stroke="#ddd"] { stroke: var(--rule-strong); }
   html[data-theme="dark"] svg [fill="#eee"] { fill: var(--surface-2); }
 }
+
+/* ===================================================================
+ * Dynamic practice (dynamic.html) — tokens only, so dark mode inherits.
+ * =================================================================== */
+.dyn-help { color: var(--muted); font-size: 14px; margin: 4px 0 10px; }
+.dyn-setupbox {
+  background: var(--warn-soft); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 12px 14px; margin: 8px 0;
+}
+.dyn-setupbox p { margin: 0 0 8px; }
+.dyn-setupbox button, .dyn-genrow button {
+  background: var(--accent); color: var(--on-accent); border: none;
+  padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer;
+}
+.dyn-setupbox button:hover, .dyn-genrow button:hover:not(:disabled) { background: var(--accent-strong); }
+.dyn-genrow button:disabled { opacity: 0.45; cursor: default; }
+.dyn-genrow #dyn-cancel { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.dyn-genrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dyn-status { font-size: 14px; color: var(--muted); }
+.dyn-status.busy { color: var(--warn); }
+.dyn-status.ok { color: var(--ok); }
+.dyn-status.bad { color: var(--danger); }
+.dyn-bucket h3 { margin: 14px 0 6px; font-size: 15px; color: var(--ink-2); }
+.dyn-none { color: var(--muted-2); font-size: 14px; margin: 0; }
+.dyn-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.dyn-chip {
+  font-family: var(--han); font-size: 17px; cursor: pointer;
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--rule-strong); border-radius: 999px; padding: 4px 12px;
+}
+.dyn-chip.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+#dyn-lessons { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px 14px; }
+.dyn-lesson { display: flex; align-items: baseline; gap: 6px; font-size: 13.5px; color: var(--ink-3); cursor: pointer; }
+.dyn-lesson input { flex: none; }
+.dyn-note { color: var(--muted); font-size: 13.5px; margin: 4px 0 14px; }
+.dyn-hintbtn {
+  display: inline-block; background: transparent; color: var(--muted);
+  border: 1px dashed var(--rule-strong); border-radius: 4px;
+  padding: 2px 10px; font-size: 12.5px; cursor: pointer; margin: 4px 0;
+}
+.dyn-hint {
+  display: none; background: var(--info-soft); border: 1px solid var(--info-rule);
+  border-radius: 6px; padding: 8px 12px; margin: 6px 0; font-size: 14px;
+}
+.dyn-hint.shown { display: block; }
+#dyn-items .exercise { margin-bottom: 22px; }
