@@ -41,15 +41,30 @@ any of them are implemented.
 
 ## Exercise design
 
-- Each set follows a pedagogical arc: **recognition first, then guided production, then free
-  writing.**
+- Each set follows PEDAGOGY.md's five-stage arc, in rendered order: **structured input
+  (meaning-choice) → discrimination (form-choice) → cued fill → constrained production
+  (full-sentence typing, then word order) → free writing.** The order is enforced at set
+  creation, not merely requested of the generator.
+- Structured input and discrimination are distinct: in structured input the learner picks the
+  **English meaning** of a Chinese sentence whose form is the only clue; in discrimination the
+  learner picks between **Chinese forms** that differ in exactly one dimension, with distractors
+  drawn from real English-speaker errors.
+- Constrained production uses PEDAGOGY.md's formats (transformation, constrained translation,
+  question→answer). Typed full sentences are graded against an enumerated variant list; an item
+  whose variant space cannot be confidently enumerated is demoted to free writing instead of
+  being graded wrong.
+- Free writing (AI-graded) is the highest-value category and every set ends with it.
 - Generated exercises use the same interactive widget language, grading, and AI feedback as the
   hand-authored lesson pages, and are held to the same authoring contract (PEDAGOGY.md). Content
   that does not meet the contract is not shown.
 - One difficulty per item: everything around the tested point must read easily with the known
   vocabulary.
+- Content words rotate across the set; no scenario or sentence repeats, and no content word is
+  the tested point of more than two items.
 - Exercise prompts are Chinese-only. English scaffolding (situational setup, hints) exists but is
-  hidden until the learner asks for it, so every item is first attempted as bare Chinese.
+  hidden until the learner asks for it, so every item is first attempted as bare Chinese. The
+  sole exception is constrained production in transformation/translation format, where the task
+  instruction itself is English — as on the hand-authored pages.
 - Explanations teach the rule at work, not just the answer.
 
 ## Generation follows current Claude API best practices

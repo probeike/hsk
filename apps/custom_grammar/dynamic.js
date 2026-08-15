@@ -336,22 +336,36 @@ const DYN_SCHEMA = {
 const DYN_SYSTEM =
   'You author Mandarin grammar exercises for one adult English-speaking learner at ~HSK 3. ' +
   'Return a JSON exercise set following the schema exactly; leave unused fields empty ("" or []).\n\n' +
-  'Exercise types (the set follows the arc recognition → guided production → free writing, in order):\n' +
-  '- "si"/"mc": multiple choice. prompt = a Chinese sentence or question (use ___ for a gap). 3-4 choices, ' +
-  'EXACTLY ONE with correct=true. Distractors are errors an English speaker actually makes; each differs from ' +
-  'the correct choice in exactly one dimension. Every choice gets a short English "why" rationale.\n' +
-  '- "fill": type-in. prompt = Chinese with ___. answers = EVERY natural correct variant (word-order variants, ' +
-  '也/都, 没/没有, optional 的…), 3-8 entries for full sentences, 1-3 for short word fills. If you cannot ' +
-  'confidently enumerate the variant space within 8 entries, make the item a "reveal" instead. ' +
-  'explain = why the answer works (shown after checking).\n' +
+  'Exercise types — the set follows a five-stage arc, in order: structured input ("si") → discrimination ' +
+  '("mc") → cued fill (short "fill") → constrained production (full-sentence "fill", then "builder") → ' +
+  'free writing ("reveal"):\n' +
+  '- "si" (structured input): prompt = ONE Chinese sentence whose grammar form is the only clue to its meaning. ' +
+  'choices = 3-4 ENGLISH meanings, EXACTLY ONE with correct=true; each wrong meaning is what an English speaker ' +
+  'who misread the structure would think it says. Every choice gets a short English "why" rationale.\n' +
+  '- "mc" (discrimination): prompt = a Chinese sentence or question (use ___ for a gap). choices = 3-4 CHINESE ' +
+  'forms, EXACTLY ONE with correct=true. Distractors are errors an English speaker actually makes; each differs ' +
+  'from the correct choice in exactly one dimension — never gibberish. Every choice gets a short English "why".\n' +
+  '- short "fill" (cued production): prompt = Chinese with ___ blanking the DECISION POINT (the grammar choice), ' +
+  'never a guessable content word. answers = 1-3 short variants. explain = why the answer works (shown after checking).\n' +
+  '- full-sentence "fill" (constrained production — the learner types a whole sentence): use one of these formats. ' +
+  'F1 transformation: show a base Chinese sentence and ask for a rewrite using the target structure. ' +
+  'F2 constrained translation: give an English sentence to say in Chinese. ' +
+  'F4 question→answer: prompt = a Chinese question the learner answers with a full sentence. ' +
+  'For F1/F2 the prompt opens with a short English task line naming the required content words ' +
+  '("Keep the subject X; use the measure word Y") so the answer space stays enumerable. ' +
+  'answers = EVERY natural correct variant (word-order variants, 也/都, 没/没有, optional 的/儿), 3-8 entries. ' +
+  'If you cannot confidently enumerate the variant space within 8 entries, make the item a "reveal" instead. ' +
+  'explain = why the answer works.\n' +
   '- "builder": word order. chunks = 4-8 tiles that concatenate EXACTLY into each string in answers ' +
   '(no missing text; punctuation may be omitted). answers = every acceptable order. explain = the rule at work.\n' +
-  '- "reveal": free production. prompt = an open Chinese question or task the learner answers in writing (2-3 sentences). ' +
+  '- "reveal": free production — the highest-value items, graded by AI. prompt = an open Chinese question or task ' +
+  'the learner answers in writing (2-3 sentences), naming the structures to use. ' +
   'explain = one model answer in Chinese followed by a short English gloss in parentheses. ' +
   'checklist = 3-5 short English self-check items naming the required structures and likely mistakes.\n\n' +
   'Hard rules:\n' +
   '- prompt is CHINESE ONLY (Chinese punctuation; no English words, no pinyin). All English scaffolding — ' +
-  'situational setup, hints — goes in hint_en (shown only on request; "" if none needed).\n' +
+  'situational setup, hints — goes in hint_en (shown only on request; "" if none needed). ' +
+  'SOLE EXCEPTION: F1/F2 full-sentence fills, whose prompt opens with the English task line described above.\n' +
   '- Vocabulary: use ONLY words from ALLOWED WORDS (小丽 and 小刚 are available as names). Words, not characters — ' +
   'never coin a compound out of known characters; a word is usable only if listed.\n' +
   '- Every TARGET word appears in at least one exercise and is central to the item that uses it. ' +
@@ -359,16 +373,27 @@ const DYN_SYSTEM =
   '- One difficulty per item: everything around the tested point must read easily.\n' +
   '- Grammar: any HSK 1-2 structure, plus ONLY the HSK 3 structures listed as allowed. ' +
   '把/被/result/directional/得-complements count as HSK 3.\n' +
-  '- Vary scenarios and content words across items; never reuse the same sentence twice.\n' +
+  '- Vary scenarios and content words across items; never reuse the same sentence twice. ' +
+  'Rotate vocabulary: no content word (noun/verb/adjective) is central to more than 2 items in the set.\n' +
   '- explain teaches the rule, not just the answer.';
+
+// Per-stage mix for a set of n items (n is always even, 6-14). Weighted toward
+// production per PEDAGOGY's target ratios; fillShort absorbs the remainder and
+// stays >= 1 for every legal n.
+function dynMix(n) {
+  const reveal = Math.max(2, Math.round(n * 0.25));
+  const builder = n >= 10 ? 2 : 1;
+  const si = n >= 8 ? 1 : 0;
+  const mc = n >= 12 ? 2 : 1;
+  const fillFull = Math.max(1, Math.round(n * 0.2));
+  const fillShort = n - si - mc - fillFull - builder - reveal;
+  return { si: si, mc: mc, fillShort: fillShort, fillFull: fillFull, builder: builder, reveal: reveal };
+}
 
 function dynPrompt(targets, n) {
   const passive = dynPassive(targets);
   const pts = dynLessonPts();
-  const mc = Math.max(1, Math.round(n * 0.2));
-  const reveal = Math.max(2, Math.round(n * 0.25));
-  const builder = n >= 10 ? 2 : 1;
-  const fill = n - mc - reveal - builder;
+  const m = dynMix(n);
   return 'ALLOWED WORDS (complete list — use no Chinese word outside it):\n' +
     Array.from(dynKnownAll()).join(' ') + '\n\n' +
     'TARGET WORDS (drill each one):\n' +
@@ -378,7 +403,8 @@ function dynPrompt(targets, n) {
     'ALLOWED HSK 3 GRAMMAR POINTS:\n' +
     (pts.length ? pts.map(p => '- ' + p).join('\n') : '(none ticked — HSK 1-2 grammar only)') + '\n\n' +
     'Generate exactly ' + n + ' exercises, in this order: ' +
-    mc + ' recognition (si/mc), ' + fill + ' fill, ' + builder + ' builder, ' + reveal + ' reveal.';
+    (m.si ? m.si + ' si, ' : '') + m.mc + ' mc, ' + m.fillShort + ' short fill, ' +
+    m.fillFull + ' full-sentence fill (F1/F2/F4), ' + m.builder + ' builder, ' + m.reveal + ' reveal.';
 }
 
 async function dynCallGenerate(targets, n, onProgress) {
@@ -491,7 +517,11 @@ function dynCheckItem(it, known) {
     if (cs.length < 2) return 'needs 2+ choices';
     if (cs.filter(c => c.correct).length !== 1) return 'needs exactly one correct choice';
   } else if (it.type === 'fill') {
-    if (!(it.answers || []).some(a => norm(a))) return 'no answers';
+    const ans = (it.answers || []).filter(a => norm(a));
+    if (!ans.length) return 'no answers';
+    // Tier-2 rule: a full-sentence fill graded by string match needs the
+    // variant space enumerated (也/都, 没/没有, word order…), not one answer.
+    if (norm(ans[0]).length >= 5 && ans.length < 2) return 'full-sentence fill needs 2+ answer variants';
   } else if (it.type === 'builder') {
     const ans = (it.answers || []).filter(a => norm(a));
     if (!ans.length) return 'no answers';
@@ -509,6 +539,17 @@ function dynCheckItem(it, known) {
     }
   }
   return '';
+}
+
+// Pedagogical arc position: si → mc → short fill → full-sentence fill →
+// builder → reveal. Applied once at set creation (a stable sort), so the
+// rendered order honours the arc even when the model's ordering drifts.
+function dynStageOrder(it) {
+  if (it.type === 'si') return 0;
+  if (it.type === 'mc') return 1;
+  if (it.type === 'fill') return norm((it.answers && it.answers[0]) || '').length >= 5 ? 3 : 2;
+  if (it.type === 'builder') return 4;
+  return 5; // reveal
 }
 
 function dynValidate(items, known) {
@@ -670,9 +711,11 @@ async function dynGenerate() {
     const items = (JSON.parse(r.acc).items) || [];
     const v = dynValidate(items, dynKnownAll());
     if (!v.kept.length) throw new Error('all ' + items.length + ' generated items failed validation');
+    // Sort into arc order once, before persisting — done{} keys by index.
+    const ordered = v.kept.slice().sort((a, b) => dynStageOrder(a) - dynStageOrder(b));
     dynState = {
       at: Date.now(), model: DYN_MODEL, usage: r.usage,
-      gen: items.length, kept: v.kept.length, items: v.kept, done: {}, drafts: {},
+      gen: items.length, kept: ordered.length, items: ordered, done: {}, drafts: {},
     };
     dynSave();
     dynRender();
@@ -715,10 +758,10 @@ function dynMockItem(type, prompt, hint, extra) {
     extra);
 }
 const DYN_MOCK_BATCH = { items: [
-  dynMockItem('si', '小丽___听音乐___打扫房间。', 'She does both things at the same time.', { choices: [
-    { text: '一边……一边', correct: true, why: '一边 A 一边 B marks two simultaneous ongoing actions.' },
-    { text: '先……然后', correct: false, why: '先…然后 sequences actions one after another, not at the same time.' },
-    { text: '又……又', correct: false, why: '又…又 stacks qualities or states, not two ongoing actions.' } ] }),
+  dynMockItem('si', '她一边听音乐一边打扫房间。', 'What does this sentence mean?', { choices: [
+    { text: 'She listens to music while cleaning the room.', correct: true, why: '一边 A 一边 B marks two simultaneous ongoing actions by the same person.' },
+    { text: 'She listens to music and then cleans the room.', correct: false, why: 'Sequencing would be 先…然后; 一边…一边 means at the same time.' },
+    { text: 'She sometimes listens to music, sometimes cleans.', correct: false, why: 'Alternation would be 有时…有时; 一边…一边 is simultaneous.' } ] }),
   dynMockItem('mc', '我找了一个星期，___找到了手机。', 'Finally — after a long effort.', { choices: [
     { text: '终于', correct: true, why: '终于 marks success after a long process; it sits before the verb.' },
     { text: '马上', correct: false, why: '马上 means "right away" — it contradicts a week of searching.' },
@@ -735,6 +778,11 @@ const DYN_MOCK_BATCH = { items: [
   dynMockItem('builder', '他做了什么？', 'Arrange the tiles into one sentence describing what he did.', {
     answers: ['他拿着一本书回家了'], chunks: ['他', '拿着', '一本书', '回家', '了'],
     explain: 'V着 (拿着) marks the ongoing background action while 回家 is the main motion; sentence-final 了 marks the completed event.' }),
+  // Full-sentence F4 fill, deliberately listed AFTER the builder: the arc sort
+  // must move it ahead of the builder when the set renders.
+  dynMockItem('fill', '你昨天去公园了吗？', 'Answer no — you did not go. Type a full sentence; use 没.', {
+    answers: ['我昨天没去公园', '昨天我没去公园', '我昨天没有去公园', '昨天我没有去公园'],
+    explain: '没(有) negates a completed past event, and 昨天 may sit before or after the subject. No 了 after 没 — the 了 of completion disappears under negation.' }),
   dynMockItem('reveal', '你的房间谁打扫？请写两三句话。', 'Say who cleans, how often, and what you do afterwards — try 自己 and 然后.', {
     explain: '我自己打扫房间。我每个星期六打扫，然后一边听音乐一边休息。(I clean my room myself, every Saturday, then I rest while listening to music.)',
     checklist: ['Did you use 打扫 as the main verb?', '自己 goes right before the verb it emphasises.',
