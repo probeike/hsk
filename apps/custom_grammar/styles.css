@@ -137,6 +137,11 @@ html, body {
   color: var(--muted);
   margin: 0 0 12px;
 }
+/* Cards with several step headings (dynamic.html): keep the first flush,
+   give later steps room to breathe above them. */
+.overview h2:not(:first-child) {
+  margin-top: 26px;
+}
 .overview ol {
   margin: 0;
   padding-left: 22px;
@@ -960,6 +965,10 @@ html, body {
   font-weight: 700;
   font-size: 15px;
 }
+/* Keep long prompts clear of the absolutely-positioned ✓ */
+.exercise.done .prompt {
+  padding-right: 28px;
+}
 .progress-pill {
   position: fixed;
   left: 14px;
@@ -1197,8 +1206,9 @@ html, body {
 .dyn-status.busy { color: var(--warn); }
 .dyn-status.ok { color: var(--ok); }
 .dyn-status.bad { color: var(--danger); }
+.dyn-bucket { margin: 0 0 16px; }
 .dyn-bucket h3 { margin: 14px 0 6px; font-size: 15px; color: var(--ink-2); }
-.dyn-none { color: var(--muted-2); font-size: 14px; margin: 0; }
+.dyn-none { color: var(--muted-2); font-size: 14px; margin: 0 0 4px; }
 .dyn-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .dyn-chip {
   font-family: var(--han); font-size: 17px; cursor: pointer;
@@ -1206,7 +1216,7 @@ html, body {
   border: 1px solid var(--rule-strong); border-radius: 999px; padding: 4px 12px;
 }
 .dyn-chip.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-#dyn-lessons { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px 14px; }
+#dyn-lessons { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 7px 14px; margin-bottom: 12px; }
 .dyn-lesson { display: flex; align-items: baseline; gap: 6px; font-size: 13.5px; color: var(--ink-3); cursor: pointer; }
 .dyn-lesson input { flex: none; }
 .dyn-note { color: var(--muted); font-size: 13.5px; margin: 4px 0 14px; }
@@ -1220,4 +1230,30 @@ html, body {
   border-radius: 6px; padding: 8px 12px; margin: 6px 0; font-size: 14px;
 }
 .dyn-hint.shown { display: block; }
-#dyn-items .exercise { margin-bottom: 22px; }
+/* Generated sets are long runs of consecutive cards with no prose between
+   them, so they need clearer separation than hand-authored pages. */
+#dyn-items .exercise {
+  margin-bottom: 26px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+@media screen {
+  html[data-theme="dark"] #dyn-items .exercise {
+    box-shadow: none;
+    border-color: var(--rule-strong);
+    border-left-color: var(--accent);
+  }
+  html[data-theme="dark"] #dyn-items .exercise.done {
+    border-left-color: var(--ok-strong);
+  }
+}
+/* Input + Check button row inside generated fill items (bare inline
+   siblings otherwise sit flush under the prompt). */
+.dyn-inputrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0 0;
+}
+.dyn-inputrow button.check { margin-left: 0; }
+#dyn-items .exercise button.reveal { display: block; margin-top: 10px; }

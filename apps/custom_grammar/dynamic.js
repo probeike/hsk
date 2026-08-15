@@ -548,7 +548,7 @@ function dynItemHTML(it, i) {
   }
   if (it.type === 'fill') {
     return open + ' data-answer="' + dynEsc(it.answers.join('|')) + '">' + head +
-      '<input type="text" placeholder="输入你的答案"> <button type="button" class="check">Check</button>' +
+      '<div class="dyn-inputrow"><input type="text" placeholder="输入你的答案"> <button type="button" class="check">Check</button></div>' +
       '<div class="feedback"></div>' +
       '<button type="button" class="reveal">Show answer</button>' +
       '<div class="reveal-box"><p><strong>' + dynEsc(it.answers[0]) + '</strong></p><p>' + dynEsc(it.explain) + '</p></div></div>';
